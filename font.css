@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Rawrote';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''), url('https://fonts.cdnfonts.com/s/114468/Rawrote Demo.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Perpetua Titling MT';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Perpetua Titling MT'), url('https://fonts.cdnfonts.com/s/56562/PERTIBD.woff') format('woff');
+}
