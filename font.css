@@ -1,8 +1,9 @@
+
 @font-face {
     font-family: 'Rawrote';
-    font-style: normal;
+    src: url('./src/font/rawrote.woff2') format('woff2');
     font-weight: 400;
-    src: local(''), url('https://fonts.cdnfonts.com/s/114468/Rawrote Demo.woff') format('woff');
+    font-style: normal;
 }
 
 @font-face {
