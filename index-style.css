@@ -70,7 +70,7 @@ nav ul {
     display: flex;
     flex-direction: column; 
     justify-content: center;
-    align-items: flex-end; 
+    align-items: center; 
     text-align: right; 
     width: 100%;
     height: 100vh;
@@ -81,6 +81,7 @@ nav ul {
 
 span {
     font-family: 'Rawrote';
+    margin-left: 11vw;
     color: #960000;
     font-size: 48px;
     background-color: rgba(210, 205, 163, 0.5);
@@ -102,6 +103,8 @@ span {
 }
 
 .a-propos-left {
+    display: flex;
+    align-items: left;
     line-height: 2.5;
     padding: 13vw 7vw;
     background-image: url('src/images/gauche.png');
@@ -115,9 +118,7 @@ span {
 .domaines-expertises-titre { 
     display: flex;
     flex-direction: column; 
-    justify-content: center;
-    align-items: flex-end; 
-    text-align: right; 
+    align-items: center; 
     gap:16px;
 }
 
@@ -126,12 +127,5 @@ span {
 }
 
 #domaines-expertises-bouton {
-    display: flex;
-    align-items: left;
-}
-
-#domaines-expertises-contenu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-left: 10vw;
 }
