@@ -99,7 +99,7 @@ span {
 .a-propos-contenu {
     display: flex;
     align-items: center;
-    gap: -10vw;
+    position: relative;
 }
 
 .a-propos-left {
@@ -110,15 +110,26 @@ span {
     background-image: url('src/images/gauche.png');
     background-repeat: no-repeat;
 }
+/* .a-propos-right{
+    position: absolute;
+    right: 0;
+    z-index: -1;
+} */
 
 .language img {
     width: 1vw;
+}
+.flex-title-domaines{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .domaines-expertises-titre { 
     display: flex;
     flex-direction: column; 
-    align-items: center; 
+    align-items: end; 
     gap:16px;
 }
 
