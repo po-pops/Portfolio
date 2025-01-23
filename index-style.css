@@ -44,6 +44,7 @@ header {
     height: 100px;
     position: fixed;
     top: 0;
+    z-index: 999;
 }
 
 .logo1 {
@@ -103,11 +104,14 @@ span {
 }
 
 .a-propos-left {
+    height: 380px;
+    width: 40vw;
     display: flex;
-    align-items: left;
+    align-items: center;
+    justify-content: center;
     line-height: 2.5;
-    padding: 13vw 7vw;
-    background-image: url('src/images/gauche.png');
+    padding: 0px 32px;
+    background-image: url('src/images/PAPIER.png');
     background-repeat: no-repeat;
 }
 /* .a-propos-right{
