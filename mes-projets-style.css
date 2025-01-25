@@ -19,6 +19,12 @@ h3 {
     text-transform: uppercase;
 }
 
+h4 {
+    font-family: 'Rawrote';
+    font-size: 24px;
+    color:#960000;
+}
+
 body{
     height: 1000px;
     cursor: url("src/images/souris.png"), auto;
@@ -38,9 +44,9 @@ header a {
     color: black;
 }
 
-main a {
+a {
     font-family: 'Perpetua';
-    font-size: 20px;
+    font-size: 24px;
     text-decoration: none;
     color: #960000;
 }
@@ -76,10 +82,6 @@ nav ul {
     gap: 8px;
 }
 
-.language img {
-    width: 1vw;
-}
-
 .top-content {
     margin-top: 100px; 
     display: flex;
@@ -96,102 +98,91 @@ nav ul {
 
 .top-content span {
     font-family: 'Rawrote';
-    margin-left: 11vw;
     color: #960000;
     font-size: 48px;
     background-color: rgba(210, 205, 163, 0.5);
 }
 
-#a-propos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 128px;
-    flex-direction: column;
-    gap:48px;
+.language img {
+    width: 1vw;
 }
 
-.a-propos-contenu {
-    display: flex;
-    align-items: center;
-    position: relative;
+.mes-projets-titre img{
+    width: 5vw;
+    margin-top: -50px;
+    margin-bottom: 50px;
+    transform: scaleX(-1);
 }
 
-.a-propos-left {
-    height: 380px;
-    width: 40vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 2.5;
-    padding: 0px 32px;
-    background-image: url('src/images/PAPIER.png');
-    background-repeat: no-repeat;
-}
 
-.flex-title-domaines{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.domaines-expertises-titre { 
-    display: flex;
-    flex-direction: column; 
-    align-items: end; 
-    gap:16px;
-}
-
-.domaines-expertises img {
-    width: 0.75vw;
-}
-
-.domaines-expertises-bouton {
-    margin-left: 10vw;
-}
-
-.telephone-cable {
-    max-width: 25vw;
-}
-
-.telephone-appareil {
-    max-width: 15vw;
-    margin-left: -3px;
-}
-
-.contact {
-    display: flex;
-    flex-direction: column;
-    gap: 64px;
-    margin-top: 68px;
-}
-
-.telephone {
+.mes-projets-titre {
     display: flex;
     flex-direction: row;
-}
-
-.contact h2 {
-    display: flex;
     justify-content: center;
+    margin-top: 100px;
 }
 
-.contact-message img {
-    max-width: 5vw;
-    margin-left: -3vw;
-}
 
-.contact-content {
+.audiovisuel-titre {
     display: flex;
-    align-items: end;
     flex-direction: row;
-    gap: 3vw;
-}
-
-.contact-message {
-    display: flex;
-    flex-direction: column;
     gap: 1vw;
-    margin-bottom: 3vw;
+    margin-left: 3vw;
+    align-items: center;
+}
+
+.mes-projets-audiovisuel-card1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: start;
+}
+
+.computer {
+    max-width: 30vw;
+    height: auto;
+}
+
+.post-it1 {
+    margin-top: 40px;
+    max-width: 20vw;        
+    background-image: url('./src/images/post-it1.png');
+    background-repeat: no-repeat;
+    padding: 70px 45px;
+    margin-right: -4vw;
+}
+
+.audiovisuel-cards span {
+    font-family: 'Perpetua';
+    font-size: 24px;
+    color: black;
+    background-color: rgba(210, 205, 163, 0.5);
+}
+
+.etoile-audiovisuel1 {
+    position: relative;
+    margin-right: -100px;
+}
+
+.post-it2 {
+    margin-top: 40px;
+    max-width: 20vw;        
+    background-image: url('./src/images/post-it2.png');
+    background-repeat: no-repeat;
+    padding: 70px 45px;
+    margin-left: -4vw;
+}
+
+.mes-projets-audiovisuel-card2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: end;
+}
+
+.audiovisuel-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 180px;
 }

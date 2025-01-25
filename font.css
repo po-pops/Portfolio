@@ -7,10 +7,10 @@
 }
 
 @font-face {
-    font-family: 'Perpetua Titling MT';
+    font-family: 'Perpetua';
     font-style: normal;
     font-weight: 700;
-    src: local('Perpetua Titling MT'), url('https://fonts.cdnfonts.com/s/56562/PERTIBD.woff') format('woff');
+    src: url('./src/font/Perpetua.woff') format('woff');
 }
 
 @font-face {
