@@ -107,6 +107,13 @@ nav ul {
     width: 1vw;
 }
 
+.mes-projets-contenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 200px;
+}
+
 .mes-projets-titre img{
     width: 5vw;
     margin-top: -50px;
@@ -127,7 +134,7 @@ nav ul {
     display: flex;
     flex-direction: row;
     gap: 1vw;
-    margin-left: 3vw;
+    margin: 68px 3vw;
     align-items: center;
 }
 
@@ -138,21 +145,48 @@ nav ul {
     align-items: start;
 }
 
+.mes-projets-audiovisuel-card2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: end;
+    position: relative;
+}
+
 .computer {
+    position: relative;
+    z-index: 2;
     max-width: 30vw;
     height: auto;
+    flex-shrink: 0;
 }
 
 .post-it1 {
+    position: relative;
+    z-index: 1;
+    margin-bottom: -60px;
     margin-top: 40px;
+    margin-right: -4vw;
     max-width: 20vw;        
     background-image: url('./src/images/post-it1.png');
     background-repeat: no-repeat;
     padding: 70px 45px;
-    margin-right: -4vw;
 }
 
-.audiovisuel-cards span {
+.post-it2 {
+    position: relative;
+    z-index: 1;
+    margin-bottom: -50px;
+    margin-left: -3vw;
+    max-width: 20vw;        
+    background-image: url('./src/images/post-it2.png');
+    background-repeat: no-repeat;
+    background-position: left;
+    padding: 70px 45px;
+    flex-shrink: 0;
+}
+
+.audiovisuel span, .uiux span {
     font-family: 'Perpetua';
     font-size: 24px;
     color: black;
@@ -161,23 +195,15 @@ nav ul {
 
 .etoile-audiovisuel1 {
     position: relative;
+    z-index: 2;
     margin-right: -100px;
 }
 
-.post-it2 {
-    margin-top: 40px;
-    max-width: 20vw;        
-    background-image: url('./src/images/post-it2.png');
-    background-repeat: no-repeat;
-    padding: 70px 45px;
-    margin-left: -4vw;
-}
-
-.mes-projets-audiovisuel-card2 {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    align-items: end;
+.etoile-audiovisuel2 {
+    position: relative;
+    z-index: 2;
+    margin-left: -130px;
+    margin-bottom: -50px;
 }
 
 .audiovisuel-cards {
@@ -185,4 +211,61 @@ nav ul {
     flex-direction: column;
     justify-content: center;
     gap: 180px;
+}
+
+.uiux {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    gap: 12vw;
+}
+
+.television-frame {
+    max-width: 40vw;
+    height: auto;
+}
+
+.television {
+    position: relative;
+    z-index: 1;
+    background-image: url(src/images/papier-television.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    padding: 8vw 8vw 8vw 9.5vw;
+}
+
+.uiux-left {
+    max-width: 21vw;
+}
+
+.uiux-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.scroll {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+.details-uiux {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 400px;
+    align-items: start;
+    margin-right: -14vw;
+}
+
+.lien {
+    display: flex;
+    align-items: start;
+}
+
+.lien img {
+    margin: -8px -8px 0 0;
 }

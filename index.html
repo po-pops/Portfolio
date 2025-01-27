@@ -17,12 +17,12 @@
                 <li><a href=./index.html><img class="logo1" src="./src/images/logo-1.png"></a></li>
                 <li><a href=./mes-projets.html>Mes projets</a></li>
                 <li><a href=#a-propos>A propos</a></li>
-                <li><a href=#>Contact</a></li>
+                <li><a href=#contact>Contact</a></li>
             </ul>
         </nav>
         <div class="language">
-            <p>FR</p>
-            <img src="./src/images/chevron.png">
+            <span><a href=#>FR</a></span>
+            <span><a href=#>EN</a></span>
         </div>
     </header>
     <main>
@@ -30,39 +30,76 @@
             <h1>Pauline Yvelin</h1>
             <span>designeuse en devenir</span>
         </section>
-        <section class="a-propos">
+        <section id="a-propos" class="a-propos">
             <h2>Un plaisir de vous rencontrer !</h2>
             <div class="a-propos-contenu">
                 <div class="a-propos-left">
-                    <p>Jeune artiste de 19 ans et passionnée par les arts divers et variés depuis mon enfance, je
-                        m’intéresse actuellement principalement au graphisme, à l’audiovisuel et à l’UI/UX design. 
-                        <br><br>
-                        De nature très curieuse et polyvalente, j’adore découvrir et apprendre de nouvelles techniques
-                        créatives.</p>
-                </div>
-                <div class="a-propos-right">
-                    <img src="src/images/droite.png" alt="photos noires et blanches pauline yvelin">
-                </div>
+                    <div class="a-propos-left-texte">
+                        <p>Jeune artiste de 19 ans et passionnée par les arts divers et variés depuis mon enfance, je
+                            m’intéresse actuellement principalement au graphisme, à l’audiovisuel et à l’UI/UX design. 
+                            <br>
+                            De nature très curieuse et polyvalente, j’adore découvrir et apprendre de nouvelles techniques
+                            créatives.</p>
+                    </div>
+                    <img class="etoile-a-propos" src="src/images/etoiles1 1.png">
+                    <div class="bouton">
+                        <a href="src/CV_Pauline_Yvelin.pdf" download>Télécharger mon CV</a>
+                        <img src="src/images/fleche-rouge.svg">
+                    </div>
+                </div>   
+                <img class="a-propos-right" src="src/images/droite.png" alt="photos noires et blanches pauline yvelin">
             </div>
         </section>
         <section class="domaines-expertises">
             <div class="flex-title-domaines">
                 <div class="domaines-expertises-titre">
                     <h2>Voici mes domaines d'expertises</h2>
-                    <div class="domaines-expertises-bouton">
-                        <a href="#">Découvez mes projets</a>
-                        <img src="src/images/bouton-fleche.png">
+                    <div class="bouton">
+                        <a href="#">Découvrir mes projets</a>
+                        <img src="src/images/fleche-rouge.svg">
                     </div>
                 </div>
             </div>
             <div class="domaines-expertises-contenu">
-                <img src="src/images/polaroid.png" alt="1er polaroid UIX">
-                <img src="src/images/polaroid.png" alt="2ème polaroid Graphisme">
-                <img src="src/images/polaroid.png" alt="3ème polaroid Audiovisuel">
-                <img src="src/images/polaroid.png" alt="4ème polaroid Illustrations">
+                <div class="polaroid-row1">
+                    <div class="polaroid">
+                        <div class="bouton">
+                            <span>UI/UX</span>
+                            <img src="src/images/fleche-noire.svg">
+                        </div>
+                        <img class="polaroid-image" src="src/images/polaroid-noir.png">
+                        <img class="polaroid-image" src="src/images/polaroid-uix.png" alt="1er polaroid UIX">
+                    </div>
+                    <div class="polaroid">
+                        <div class="bouton">
+                            <span>Graphisme</span>
+                            <img src="src/images/fleche-noire.svg">
+                        </div>
+                        <img class="polaroid-image" src="src/images/polaroid-noir.png">
+                        <img class="polaroid-image" src="src/images/polaroid-graphisme.png" alt="2ème polaroid Graphisme">
+                    </div>
+                </div>
+                <div class="polaroid-row2">
+                    <div class="polaroid">
+                        <div class="bouton">
+                            <span>Audiovisuel</span>
+                            <img src="src/images/fleche-noire.svg">
+                        </div>
+                        <img class="polaroid-image" src="src/images/polaroid-noir.png" >
+                        <img class="polaroid-image" src="src/images/polaroid-audiovisuel.png" alt="3ème polaroid audiovisuel">
+                    </div>
+                    <div class="polaroid">
+                        <div class="bouton">
+                            <span>Illustrations</span>
+                            <img src="src/images/fleche-noire.svg">
+                        </div>
+                        <img class="polaroid-image" src="src/images/polaroid-noir.png">
+                        <img class="polaroid-image" src="src/images/polaroid-illustrations.png" alt="4ème polaroid audiovisuel">
+                    </div>
+                </div>
             </div>
         </section>
-        <section class="contact">
+        <section id="contact" class="contact">
             <h2>une idee ? un projet ?</h2>
             <div class="contact-content">
                 <div class="telephone">

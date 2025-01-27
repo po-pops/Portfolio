@@ -1,3 +1,7 @@
+body {
+    scroll-behavior: smooth;
+}
+
 h1 {
     font-family: 'Rawrote';
     font-size: 96px;
@@ -19,6 +23,25 @@ h3 {
     text-transform: uppercase;
 }
 
+header span {
+    font-family: 'Rawrote';
+    font-size: 24px;
+    color: #960000;
+    text-transform: uppercase;
+}
+
+a {
+    color: #960000;
+    text-decoration: none;
+}
+
+.polaroid span {
+    font-family: 'Marker Note Regular';
+    font-size: 16px;
+    color:#000000;
+    text-transform: uppercase;
+}
+
 body{
     height: 1000px;
     cursor: url("src/images/souris.png"), auto;
@@ -31,7 +54,7 @@ p {
     color: black;
 }
 
-header a {
+nav a {
     font-family: 'Perpetua';
     font-size: 24px;
     text-decoration: none;
@@ -73,11 +96,18 @@ nav ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 8px;
+    gap: 30px;
 }
 
 .language img {
     width: 1vw;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 200px
 }
 
 .top-content {
@@ -102,11 +132,10 @@ nav ul {
     background-color: rgba(210, 205, 163, 0.5);
 }
 
-#a-propos {
+.a-propos {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 128px;
     flex-direction: column;
     gap:48px;
 }
@@ -117,16 +146,36 @@ nav ul {
     position: relative;
 }
 
-.a-propos-left {
+.a-propos-left-texte {
     height: 380px;
-    width: 40vw;
+    width: 35vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    line-height: 2.5;
-    padding: 0px 32px;
+    line-height: 2.2;
+    padding: 0 10vw 0 4vw;
+    padding-top: 25px;
     background-image: url('src/images/PAPIER.png');
     background-repeat: no-repeat;
+    background-size: auto; 
+    background-position: start;
+}
+
+.a-propos-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.a-propos-right {
+    margin-left: -11vw;
+}
+
+.etoile-a-propos {
+    position: relative;
+    margin-top: -90px;
+    margin-left: -3vw;
+    max-width: 10vw;
+    height: auto;
 }
 
 .flex-title-domaines{
@@ -143,12 +192,68 @@ nav ul {
     gap:16px;
 }
 
-.domaines-expertises img {
-    width: 0.75vw;
+.polaroid .bouton {
+    position: relative;
+    z-index: 2;
+    margin: -10px -10px 0 0;
 }
 
-.domaines-expertises-bouton {
+.bouton {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 0.5vw;
+}
+
+.a-propos-left .bouton  {
     margin-left: 10vw;
+    margin-top: -30px;
+}
+
+.domaines-expertises {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.domaines-expertises-contenu {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-image: url(src/images/papier-jaune.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    padding: 7vw 35vw;
+}
+
+.polaroid-row1 {
+    display: flex;
+    margin-left: -6vw;
+    gap: 30px;
+}
+
+.polaroid-row2 {
+    display: flex;
+    margin-right: -6vw;
+    gap: 30px;
+}
+
+.polaroid {
+    display: flex;
+    align-items: end;
+    position: relative;
+    width: 16vw;
+    height: 290px;
+}
+
+.polaroid-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 16vw;
+    margin-top: 55px;
 }
 
 .telephone-cable {
@@ -164,7 +269,6 @@ nav ul {
     display: flex;
     flex-direction: column;
     gap: 64px;
-    margin-top: 68px;
 }
 
 .telephone {
