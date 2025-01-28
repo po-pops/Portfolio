@@ -37,14 +37,21 @@ p {
     color: black;
 }
 
-header a {
+nav a {
     font-family: 'Perpetua';
     font-size: 24px;
     text-decoration: none;
     color: black;
 }
 
-a {
+header span {
+    font-family: 'Rawrote';
+    font-size: 24px;
+    color: #960000;
+    text-transform: uppercase;
+}
+
+main a {
     font-family: 'Perpetua';
     font-size: 24px;
     text-decoration: none;
@@ -67,6 +74,10 @@ header {
     width: 3vw;
 }
 
+.logo2 {
+    width: 3vw;
+    height: auto;
+}
 
 nav ul {
     display: flex;
@@ -79,7 +90,7 @@ nav ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 8px;
+    gap: 30px;
 }
 
 .top-content {
@@ -213,7 +224,7 @@ nav ul {
     gap: 180px;
 }
 
-.uiux {
+.uiux-top {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -268,4 +279,77 @@ nav ul {
 
 .lien img {
     margin: -8px -8px 0 0;
+}
+
+.left-palette-couleurs {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+.palette-couleurs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.palette {
+    position: relative;
+    z-index: 2;
+    max-width: 20vw;
+    height: auto;
+    margin-left: -3vw;
+    margin-top: -5vw;
+}
+
+.carres-couleurs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    background-image: url(src/images/postit-uiux.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 7vw 30vw;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 65px 6vw 65px 6vw;
+    width: calc(100vw - 12vw);
+    height: 100px;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2vw;
+}
+
+.footer-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-middle {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-right img {
+    max-width: 2.5vw;
+    height: auto;
 }
