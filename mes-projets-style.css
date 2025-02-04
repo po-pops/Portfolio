@@ -1,122 +1,3 @@
-h1 {
-    font-family: 'Rawrote';
-    font-size: 96px;
-    color: #960000;
-    text-transform: uppercase;
-}
-
-h2 {
-    font-family: 'Rawrote';
-    font-size: 36px;
-    color: #960000;
-    text-transform: uppercase;
-}
-
-h3 {
-    font-family: 'Marker Note Regular';
-    font-size: 24px;
-    color:#960000;
-    text-transform: uppercase;
-}
-
-h4 {
-    font-family: 'Rawrote';
-    font-size: 24px;
-    color:#960000;
-}
-
-body{
-    height: 1000px;
-    cursor: url("src/images/souris.png"), auto;
-    background-color: #F6F6F6;
-}
-
-p {
-    font-family: 'Perpetua';
-    font-size: 24px;
-    color: black;
-}
-
-nav a {
-    font-family: 'Perpetua';
-    font-size: 24px;
-    text-decoration: none;
-    color: black;
-}
-
-header span {
-    font-family: 'Rawrote';
-    font-size: 24px;
-    color: #960000;
-    text-transform: uppercase;
-}
-
-main a {
-    font-family: 'Perpetua';
-    font-size: 24px;
-    text-decoration: none;
-    color: #960000;
-}
-
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 6vw;
-    width: calc(100vw - 12vw);
-    height: 100px;
-    position: fixed;
-    top: 0;
-    z-index: 999;
-}
-
-.logo1 {
-    width: 3vw;
-}
-
-.logo2 {
-    width: 3vw;
-    height: auto;
-}
-
-nav ul {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 58px
-}
-
-.language {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-}
-
-.top-content {
-    margin-top: 100px; 
-    display: flex;
-    flex-direction: column; 
-    justify-content: center;
-    align-items: center; 
-    text-align: right; 
-    width: 100%;
-    height: 100vh;
-    background-image: url('./src/images/papier1.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.top-content span {
-    font-family: 'Rawrote';
-    color: #960000;
-    font-size: 48px;
-    background-color: rgba(210, 205, 163, 0.5);
-}
-
-.language img {
-    width: 1vw;
-}
 
 .mes-projets-contenu {
     display: flex;
@@ -137,16 +18,22 @@ nav ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 100px;
 }
 
+.audiovisuel {
+    padding-top: 100px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 100px;
+}
 
-.audiovisuel-titre {
+.catégorie-titres {
     display: flex;
     flex-direction: row;
     gap: 1vw;
-    margin: 68px 3vw;
     align-items: center;
+    margin-left: 4vw;
 }
 
 .mes-projets-audiovisuel-card1 {
@@ -177,7 +64,7 @@ nav ul {
     z-index: 1;
     margin-bottom: -60px;
     margin-top: 40px;
-    margin-right: -4vw;
+    margin-right: -4.5vw;
     max-width: 20vw;        
     background-image: url('./src/images/post-it1.png');
     background-repeat: no-repeat;
@@ -187,7 +74,7 @@ nav ul {
 .post-it2 {
     position: relative;
     z-index: 1;
-    margin-bottom: -50px;
+    margin-bottom: -30px;
     margin-left: -3vw;
     max-width: 20vw;        
     background-image: url('./src/images/post-it2.png');
@@ -197,7 +84,7 @@ nav ul {
     flex-shrink: 0;
 }
 
-.audiovisuel span, .uiux span {
+.audiovisuel span, .uiux span, .graphisme span {
     font-family: 'Perpetua';
     font-size: 24px;
     color: black;
@@ -246,6 +133,124 @@ nav ul {
     padding: 8vw 8vw 8vw 9.5vw;
 }
 
+.television-screen {
+    position: absolute;
+    top: 18%;
+    left: 23%;
+    width: 53.5%;
+    height: 52%;
+    overflow: hidden;
+    z-index: 1; /* Toujours derrière la frame */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    scrollbar-width: none;
+    pointer-events: all;
+    mask-image: url("src/images/formes-televisions.svg");
+    -webkit-mask-image: url("src/images/formes-televisions.svg");
+
+    /* Empêcher la répétition */
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+
+    /* Ajuster la taille au conteneur */
+    mask-size: 100% 100%;
+}
+
+.television-screen::-webkit-scrollbar {
+    display: none; /* Cache la scrollbar sur Chrome et Safari */
+}
+.scroll-content {
+    width: 100%;
+    height: 200%; /* Longue image scrollable */
+}
+.scroll-content img {
+    padding: 28px 0;
+    width: 100%;
+    height: auto;
+}
+.graphisme {
+    padding-top: 100px; 
+}
+
+.graphisme-affiche {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+    
+}
+
+.graphisme-affiche img {
+    position: relative;
+    z-index: 2;
+    max-width: 30vw;
+    height: auto;
+}
+
+.graphisme-texte1 {
+    position: relative;
+    z-index: 1;
+    max-width: 20vw;
+    background-image: url(src/images/papier-graphisme1.png);
+    background-position: right;
+    background-size: 30vw;
+    background-repeat: no-repeat;
+    padding: 8vw;
+    margin-left: -8vw;
+    line-height: 40px;
+}
+
+.graphisme-texte2 {
+    position: relative;
+    z-index: 1;
+    max-width: 20vw;
+    background-image: url(src/images/papier-graphisme2.png);
+    background-position: left;
+    background-size: 30vw;
+    background-repeat: no-repeat;
+    padding: 8vw;
+    margin-right: -10vw;
+    line-height: 40px;
+}
+
+.graphisme-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    gap: 2vw;
+    
+}
+
+.graphisme-texte-logo {
+    margin-top: 20px;
+    max-width: 23vw;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+}
+
+.graphisme-postit {
+    max-width: 25vw;
+    height: auto;
+}
+
+.graphisme-texte-logo img {
+    max-width: 12vw;
+    height: auto;
+}
+
+.uiux {
+    padding-top: 100px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 100px;
+}
+
 .uiux-left {
     max-width: 21vw;
 }
@@ -281,12 +286,6 @@ nav ul {
     margin: -8px -8px 0 0;
 }
 
-.left-palette-couleurs {
-    display: flex;
-    flex-direction: column;
-    gap: 1vw;
-}
-
 .palette-couleurs {
     display: flex;
     flex-direction: row;
@@ -312,44 +311,147 @@ nav ul {
     background-image: url(src/images/postit-uiux.png);
     background-repeat: no-repeat;
     background-position: center;
-    padding: 7vw 30vw;
+    padding: 3vw 3vw;
+    margin-top: 10px;
+    gap: 1.5vw;
 }
 
-footer {
+.bleu-fonce {
+    padding: 3.5vw;
+    background-color: #155A7A;
+    border-radius: 1vw;
+}
+
+.bleu-clair {
+    padding: 3.5vw;
+    background-color: #609BBF;
+    border-radius: 1vw;
+}
+
+.blanc {
+    padding: 3.5vw;
+    background-color: #F6F6F6;
+    border-radius: 1vw;
+}
+
+.noir {
+    padding: 3.5vw;
+    background-color: #000000;
+    border-radius: 1vw;
+}
+
+.encre {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 65px 6vw 65px 6vw;
-    width: calc(100vw - 12vw);
-    height: 100px;
+    flex-direction: column;
+    gap: 1vw;
+    position: relative;
+    z-index: 2;
+    max-width: 20vw;
+    height: auto;
+    margin-right: -5vw;
 }
 
-.footer-left {
+.typographie {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.polices {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 2vw;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    background-image: url(src/images/postit-uiux.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 3vw 7vw;
+    margin-top: 10px;
+    gap:1vw;
 }
 
-.footer-menu {
+.right-typographie {
+    display: flex;
+    position: relative;
+    z-index: 1;
+    flex-direction: column;
+    align-items: end;
+}
+.polices-titres, .polices-corps{
     display: flex;
     flex-direction: column;
 }
+.polices-titres p, .polices-corps p{
+    margin-bottom: 12px;
+}
 
-.footer-middle {
-    margin-top: 150px;
+.polices-titres span {
+    font-family: 'Lemon Milk';
+    background: none;
+}
+.bold{
+    font-weight: 700;
+}
+.medium{
+    font-weight: 500;
+}
+.regular{
+    font-weight: 400;
+}
+.light{
+    font-weight: 300;
+}
+.polices-corps span {
+    font-family: 'Bricolage Grotesque';
+    background: none;
+}
+
+.illustrations {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    padding-top: 100px;
+    gap: 100px;
+}
+
+.illustrations-contenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.carnet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    position: relative;
+    background-image: url(src/images/carnet.png);
+    background-size: 60vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 20vw 25vw;
 }
 
-.footer-right {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.footer-right img {
-    max-width: 2.5vw;
+.dessin {
+    max-width: 20vw;
     height: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.indications img {
+    max-width: 5vw;
+    height: auto;
+}
+
+.indications {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10vw;
 }

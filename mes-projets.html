@@ -1,10 +1,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mes projets</title>
+    <title>Pops - Portfolio | Mes projets</title>
     <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="/header.css">
     <link rel="stylesheet" href="mes-projets-style.css">
+    <link rel="stylesheet" href="/footer.css">
     <link rel="stylesheet" href="font.css">
+    <link rel="icon" type="image/png" href="src/images/favicon.png">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
@@ -12,9 +18,18 @@
         <nav>
             <ul>
                 <li><a href=./index.html><img class="logo1" src="./src/images/logo-1.png"></a></li>
-                <li><a href=./mes-projets.html>Mes projets</a></li>
-                <li><a href=#a-propos>A propos</a></li>
-                <li><a href=#contact>Contact</a></li>
+                <li><a href=./mes-projets.html class="menu-mes-projets">
+                    <p>Mes projets</p>
+                    <img class="image-entoure" src="src/images/entoure.png">
+                </a></li>
+                <li><a href=./index.html#a-propos class="bouton-menu">
+                    <p>A propos</p>
+                    <img class="image-souligne" src="src/images/souligne.png">
+                </a></li>
+                <li><a href=./index.html#contact class="bouton-menu">
+                    <p>Contact</p>
+                    <img class="image-souligne" src="src/images/souligne2.png">
+                </a></li>
             </ul>
         </nav>
         <div class="language">
@@ -27,13 +42,13 @@
             <h1>Mes projets</h1>
             <span>et creations numeriques</span>
         </section>
-        <div class="mes-projets-titre">
-            <h2>bienvenue dans mon monde !</h2>
-            <img src="src/images/smiley.png" alt="smiley">
-        </div>
         <section class="mes-projets-contenu">
-            <section class="audiovisuel">
-                <div class="audiovisuel-titre">
+            <div class="mes-projets-titre">
+                <h2>bienvenue dans mon monde !</h2>
+                <img src="src/images/smiley.png" alt="smiley">
+            </div>
+            <section id="audiovisuel" class="audiovisuel">
+                <div class="catégorie-titres">
                     <h4>audiovisuel</h4>
                     <img src="src/images/mes-projets-fleche.png">
                 </div>
@@ -64,12 +79,47 @@
                     </div>
                 </div>
             </section>
-            <section class="uiux">
+            <section id="graphisme" class="graphisme">
+                <div class="catégorie-titres">
+                    <h4>graphisme</h4>
+                    <img src="src/images/mes-projets-fleche.png">
+                </div>
+                <div class="graphisme-affiche">
+                    <img src="src/images/halles-bacalan.jpg">
+                    <div class="graphisme-texte1">
+                        <span>Affiche touristique</span><p>pour les Halles Bacalan à Bordeaux à l’occasion du projet d’intégration à l’IUT MMI de Bordeaux Montaigne.</p>
+                    </div>
+                </div>
+                <div class="graphisme-affiche">
+                    <div class="graphisme-texte2">
+                        <span>Affiche de film</span> <p>pour notre court-métrage de bac “La 7ème minute” à partir d’une photo prise sur le tournage.</p>
+                    </div>
+                    <img src="src/images/7eme-minute-affiche.png">
+                </div>
+                <div class="graphisme-logo">
+                    <img class="graphisme-postit" src="src/images/graphisme-postit1.png">
+                    <div class="graphisme-texte-logo">
+                        <p><span>Logo</span> réalisé lors du <span>concours de pull</span> organisé par le BDE de l’IUT Bordeaux Montaigne, puis choisi par l’ensemble de l’IUT lors d’un vote.<br>- 2024</p>
+                        <img src="src/images/graphisme-logo.png">
+                    </div>
+                </div>
+                <div class="graphisme-logo">
+                    <div class="graphisme-texte-logo">
+                        <p>Production d’un <span>logo</span> sur demande à l’occasion de la création d’un portfolio, contenant les initiales <span>T et R</span> et dans un style minimaliste moderne.<br>- 2024
+                    </div>
+                    <img class="graphisme-postit" src="src/images/graphisme-postit2.png">
+                </div>
+            </section>
+            <section id="uiux" class="uiux">
+                <div class="catégorie-titres">
+                    <h4>ui/ux</h4>
+                    <img src="src/images/mes-projets-fleche.png">
+                </div>
                 <div class="uiux-top">
                     <div class="uiux-left">
                         <span>Refonte du musée des Beaux-Arts de Rouen</span><p><br>2024<br><br>En équipe et à travers un premier maquettage sur Figma puis son développement avec Visual Studio Code, nous avons pu proposer au musée un tout nouveau site web mettant en avant d’une meilleure manière et de façon plus esthétique ses différentes propositions.<br><br></p>
                         <div class="lien">
-                            <a href="musbar.netlify.app">musbar.netlify.app</a><br><br>
+                            <a href="https://musbar.netlify.app/#">musbar.netlify.app</a><br><br>
                             <img src="src/images/traits-liens.svg">
                         </div>
                         <span>UI/UX - Développement web</span>
@@ -84,6 +134,11 @@
                         </div>
                         <div class="television">
                             <img class="television-frame" src="src/images/television.png">
+                            <div class="television-screen" id="television-screen">
+                                <div class="scroll-content">
+                                    <img src="src/images/maquette.png">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -91,41 +146,111 @@
                     <div class="left-palette-couleurs">
                         <span>Palette de couleurs</span>
                         <div class="carres-couleurs">
-                            <div class="bleu-fonce">
+                            <div class="carre">
+                                <div class="noir">
+                                </div>
+                                <p>#000000</p>
                             </div>
-                            <div class="bleu-clair">
+                            <div class="carre">
+                                <div class="blanc">
+                                </div>
+                                <p>#F6F6F6</p>
                             </div>
-                            <div class="blanc">
+                            <div class="carre">
+                                <div class="bleu-clair">
+                                </div>
+                                <p>#609BBF</p>
                             </div>
-                            <div class="noir">
-                            </div>
+                            <div class="carre">
+                                <div class="bleu-fonce">
+                                </div>
+                                <p>#155A7A</p>
+                            </div>                            
                         </div>
                     </div>
                     <div class="right-palette-couleurs">
                         <img class="palette" src="src/images/palette.png">
                     </div>
                 </div>
+                <div class="typographie">
+                    <div class="encre">
+                        <img src="src/images/encre.png">
+                    </div>
+                    <div class="right-typographie">
+                        <span>Typographie</span>
+                        <div class="polices">
+                            <div class="polices-titres">
+                                <p>Titres</p>
+                                <span class="lemon-milk bold">LEMON MILK</span>
+                                <span class="lemon-milk medium">LEMON MILK</span>
+                                <span class="lemon-milk regular">LEMON MILK</span>
+                                <span class="lemon-milk light">LEMON MILK</span>
+                            </div>
+                            <div class="polices-corps">
+                                <p>Corps de texte</p>
+                                <span class="bricolage-grotesque bold">Bricolage Grotesque</span>
+                                <span class="bricolage-grotesque medium">Bricolage Grotesque</span>
+                                <span class="bricolage-grotesque regular">Bricolage Grotesque</span>
+                                <span class="bricolage-grotesque light">Bricolage Grotesque</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="illustrations">
+                <div class="catégorie-titres">
+                    <h4>ilustrations</h4>
+                    <img src="src/images/mes-projets-fleche.png">
+                </div>
+                <div class="illustrations-contenu">
+                    <div class="carnet">
+                        <div class="carnet-left">
+                            <img class="dessin" src="src/images/lava.png">
+                            <img class="dessin" src="src/images/sam.png">
+                        </div>
+                        <div class="carnet-right">
+                            <img class="dessin" src="src/images/musique.png">
+                            <img class="dessin" src="src/images/sorciere.png">
+                        </div>
+                    </div>
+                    <div class="indications">
+                        <a href="#"><img src="src/images/fleche-gauche.png"></a>
+                        <h3>Tourne la page !</h3>
+                        <a href="#"><img src="src/images/fleche-droite.png"></a>
+                    </div>
+                </div>
             </section>
         </section>
+    </main>
     <footer>
         <div class="footer-left">
             <a href="./index.html"><img class="logo2" src="src/images/logo-2.png"></a>
             <div class="footer-menu">
                 <ul>
-                    <p>A propos</p>
-                    <p>Mes projets</p>
-                    <p>Contact</p>
+                    <li><a href="./mes-projets.html"><p>Mes projets</p></a></li>
+                    <li><a href="./index.html#a-propos"><p>A propos</p></a></li>
+                    <li><a href="./index.html#contact"><p>Contact</p></a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-middle">
             <p>© 2024 Pauline Yvelin | Tous droits réservés</p>
-            <a href="#"><p>mentions légales</p></a>
+            <a href="#"><p>Mentions légales</p></a>
         </div>
         <div class="footer-right">
-            <img src="src/images/email.png">
-            <img src="src/images/linkedin.png">
+            <ul>
+                <li><a href=./index.html><img src="src/images/email.png"></a></li>
+                <li><a href="https://www.linkedin.com/in/pauline-yvelin-a23188332"><img src="src/images/linkedin.png"></a></li>
+            </ul>
         </div>
     </footer>
-        
+</body>   
 
+<script>
+  const tvScreen = document.getElementById("television-screen");
+    tvScreen.addEventListener("wheel", (event) => {
+        event.preventDefault();
+        tvScreen.scrollTop += event.deltaY;
+    });
+
+</script>

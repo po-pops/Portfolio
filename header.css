@@ -1,0 +1,179 @@
+body {
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-family: 'Rawrote';
+    font-size: 96px;
+    color: #960000;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: 'Rawrote';
+    font-size: 36px;
+    color: #960000;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-family: 'Marker Note Regular';
+    font-size: 24px;
+    color:#960000;
+    text-transform: uppercase;
+}
+
+h4 {
+    font-family: 'Rawrote';
+    font-size: 32px;
+    color:#960000;
+}
+
+body{
+    height: 1000px;
+    cursor: url("src/images/souris.png"), auto;
+    background-color: #F6F6F6;
+}
+
+p {
+    font-family: 'Perpetua';
+    font-size: 24px;
+    color: black;
+}
+
+a {
+    color: #960000;
+    text-decoration: none;
+}
+
+nav a {
+    font-family: 'Perpetua';
+    font-size: 24px;
+    text-decoration: none;
+    color: black;
+}
+
+header span {
+    font-family: 'Rawrote';
+    font-size: 24px;
+    color: #960000;
+    text-transform: uppercase;
+}
+
+main a {
+    font-family: 'Perpetua';
+    font-size: 24px;
+    text-decoration: none;
+    color: #960000;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6vw;
+    width: calc(100% - 12vw);
+    height: 100px;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+.logo1 {
+    width: 3vw;
+    margin-right: 2vw;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5vw;
+}
+
+.language {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.bouton-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-mes-projets {
+    position: relative; /* Permet aux enfants d'être positionnés relativement à cet élément */
+    display: inline-block; /* Garde le lien compact */
+    text-align: center; /* Centre le texte */
+}
+
+.texte-mes-projets {
+    position: relative; /* Garde le texte au-dessus de l'image */
+    font-size: 18px; /* Ajustez la taille selon vos besoins */
+    z-index: 2; /* Assure que le texte est au-dessus de l'image */
+}
+
+.image-entoure {
+    position: absolute; /* Superpose l'image */
+    top: 50%; /* Centre verticalement */
+    left: 50%; /* Centre horizontalement */
+    transform: translate(-50%, -50%); /* Ajuste parfaitement l'image autour du texte */
+    width: 130%; /* Ajustez la taille pour qu'elle englobe bien le texte */
+    height: auto;
+    z-index: 1; /* Place l'image sous le texte */
+    pointer-events: none; /* Empêche l'image d'interférer avec le clic sur le lien */
+    opacity: 0%;
+}
+
+/* Applique l'effet lorsque le lien est survolé */
+.menu-mes-projets:hover .image-entoure,
+.bouton-menu:hover .image-souligne {
+    opacity: 100%; /* Rend l'image visible */
+}
+
+.image-souligne {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    height: auto;
+    opacity: 0%;
+    position: absolute;
+    width: 90px;
+    bottom: 30%;
+}
+
+.language img {
+    width: 1vw;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 200px
+}
+
+.top-content {
+    margin-top: 100px; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+    text-align: right; 
+    width: 100%;
+    height: 100vh;
+    background-image: url('./src/images/papier1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.top-content span {
+    font-family: 'Rawrote';
+    margin-left: 11vw;
+    color: #960000;
+    font-size: 48px;
+    background-color: rgba(210, 205, 163, 0.5);
+}

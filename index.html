@@ -4,10 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil</title>
+    <title>Pops - Portfolio | Accueil</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="index-style.css">
+    <link rel="stylesheet" href="/header.css">
+    <link rel="stylesheet" href="/footer.css">
     <link rel="stylesheet" href="font.css">
+    <link rel="icon" type="image/png" href="src/images/favicon.png">
 </head>
 
 <body>
@@ -15,9 +18,18 @@
         <nav>
             <ul>
                 <li><a href=./index.html><img class="logo1" src="./src/images/logo-1.png"></a></li>
-                <li><a href=./mes-projets.html>Mes projets</a></li>
-                <li><a href=#a-propos>A propos</a></li>
-                <li><a href=#contact>Contact</a></li>
+                <li><a href=./mes-projets.html class="menu-mes-projets">
+                    <p>Mes projets</p>
+                    <img class="image-entoure" src="src/images/entoure.png">
+                </a></li>
+                <li><a href=./index.html#a-propos class="bouton-menu">
+                    <p>A propos</p>
+                    <img class="image-souligne" src="src/images/souligne.png">
+                </a></li>
+                <li><a href=./index.html#contact class="bouton-menu">
+                    <p>Contact</p>
+                    <img class="image-souligne" src="src/images/souligne2.png">
+                </a></li>
             </ul>
         </nav>
         <div class="language">
@@ -55,59 +67,62 @@
                 <div class="domaines-expertises-titre">
                     <h2>Voici mes domaines d'expertises</h2>
                     <div class="bouton">
-                        <a href="#">Découvrir mes projets</a>
+                        <a href="./mes-projets.html">Découvrir mes projets</a>
                         <img src="src/images/fleche-rouge.svg">
                     </div>
                 </div>
             </div>
             <div class="domaines-expertises-contenu">
                 <div class="polaroid-row1">
-                    <div class="polaroid">
+                    <a href="./mes-projets.html#uiux" class="polaroid">
                         <div class="bouton">
                             <span>UI/UX</span>
                             <img src="src/images/fleche-noire.svg">
                         </div>
                         <img class="polaroid-image" src="src/images/polaroid-noir.png">
                         <img class="polaroid-image" src="src/images/polaroid-uix.png" alt="1er polaroid UIX">
-                    </div>
-                    <div class="polaroid">
+                    </a>
+                    <a href="./mes-projets.html#graphisme" class="polaroid">
                         <div class="bouton">
                             <span>Graphisme</span>
                             <img src="src/images/fleche-noire.svg">
                         </div>
                         <img class="polaroid-image" src="src/images/polaroid-noir.png">
                         <img class="polaroid-image" src="src/images/polaroid-graphisme.png" alt="2ème polaroid Graphisme">
-                    </div>
+                    </a>
                 </div>
                 <div class="polaroid-row2">
-                    <div class="polaroid">
+                    <a href=./mes-projets.html#audiovisuel class="polaroid">
                         <div class="bouton">
                             <span>Audiovisuel</span>
                             <img src="src/images/fleche-noire.svg">
                         </div>
                         <img class="polaroid-image" src="src/images/polaroid-noir.png" >
                         <img class="polaroid-image" src="src/images/polaroid-audiovisuel.png" alt="3ème polaroid audiovisuel">
-                    </div>
-                    <div class="polaroid">
+                    </a>
+                    <a href="./mes-projets.html#illustrations" class="polaroid">
                         <div class="bouton">
                             <span>Illustrations</span>
                             <img src="src/images/fleche-noire.svg">
                         </div>
                         <img class="polaroid-image" src="src/images/polaroid-noir.png">
                         <img class="polaroid-image" src="src/images/polaroid-illustrations.png" alt="4ème polaroid audiovisuel">
-                    </div>
+                    </a>
                 </div>
             </div>
         </section>
         <section id="contact" class="contact">
-            <h2>une idee ? un projet ?</h2>
+            <div class="titre-contact">
+                <h2>une idee ? un projet ?<br>
+                <h2>contactez moi !</h2>
+            </div>
             <div class="contact-content">
                 <div class="telephone">
                     <img class="telephone-cable" src="src/images/telephone_cable.png">
-                    <img class="telephone-appareil" src="src/images/telephone_1.png">
+                    <a href="#"><img class="telephone-appareil" src="src/images/telephone_1.png"></a>
                 </div>
                 <div class="contact-message">
-                    <h3>contactez moi !</h3>
+                    <h3>clic!</h3>
                     <img src="src/images/fleche.png">
                 </div>
             </div>
@@ -118,19 +133,21 @@
             <a href="./index.html"><img class="logo2" src="src/images/logo-2.png"></a>
             <div class="footer-menu">
                 <ul>
-                    <p>A propos</p>
-                    <p>Mes projets</p>
-                    <p>Contact</p>
+                    <li><a href="./mes-projets.html"><p>Mes projets</p></a></li>
+                    <li><a href="./index.html#a-propos"><p>A propos</p></a></li>
+                    <li><a href="./index.html#contact"><p>Contact</p></a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-middle">
             <p>© 2024 Pauline Yvelin | Tous droits réservés</p>
-            <a href="#"><p>mentions légales</p></a>
+            <a href="#"><p>Mentions légales</p></a>
         </div>
         <div class="footer-right">
-            <img src="src/images/email.png">
-            <img src="src/images/linkedin.png">
+            <ul>
+                <li><a href=./index.html><img src="src/images/email.png"></a></li>
+                <li><a href="https://www.linkedin.com/in/pauline-yvelin-a23188332"><img src="src/images/linkedin.png"></a></li>
+            </ul>
         </div>
     </footer>
 </body>
