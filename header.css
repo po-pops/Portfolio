@@ -2,6 +2,16 @@ body {
     scroll-behavior: smooth;
 }
 
+::-moz-selection {
+    color: rgb(255, 255, 255);
+    background:#960000;
+}
+
+::selection {
+    color: rgb(255, 255, 255);
+    background: #960000;
+}
+
 h1 {
     font-family: 'Rawrote';
     font-size: 96px;
@@ -126,6 +136,7 @@ nav ul {
     z-index: 1; /* Place l'image sous le texte */
     pointer-events: none; /* Empêche l'image d'interférer avec le clic sur le lien */
     opacity: 0%;
+    transition: 0.3s ease-in-out;
 }
 
 /* Applique l'effet lorsque le lien est survolé */
@@ -143,6 +154,7 @@ nav ul {
     position: absolute;
     width: 90px;
     bottom: 30%;
+    transition: 0.3s ease-in-out;
 }
 
 .language img {

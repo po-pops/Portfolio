@@ -267,6 +267,10 @@
     gap: 1vw;
 }
 
+.scroll h3 {
+    margin-left: -2vw;
+}
+
 .details-uiux {
     position: relative;
     z-index: 2;
@@ -280,10 +284,18 @@
 .lien {
     display: flex;
     align-items: start;
+    text-decoration: none;
+    text-decoration-color: #960000;
 }
 
 .lien img {
     margin: -8px -8px 0 0;
+}
+
+.lien:hover {
+    text-decoration: underline;
+    text-decoration-color: #960000;
+    text-decoration-thickness: 1.5px;
 }
 
 .palette-couleurs {
@@ -311,9 +323,34 @@
     background-image: url(src/images/postit-uiux.png);
     background-repeat: no-repeat;
     background-position: center;
-    padding: 3vw 3vw;
+    padding: 5vw 4vw;
     margin-top: 10px;
-    gap: 1.5vw;
+    gap:1vw;
+}
+
+.carre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carre p{
+    opacity: 0;
+    margin-top: -4vw;
+    transition: opacity 0.5s ease-in-out;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.texte-blanc {
+    color: white;
+}
+
+.carre:hover p{
+    opacity: 1;
 }
 
 .bleu-fonce {
@@ -367,7 +404,7 @@
     background-image: url(src/images/postit-uiux.png);
     background-repeat: no-repeat;
     background-position: center;
-    padding: 3vw 7vw;
+    padding: 3vw 6vw;
     margin-top: 10px;
     gap:1vw;
 }
@@ -390,6 +427,11 @@
 .polices-titres span {
     font-family: 'Lemon Milk';
     background: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 .bold{
     font-weight: 700;

@@ -70,6 +70,14 @@
     align-items: center;
     flex-direction: row;
     gap: 0.5vw;
+    text-decoration: none;
+    text-decoration-color: #960000;
+}
+
+.bouton:hover {
+    text-decoration: underline;
+    text-decoration-color: #960000;
+    text-decoration-thickness: 1.5px;
 }
 
 .bouton span {
@@ -122,12 +130,35 @@
     height: 290px;
 }
 
-.polaroid-image {
+.polaroid-image img{
     position: absolute;
     left: 0;
     top: 0;
     width: 16vw;
     margin-top: 55px;
+}
+
+.polaroid-noir:hover {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.polaroid-noir {
+    opacity: 1; 
+    transition: opacity 0.5s ease-in-out;
+}
+
+.polaroid-noir:hover,
+.polaroid-domaine {
+    animation: shake 0.4s ease-in-out;
+}
+
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); }
 }
 
 .telephone-cable {
@@ -139,6 +170,22 @@
     max-width: 17vw;
     height: auto;
     margin-left: -0.5vw;
+}
+
+.telephone:hover
+.telephone-appareil {
+    animation: shake 0.5s ease-in-out;
+}
+
+.telephone:hover
+.telephone-cable {
+    animation: stretch 0.7s ease-in-out;
+}
+
+@keyframes stretch {
+    0% { transform: scaleX(1); }
+    50% { transform: scaleX(1.02); }
+    100% { transform: scaleX(1); }
 }
 
 .contact {

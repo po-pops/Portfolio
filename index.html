@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="/header.css">
     <link rel="stylesheet" href="/footer.css">
     <link rel="stylesheet" href="font.css">
-    <link rel="icon" type="image/png" href="src/images/favicon.png">
+    <link rel="stylesheet" href="lang.css">
+    <link rel="icon" type="image/png" href="src/images/favicon.PNG">
 </head>
 
 <body>
@@ -55,7 +56,7 @@
                     </div>
                     <img class="etoile-a-propos" src="src/images/etoiles1 1.png">
                     <div class="bouton">
-                        <a href="src/CV_Pauline_Yvelin.pdf" download>Télécharger mon CV</a>
+                        <a href="src/CV_Pauline_Yvelin.pdf" target="_blank">Télécharger mon CV</a>
                         <img src="src/images/fleche-rouge.svg">
                     </div>
                 </div>   
@@ -79,16 +80,20 @@
                             <span>UI/UX</span>
                             <img src="src/images/fleche-noire.svg">
                         </div>
-                        <img class="polaroid-image" src="src/images/polaroid-noir.png">
-                        <img class="polaroid-image" src="src/images/polaroid-uix.png" alt="1er polaroid UIX">
+                        <div class="polaroid-image">
+                            <img class="polaroid-domaine" src="src/images/polaroid-uix.png" alt="1er polaroid UIX">
+                            <img class="polaroid-noir" src="src/images/polaroid-noir.png">
+                        </div>
                     </a>
                     <a href="./mes-projets.html#graphisme" class="polaroid">
                         <div class="bouton">
                             <span>Graphisme</span>
                             <img src="src/images/fleche-noire.svg">
                         </div>
-                        <img class="polaroid-image" src="src/images/polaroid-noir.png">
-                        <img class="polaroid-image" src="src/images/polaroid-graphisme.png" alt="2ème polaroid Graphisme">
+                        <div class="polaroid-image">
+                            <img src="src/images/polaroid-graphisme.png" alt="2ème polaroid Graphisme">
+                            <img class="polaroid-noir" src="src/images/polaroid-noir.png">
+                        </div>
                     </a>
                 </div>
                 <div class="polaroid-row2">
@@ -97,16 +102,20 @@
                             <span>Audiovisuel</span>
                             <img src="src/images/fleche-noire.svg">
                         </div>
-                        <img class="polaroid-image" src="src/images/polaroid-noir.png" >
-                        <img class="polaroid-image" src="src/images/polaroid-audiovisuel.png" alt="3ème polaroid audiovisuel">
+                        <div class="polaroid-image">
+                            <img src="src/images/polaroid-audiovisuel.png" alt="3ème polaroid audiovisuel">
+                            <img class="polaroid-noir" src="src/images/polaroid-noir.png" >
+                        </div>
                     </a>
                     <a href="./mes-projets.html#illustrations" class="polaroid">
                         <div class="bouton">
                             <span>Illustrations</span>
                             <img src="src/images/fleche-noire.svg">
                         </div>
-                        <img class="polaroid-image" src="src/images/polaroid-noir.png">
-                        <img class="polaroid-image" src="src/images/polaroid-illustrations.png" alt="4ème polaroid audiovisuel">
+                        <div class="polaroid-image">
+                            <img src="src/images/polaroid-illustrations.png" alt="4ème polaroid audiovisuel">
+                            <img class="polaroid-noir" src="src/images/polaroid-noir.png">
+                        </div>
                     </a>
                 </div>
             </div>
@@ -133,15 +142,15 @@
             <a href="./index.html"><img class="logo2" src="src/images/logo-2.png"></a>
             <div class="footer-menu">
                 <ul>
-                    <li><a href="./mes-projets.html"><p>Mes projets</p></a></li>
-                    <li><a href="./index.html#a-propos"><p>A propos</p></a></li>
-                    <li><a href="./index.html#contact"><p>Contact</p></a></li>
+                    <li><a href="./mes-projets.html" class="footer-lien">Mes projets</a></li>
+                    <li><a href="./index.html#a-propos" class="footer-lien">A propos</a></li>
+                    <li><a href="./index.html#contact" class="footer-lien">Contact</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-middle">
             <p>© 2024 Pauline Yvelin | Tous droits réservés</p>
-            <a href="#"><p>Mentions légales</p></a>
+            <a href="#" class="footer-lien">Mentions légales</a>
         </div>
         <div class="footer-right">
             <ul>
