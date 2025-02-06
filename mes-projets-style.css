@@ -1,4 +1,3 @@
-
 .mes-projets-contenu {
     display: flex;
     flex-direction: column;
@@ -6,7 +5,7 @@
     gap: 200px;
 }
 
-.mes-projets-titre img{
+.mes-projets-titre img {
     width: 5vw;
     margin-top: -50px;
     margin-bottom: 50px;
@@ -21,7 +20,7 @@
 }
 
 .audiovisuel {
-    padding-top: 100px; 
+    padding-top: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -65,7 +64,7 @@
     margin-bottom: -60px;
     margin-top: 40px;
     margin-right: -4.5vw;
-    max-width: 20vw;        
+    max-width: 20vw;
     background-image: url('./src/images/post-it1.png');
     background-repeat: no-repeat;
     padding: 70px 45px;
@@ -76,7 +75,7 @@
     z-index: 1;
     margin-bottom: -30px;
     margin-left: -3vw;
-    max-width: 20vw;        
+    max-width: 20vw;
     background-image: url('./src/images/post-it2.png');
     background-repeat: no-repeat;
     background-position: left;
@@ -84,7 +83,9 @@
     flex-shrink: 0;
 }
 
-.audiovisuel span, .uiux span, .graphisme span {
+.audiovisuel span,
+.uiux span,
+.graphisme span {
     font-family: 'Perpetua';
     font-size: 24px;
     color: black;
@@ -140,7 +141,8 @@
     width: 53.5%;
     height: 52%;
     overflow: hidden;
-    z-index: 1; /* Toujours derrière la frame */
+    z-index: 1;
+    /* Toujours derrière la frame */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -159,19 +161,24 @@
 }
 
 .television-screen::-webkit-scrollbar {
-    display: none; /* Cache la scrollbar sur Chrome et Safari */
+    display: none;
+    /* Cache la scrollbar sur Chrome et Safari */
 }
+
 .scroll-content {
     width: 100%;
-    height: 200%; /* Longue image scrollable */
+    height: 200%;
+    /* Longue image scrollable */
 }
+
 .scroll-content img {
     padding: 28px 0;
     width: 100%;
     height: auto;
 }
+
 .graphisme {
-    padding-top: 100px; 
+    padding-top: 100px;
 }
 
 .graphisme-affiche {
@@ -180,7 +187,7 @@
     align-items: center;
     justify-content: center;
     gap: 1vw;
-    
+
 }
 
 .graphisme-affiche img {
@@ -222,7 +229,7 @@
     align-items: start;
     justify-content: center;
     gap: 2vw;
-    
+
 }
 
 .graphisme-texte-logo {
@@ -244,7 +251,7 @@
 }
 
 .uiux {
-    padding-top: 100px; 
+    padding-top: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -325,7 +332,7 @@
     background-position: center;
     padding: 5vw 4vw;
     margin-top: 10px;
-    gap:1vw;
+    gap: 1vw;
 }
 
 .carre {
@@ -334,7 +341,7 @@
     align-items: center;
 }
 
-.carre p{
+.carre p {
     opacity: 0;
     margin-top: -4vw;
     transition: opacity 0.5s ease-in-out;
@@ -343,13 +350,14 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    font-size: 18px;
 }
 
 .texte-blanc {
     color: white;
 }
 
-.carre:hover p{
+.carre:hover p {
     opacity: 1;
 }
 
@@ -406,7 +414,7 @@
     background-position: center;
     padding: 3vw 6vw;
     margin-top: 10px;
-    gap:1vw;
+    gap: 1vw;
 }
 
 .right-typographie {
@@ -416,11 +424,15 @@
     flex-direction: column;
     align-items: end;
 }
-.polices-titres, .polices-corps{
+
+.polices-titres,
+.polices-corps {
     display: flex;
     flex-direction: column;
 }
-.polices-titres p, .polices-corps p{
+
+.polices-titres p,
+.polices-corps p {
     margin-bottom: 12px;
 }
 
@@ -433,18 +445,23 @@
     -ms-user-select: none;
     user-select: none;
 }
-.bold{
+
+.bold {
     font-weight: 700;
 }
-.medium{
+
+.medium {
     font-weight: 500;
 }
-.regular{
+
+.regular {
     font-weight: 400;
 }
-.light{
+
+.light {
     font-weight: 300;
 }
+
 .polices-corps span {
     font-family: 'Bricolage Grotesque';
     background: none;
@@ -459,30 +476,50 @@
 }
 
 .illustrations-contenu {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.carnet {
+    width: 100vw;
+    height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
+}
+
+.carnet {
+    width: 850px;
+    height: 580px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-image: url(src/images/carnet.png);
-    background-size: 60vw;
     background-repeat: no-repeat;
-    background-position: center;
-    padding: 20vw 25vw;
+    background-position: center center;
+    background-size: contain;
+}
+
+.carnet-left,
+.carnet-right {
+    width: 40%;
+    height: 100%;
+    position: relative;
 }
 
 .dessin {
-    max-width: 20vw;
+    width: 65%;
     height: auto;
+}
+
+.carnet-left .dessin {
     position: absolute;
-    left: 0;
-    top: 0;
+    right: 35px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carnet-right .dessin {
+    position: absolute;
+    left: 35px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .indications img {

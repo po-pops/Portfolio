@@ -4,7 +4,7 @@ body {
 
 ::-moz-selection {
     color: rgb(255, 255, 255);
-    background:#960000;
+    background: #960000;
 }
 
 ::selection {
@@ -29,17 +29,17 @@ h2 {
 h3 {
     font-family: 'Marker Note Regular';
     font-size: 24px;
-    color:#960000;
+    color: #960000;
     text-transform: uppercase;
 }
 
 h4 {
     font-family: 'Rawrote';
     font-size: 32px;
-    color:#960000;
+    color: #960000;
 }
 
-body{
+body {
     height: 1000px;
     cursor: url("src/images/souris.png"), auto;
     background-color: #F6F6F6;
@@ -82,7 +82,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 0 6vw;
-    width: calc(100% - 12vw);
+    width: calc(100vw - 12vw);
     height: 100px;
     position: fixed;
     top: 0;
@@ -115,26 +115,39 @@ nav ul {
 }
 
 .menu-mes-projets {
-    position: relative; /* Permet aux enfants d'être positionnés relativement à cet élément */
-    display: inline-block; /* Garde le lien compact */
-    text-align: center; /* Centre le texte */
+    position: relative;
+    /* Permet aux enfants d'être positionnés relativement à cet élément */
+    display: inline-block;
+    /* Garde le lien compact */
+    text-align: center;
+    /* Centre le texte */
 }
 
 .texte-mes-projets {
-    position: relative; /* Garde le texte au-dessus de l'image */
-    font-size: 18px; /* Ajustez la taille selon vos besoins */
-    z-index: 2; /* Assure que le texte est au-dessus de l'image */
+    position: relative;
+    /* Garde le texte au-dessus de l'image */
+    font-size: 18px;
+    /* Ajustez la taille selon vos besoins */
+    z-index: 2;
+    /* Assure que le texte est au-dessus de l'image */
 }
 
 .image-entoure {
-    position: absolute; /* Superpose l'image */
-    top: 50%; /* Centre verticalement */
-    left: 50%; /* Centre horizontalement */
-    transform: translate(-50%, -50%); /* Ajuste parfaitement l'image autour du texte */
-    width: 130%; /* Ajustez la taille pour qu'elle englobe bien le texte */
+    position: absolute;
+    /* Superpose l'image */
+    top: 50%;
+    /* Centre verticalement */
+    left: 50%;
+    /* Centre horizontalement */
+    transform: translate(-50%, -50%);
+    /* Ajuste parfaitement l'image autour du texte */
+    width: 130%;
+    /* Ajustez la taille pour qu'elle englobe bien le texte */
     height: auto;
-    z-index: 1; /* Place l'image sous le texte */
-    pointer-events: none; /* Empêche l'image d'interférer avec le clic sur le lien */
+    z-index: 1;
+    /* Place l'image sous le texte */
+    pointer-events: none;
+    /* Empêche l'image d'interférer avec le clic sur le lien */
     opacity: 0%;
     transition: 0.3s ease-in-out;
 }
@@ -142,7 +155,8 @@ nav ul {
 /* Applique l'effet lorsque le lien est survolé */
 .menu-mes-projets:hover .image-entoure,
 .bouton-menu:hover .image-souligne {
-    opacity: 100%; /* Rend l'image visible */
+    opacity: 100%;
+    /* Rend l'image visible */
 }
 
 .image-souligne {
@@ -169,12 +183,12 @@ main {
 }
 
 .top-content {
-    margin-top: 100px; 
+    margin-top: 100px;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     justify-content: center;
-    align-items: center; 
-    text-align: right; 
+    align-items: center;
+    text-align: right;
     width: 100%;
     height: 100vh;
     background-image: url('./src/images/papier1.png');
@@ -188,4 +202,50 @@ main {
     color: #960000;
     font-size: 48px;
     background-color: rgba(210, 205, 163, 0.5);
+}
+
+@media screen and (max-width: 375px) {
+
+    /* Font */
+    h1 {
+        font-size: 56px;
+        width: 50%;
+        line-height: 180%;
+        margin-top: -64px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    h4 {
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    main {
+        gap: 28px
+    }
+
+    /* top content */
+
+    .top-content {
+        height: 90vh;
+        gap: 48px;
+    }
+
+    .top-content span {
+        margin: 0;
+        width: 50%;
+        text-align: center;
+        line-height: 150%;
+        font-size: 28px;
+    }
 }

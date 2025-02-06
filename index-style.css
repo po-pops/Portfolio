@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap:48px;
+    gap: 48px;
 }
 
 .a-propos-contenu {
@@ -24,7 +24,7 @@
     padding-top: 25px;
     background-image: url('src/images/PAPIER.png');
     background-repeat: no-repeat;
-    background-size: auto; 
+    background-size: auto;
     background-position: start;
 }
 
@@ -45,18 +45,18 @@
     height: auto;
 }
 
-.flex-title-domaines{
+.flex-title-domaines {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.domaines-expertises-titre { 
+.domaines-expertises-titre {
     display: flex;
-    flex-direction: column; 
-    align-items: end; 
-    gap:16px;
+    flex-direction: column;
+    align-items: end;
+    gap: 16px;
 }
 
 .polaroid .bouton {
@@ -87,7 +87,7 @@
     text-transform: uppercase;
 }
 
-.a-propos-left .bouton  {
+.a-propos-left .bouton {
     margin-left: 10vw;
     margin-top: -30px;
 }
@@ -130,7 +130,7 @@
     height: 290px;
 }
 
-.polaroid-image img{
+.polaroid-image img {
     position: absolute;
     left: 0;
     top: 0;
@@ -144,7 +144,7 @@
 }
 
 .polaroid-noir {
-    opacity: 1; 
+    opacity: 1;
     transition: opacity 0.5s ease-in-out;
 }
 
@@ -154,11 +154,25 @@
 }
 
 @keyframes shake {
-    0% { transform: rotate(0deg); }
-    25% { transform: rotate(5deg); }
-    50% { transform: rotate(-5deg); }
-    75% { transform: rotate(5deg); }
-    100% { transform: rotate(0deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(5deg);
+    }
+
+    50% {
+        transform: rotate(-5deg);
+    }
+
+    75% {
+        transform: rotate(5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
 .telephone-cable {
@@ -172,20 +186,26 @@
     margin-left: -0.5vw;
 }
 
-.telephone:hover
-.telephone-appareil {
+.telephone:hover .telephone-appareil {
     animation: shake 0.5s ease-in-out;
 }
 
-.telephone:hover
-.telephone-cable {
+.telephone:hover .telephone-cable {
     animation: stretch 0.7s ease-in-out;
 }
 
 @keyframes stretch {
-    0% { transform: scaleX(1); }
-    50% { transform: scaleX(1.02); }
-    100% { transform: scaleX(1); }
+    0% {
+        transform: scaleX(1);
+    }
+
+    50% {
+        transform: scaleX(1.02);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
 }
 
 .contact {
@@ -232,3 +252,65 @@
     margin-bottom: 3vw;
 }
 
+
+/* Responsive */
+@media screen and (max-width: 375px) {
+    .a-propos {
+        padding: 48px 5vw;
+        gap: 48px;
+    }
+
+    .a-propos-contenu {
+        flex-direction: column-reverse;
+    }
+
+    .a-propos-left-texte {
+        height: 380px;
+        width: 90%;
+
+        line-height: 2.2;
+        padding: 0 8vw 0 4vw;
+        padding-top: 25px;
+
+    }
+
+    .a-propos-right {
+        margin: 0;
+        width: 90vw;
+    }
+
+    /* .etoile-a-propos {
+        margin-top: -90px;
+        margin-left: -3vw;
+        max-width: 10vw;
+    } */
+
+
+    .domaines-expertises {
+        padding: 42px 5vw;
+    }
+
+    .domaines-expertises-contenu {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        background-image: url(src/images/papier-jaune.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 80%;
+        padding: 7vw 35vw;
+    }
+
+    .domaines-expertises-titre {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 16px;
+    }
+
+    .polaroid .bouton {
+        position: relative;
+        z-index: 2;
+        margin: 0 0 -30px 1vw;
+    }
+}

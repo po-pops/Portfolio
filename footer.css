@@ -3,7 +3,7 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 65px 6vw 65px 6vw;
-    width: calc(100% - 12vw);
+    width: calc(100vw - 12vw);
     height: 100px;
     gap: 24vw;
 }
