@@ -50,12 +50,23 @@
     position: relative;
 }
 
-.computer {
+.computer1, .computer2 {
     position: relative;
     z-index: 2;
     max-width: 30vw;
     height: auto;
     flex-shrink: 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.computer1:hover {
+    transform: rotate(-5deg);
+    cursor: pointer;
+}
+
+.computer2:hover {
+    transform: rotate(5deg);
+    cursor: pointer;
 }
 
 .post-it1 {
@@ -82,6 +93,50 @@
     padding: 70px 45px;
     flex-shrink: 0;
 }
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 999999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    position: relative;
+    z-index: 999999;
+    background: url('./src/images/papier.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 35px 5vw;
+    border-radius: 10px;
+    width: 40vw;
+    height: auto;
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.popup-content .close {
+    color: white;
+    background-color: transparent;
+}
+
+.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+}
+
 
 .audiovisuel span,
 .uiux span,
@@ -508,6 +563,11 @@
     height: auto;
 }
 
+.dessin {
+    width: 65%;
+    height: auto;
+}
+
 .carnet-left .dessin {
     position: absolute;
     right: 35px;
@@ -534,3 +594,9 @@
     align-items: center;
     gap: 10vw;
 }
+
+.polaroid-noir:hover,
+.polaroid-domaine {
+    animation: shake 0.4s ease-in-out;
+}
+

@@ -201,10 +201,28 @@
                             </div>
                             <br><br><span>À l’occasion du Nikon Project</span>
                         </div>
-                        <img class="computer" src="src/images/computer-ligne-droite.png">
+                        <img class="computer1" src="src/images/computer-ligne-droite.png" 
+                            data-video="https://www.youtube.com/embed/c1_Go7CIrng?si=lqgtnJd55EUi8xap" 
+                            data-popup="videoPopup2" 
+                            onclick="openPopup(this)">
+                        <div class="popup" id="videoPopup1" onclick="closePopupOutside(event, 'videoPopup1')">
+                            <div class="popup-content">
+                                <span class="close" onclick="closePopup('videoPopup1')">&times;</span>
+                                <iframe width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
                     </div>
                     <div class="mes-projets-audiovisuel-card2">
-                        <img class="computer" src="src/images/computer-7ememinute.png">
+                        <img class="computer2" src="src/images/computer-7ememinute.png" 
+                            data-video="https://player.vimeo.com/video/936982096" 
+                            data-popup="videoPopup1" 
+                            onclick="openPopup(this)">
+                        <div class="popup" id="videoPopup2" onclick="closePopupOutside(event, 'videoPopup2')">
+                            <div class="popup-content">
+                                <span class="close" onclick="closePopup('videoPopup2')">&times;</span>
+                                <iframe width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
                         <div class="post-it2">
                             <span>“La 7ème minute”</span><br>
                             <p>Pauline Yvelin - Lenny Ochudlo<br>2024<br><br>Que reste-t-il de nos vies, quand on s'en
@@ -229,18 +247,18 @@
                 <div class="illustrations-contenu">
                     <div class="carnet">
                         <div class="carnet-left">
-                            <img class="dessin" src="src/images/sam.png">
-                            <img class="dessin" src="src/images/lava.png">
+                            <img class="dessin dessin1" src="src/images/sam.png">
+                            <img class="dessin dessin2" src="src/images/lava.png">
                         </div>
                         <div class="carnet-right">
-                            <img class="dessin" src="src/images/sorciere.png">
-                            <img class="dessin" src="src/images/musique.png">
+                            <img class="dessin dessin1" src="src/images/sorciere.png">
+                            <img class="dessin dessin2" src="src/images/musique.png">
                         </div>
                     </div>
                     <div class="indications">
-                        <a href="#"><img src="src/images/fleche-gauche.png"></a>
+                        <img src="src/images/fleche-gauche.png" onclick="turnPage()">
                         <h3>Tourne la page !</h3>
-                        <a href="#"><img src="src/images/fleche-droite.png"></a>
+                        <img src="src/images/fleche-droite.png" onclick="turnPage()">
                     </div>
                 </div>
             </section>
@@ -269,13 +287,58 @@
             </ul>
         </div>
     </footer>
+    <script>
+        function openPopup(element) {
+            const videoUrl = element.getAttribute("data-video");
+            const popupId = element.getAttribute("data-popup");
+
+            const popup = document.getElementById(popupId);
+            const videoFrame = popup.querySelector("iframe");
+
+            videoFrame.src = videoUrl;
+            popup.style.display = 'flex';
+
+            // Désactiver le scroll
+            document.body.classList.add("no-scroll");
+        }
+
+        function closePopup(popupId) {
+            const popup = document.getElementById(popupId);
+            const videoFrame = popup.querySelector("iframe");
+
+            videoFrame.src = ""; // Stop la vidéo
+            popup.style.display = 'none';
+
+            // Réactiver le scroll
+            document.body.classList.remove("no-scroll");
+        }
+
+    
+        function closePopupOutside(event, popupId) {
+            if (event.target.id === popupId) {
+                closePopup(popupId);
+            }
+        }
+
+        function turnPage() {
+            const dessins1 = document.querySelectorAll(".dessin1");
+            const dessins2 = document.querySelectorAll(".dessin2");
+
+            dessins1.forEach((dessin1, index) => {
+                const dessin2 = dessins2[index]; // Associe chaque dessin1 à son dessin2 correspondant
+
+                if (dessin1.style.opacity === "1" || dessin1.style.opacity === "") {
+                    dessin1.style.opacity = "0";
+                    dessin2.style.opacity = "1";
+                } else {
+                    dessin1.style.opacity = "1";
+                    dessin2.style.opacity = "0";
+                }
+            });
+        }
+
+
+            
+    </script>
 </body>
-
-<script>
-    const tvScreen = document.getElementById("television-screen");
-    tvScreen.addEventListener("wheel", (event) => {
-        event.preventDefault();
-        tvScreen.scrollTop += event.deltaY;
-    });
-
-</script>
+</html>
