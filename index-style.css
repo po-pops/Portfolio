@@ -65,7 +65,8 @@
     margin: 0 0 -30px 1vw;
 }
 
-.a-propos-contenu .bouton, .domaines-expertises-titre .bouton {
+.a-propos-contenu .bouton,
+.domaines-expertises-titre .bouton {
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -74,7 +75,8 @@
     text-decoration-color: #960000;
 }
 
-.a-propos-contenu .bouton:hover, .domaines-expertises-titre .bouton:hover {
+.a-propos-contenu .bouton:hover,
+.domaines-expertises-titre .bouton:hover {
     text-decoration: underline;
     text-decoration-color: #960000;
     text-decoration-thickness: 1.5px;
@@ -254,7 +256,8 @@
 
 /* Style du popup */
 .popup {
-    display: none;  /* Caché par défaut */
+    display: none;
+    /* Caché par défaut */
     position: fixed;
     background-image: url(src/images/post-it1.png);
     background-repeat: no-repeat;
@@ -294,7 +297,8 @@
     justify-content: center;
 }
 
-.contact-form-content input, .contact-form-content textarea {
+.contact-form-content input,
+.contact-form-content textarea {
     width: 280px;
 }
 
@@ -304,7 +308,8 @@ form {
     flex-direction: column;
 }
 
-input, textarea {
+input,
+textarea {
     margin-bottom: 10px;
     padding: 8px;
     border: none;
@@ -321,7 +326,7 @@ input, textarea {
     gap: 5px;
 }
 
-.envoyer img{
+.envoyer img {
     width: 3vw;
     height: auto;
 }
@@ -337,7 +342,7 @@ input, textarea {
 
 .span-envoyer {
     font-family: 'Marker Note Regular';
-    color:#960000;
+    color: #960000;
     font-size: 18px;
     text-transform: uppercase;
     background-color: transparent;
@@ -350,45 +355,34 @@ input, textarea {
     border: none;
 }
 
-.envoyer-email-image {
-    position: absolute;
-    right: 0;
-    left: 0;
-    bottom: 0;
+.mail-container {
+    position: relative;
+    display: inline-block;
 }
 
-.mail-ouvert {
-    position: relative;  /* Nécessaire pour positionner ::after correctement */
-    display: inline-block;  /* Assure que l'image est rendue comme un élément en ligne */
-}
-
-.mail-ouvert::after {
-    content: '';  /* Nécessaire pour créer l'élément */
+.mail-container::after {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-image: url('src/images/mail-ferme.png');
-    background-size: contain;  /* Ajuste l'image pour qu'elle couvre tout l'élément */
+    background-size: contain;
     background-repeat: no-repeat;
-    opacity: 0;  /* Cache l'image au départ */
-    transition: opacity 0.3s ease;  /* Transition de l'opacité pour l'effet de survol */
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-.mail-ouvert:hover::after {
-    opacity: 1;  /* L'image mail-ferme devient visible au survol */
+.mail-container:hover::after {
+    opacity: 1;
 }
 
-.mail-ouvert:hover {
-    opacity: 0;  /* Cache l'image mail-ouvert au survol */
+/* Cacher l'image mail-ouvert au hover */
+.mail-container:hover img {
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
-
-
-
-
-
-
 
 /* Responsive */
 @media screen and (max-width: 375px) {

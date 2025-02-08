@@ -142,7 +142,7 @@
                     <img src="src/images/fleche.png">
                 </div>
             </div>
-            
+
             <!-- Le popup de formulaire -->
             <div id="contactFormPopup" class="popup">
                 <div class="popup-content">
@@ -152,26 +152,26 @@
                         <form id="contactForm">
                             <label for="name">Nom:</label>
                             <input type="text" id="name" name="name" required><br><br>
-                            
+
                             <label for="email">Email:</label>
                             <input type="email" id="email" name="email" required><br><br>
-                            
+
                             <label for="message">Message:</label><br>
                             <textarea id="message" name="message" rows="4" required></textarea><br><br>
-                            
+
                             <div class="envoyer">
                                 <span class="span-envoyer">ENVOYER</span>
                                 <img src="src/images/fleche-droite.png">
-                                <button type="submit">
-                                    <img class="envoyer-email-image mail-ouvert" src="src/images/mail-ouvert.png">
-                                </button>                                
+                                <button type="submit" class="mail-container">
+                                    <img class="envoyer-email-image" src="src/images/mail-ouvert.png">
+                                </button>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
-            
-            
+
+
         </section>
     </main>
     <footer>
@@ -198,8 +198,8 @@
         </div>
     </footer>
     <script>
-                // Ouvrir le popup lorsque l'image du téléphone est cliquée
-        document.getElementById("openForm").addEventListener("click", function(event) {
+        // Ouvrir le popup lorsque l'image du téléphone est cliquée
+        document.getElementById("openForm").addEventListener("click", function (event) {
             event.preventDefault(); // Empêche le lien de rediriger
             document.getElementById("contactFormPopup").style.display = "block";
             // Désactiver le défilement de la page
@@ -207,14 +207,14 @@
         });
 
         // Fermer le popup lorsque l'on clique sur le bouton de fermeture
-        document.getElementById("closeForm").addEventListener("click", function() {
+        document.getElementById("closeForm").addEventListener("click", function () {
             document.getElementById("contactFormPopup").style.display = "none";
             // Réactiver le défilement de la page
             document.body.style.overflow = 'auto';
         });
 
         // Fermer le popup si l'utilisateur clique en dehors de la fenêtre du formulaire
-        window.addEventListener("click", function(event) {
+        window.addEventListener("click", function (event) {
             if (event.target === document.getElementById("contactFormPopup")) {
                 document.getElementById("contactFormPopup").style.display = "none";
                 // Réactiver le défilement de la page
@@ -223,9 +223,9 @@
         });
 
         // Envoi du formulaire via AJAX
-        document.getElementById("contactForm").addEventListener("submit", function(event) {
+        document.getElementById("contactForm").addEventListener("submit", function (event) {
             event.preventDefault(); // Empêche l'envoi traditionnel du formulaire
-            
+
             // Récupération des valeurs des champs
             const name = document.getElementById("name").value;
             const email = document.getElementById("email").value;
@@ -239,15 +239,15 @@
                 },
                 body: `name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&message=${encodeURIComponent(message)}`
             })
-            .then(response => response.text())
-            .then(data => {
-                alert('Message envoyé avec succès !');
-                document.getElementById("contactForm").reset(); // Réinitialiser le formulaire
-            })
-            .catch(error => {
-                console.error('Erreur:', error);
-                alert('Erreur lors de l\'envoi du message.');
-            });
+                .then(response => response.text())
+                .then(data => {
+                    alert('Message envoyé avec succès !');
+                    document.getElementById("contactForm").reset(); // Réinitialiser le formulaire
+                })
+                .catch(error => {
+                    console.error('Erreur:', error);
+                    alert('Erreur lors de l\'envoi du message.');
+                });
 
             // Ferme le popup après l'envoi
             document.getElementById("contactFormPopup").style.display = "none";
