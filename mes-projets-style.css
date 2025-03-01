@@ -35,19 +35,11 @@
     margin-left: 4vw;
 }
 
-.mes-projets-audiovisuel-card1 {
+.mes-projets-audiovisuel-card {
     display: flex;
     justify-content: center;
     flex-direction: row;
     align-items: start;
-}
-
-.mes-projets-audiovisuel-card2 {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    align-items: end;
-    position: relative;
 }
 
 .computer1, .computer2 {
@@ -72,22 +64,21 @@
 .post-it1 {
     position: relative;
     z-index: 1;
-    margin-bottom: -60px;
-    margin-top: 40px;
     margin-right: -4.5vw;
     max-width: 20vw;
-    background-image: url('./src/images/post-it1.png');
+    background-image: url('./src/images/post-it1.webp');
     background-repeat: no-repeat;
+    background-position: left;
     padding: 70px 45px;
+    flex-shrink: 0;
 }
 
 .post-it2 {
     position: relative;
     z-index: 1;
-    margin-bottom: -30px;
     margin-left: -3vw;
     max-width: 20vw;
-    background-image: url('./src/images/post-it2.png');
+    background-image: url('./src/images/post-it2.webp');
     background-repeat: no-repeat;
     background-position: left;
     padding: 70px 45px;
@@ -110,7 +101,7 @@
 .popup-content {
     position: relative;
     z-index: 999999;
-    background: url('./src/images/papier.png');
+    background: url('./src/images/papier.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -150,14 +141,19 @@
 .etoile-audiovisuel1 {
     position: relative;
     z-index: 2;
-    margin-right: -100px;
+    margin-right: -7vw;
+    margin-top: -40px;
+    width: 10vw;
+    height: auto;
 }
 
 .etoile-audiovisuel2 {
     position: relative;
     z-index: 2;
-    margin-left: -130px;
-    margin-bottom: -50px;
+    margin-left: -9vw;
+    margin-top: -30px;
+    width: 10vw;
+    height: auto;
 }
 
 .audiovisuel-cards {
@@ -183,7 +179,7 @@
 .television {
     position: relative;
     z-index: 1;
-    background-image: url(src/images/papier-television.png);
+    background-image: url(src/images/papier-television.webp);
     background-repeat: no-repeat;
     background-position: right;
     padding: 8vw 8vw 8vw 9.5vw;
@@ -233,7 +229,16 @@
 }
 
 .graphisme {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
     padding-top: 100px;
+}
+
+.graphisme-content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 
 .graphisme-affiche {
@@ -242,13 +247,13 @@
     align-items: center;
     justify-content: center;
     gap: 1vw;
-
+    cursor: pointer;
 }
 
 .graphisme-affiche img {
     position: relative;
     z-index: 2;
-    max-width: 30vw;
+    width: 350px;
     height: auto;
 }
 
@@ -256,7 +261,7 @@
     position: relative;
     z-index: 1;
     max-width: 20vw;
-    background-image: url(src/images/papier-graphisme1.png);
+    background-image: url(src/images/PAPIER.webp);
     background-position: right;
     background-size: 30vw;
     background-repeat: no-repeat;
@@ -269,7 +274,7 @@
     position: relative;
     z-index: 1;
     max-width: 20vw;
-    background-image: url(src/images/papier-graphisme2.png);
+    background-image: url(src/images/PAPIER-gauche.webp);
     background-position: left;
     background-size: 30vw;
     background-repeat: no-repeat;
@@ -280,16 +285,11 @@
 
 .graphisme-logo {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
-    width: 50vw;
-}
-
-.graphisme-texte-logo {
-    margin-top: 20px;
-    max-width: 23vw;
-    display: flex;
-    flex-direction: row;
-    align-items: end;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
 }
 
 .graphisme-postit {
@@ -298,12 +298,15 @@
 }
 
 .graphisme-logo img {
-    max-width: 12vw;
+    width: 15vw;
     height: auto;
 }
 
+.texte-logo {
+    width: 30vw;
+}
+
 .uiux {
-    padding-top: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -357,6 +360,11 @@
     text-decoration-thickness: 1.5px;
 }
 
+.etoiles {
+    width: 12vw;
+    height: auto;
+}
+
 .palette-couleurs {
     display: flex;
     flex-direction: row;
@@ -379,7 +387,7 @@
     justify-content: center;
     position: relative;
     z-index: 2;
-    background-image: url(src/images/postit-uiux.png);
+    background-image: url(src/images/postit-uiux.webp);
     background-repeat: no-repeat;
     background-position: center;
     padding: 5vw 4vw;
@@ -461,7 +469,7 @@
     justify-content: center;
     position: relative;
     z-index: 2;
-    background-image: url(src/images/postit-uiux.png);
+    background-image: url(src/images/postit-uiux.webp);
     background-repeat: no-repeat;
     background-position: center;
     padding: 3vw 6vw;
@@ -528,7 +536,7 @@
 }
 
 .illustrations-contenu {
-    width: 100vw;
+    width: 100%;
     height: 500px;
     display: flex;
     flex-direction: column;
@@ -542,7 +550,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(src/images/carnet.png);
+    background-image: url(src/images/carnet.webp);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
@@ -558,11 +566,14 @@
 .dessin {
     width: 65%;
     height: auto;
+    opacity: 0;
+    pointer-events: none;
+    cursor: pointer;
 }
 
-.dessin {
-    width: 65%;
-    height: auto;
+.dessin.visible {
+    opacity: 1;
+    pointer-events: all;
 }
 
 .carnet-left .dessin {
@@ -596,11 +607,6 @@
     cursor: pointer;
 }
 
-.polaroid-noir:hover,
-.polaroid-domaine {
-    animation: shake 0.4s ease-in-out;
-}
-
 .audiovisuel-message {
     display: flex;
     flex-direction: row;
@@ -618,3 +624,66 @@
     align-items: center;
     gap: 10px;
 }
+
+#filtre {
+    z-index: 800;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+  
+    &.dark {
+      background-color: rgba(0, 0, 0, 0.7);
+      pointer-events: all;
+  
+      &::after {
+        display: inline-block;
+      }
+    }
+  }
+  
+  #preview-image {
+    position: fixed;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0.5em;
+    --preview-image-width: min(
+      calc(95vw),
+      calc((95vh) * var(--image-width) / var(--image-height))
+    );
+    width: var(--preview-image-width);
+    height: calc(
+      var(--preview-image-width) * var(--image-height) / var(--image-width)
+    );
+    cursor: pointer;
+  }
+  
+  #filtre::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 3em;
+    height: 3em;
+    z-index: 801;
+    border: 5px solid #fff;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: none;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+  }
+  
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }

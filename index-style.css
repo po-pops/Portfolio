@@ -22,9 +22,9 @@
     line-height: 2.2;
     padding: 0 10vw 0 4vw;
     padding-top: 25px;
-    background-image: url('src/images/PAPIER.png');
+    background-image: url('src/images/PAPIER.webp');
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: 100%;
     background-position: start;
 }
 
@@ -35,6 +35,8 @@
 
 .a-propos-right {
     margin-left: -11vw;
+    width: 30vw;
+    height: auto;
 }
 
 .etoile-a-propos {
@@ -105,7 +107,7 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
-    background-image: url(src/images/papier-jaune.png);
+    background-image: url(src/images/papier-jaune.webp);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 80%;
@@ -132,7 +134,7 @@
     height: 290px;
 }
 
-.polaroid-image img {
+.polaroid-img {
     position: absolute;
     left: 0;
     top: 0;
@@ -140,18 +142,17 @@
     margin-top: 55px;
 }
 
-.polaroid-noir:hover {
+.polaroid:hover .polaroid-img-visible {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
 }
 
-.polaroid-noir {
+.polaroid .polaroid-img-visible {
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
 }
 
-.polaroid-noir:hover,
-.polaroid-domaine {
+.polaroid:hover {
     animation: shake 0.4s ease-in-out;
 }
 
@@ -259,7 +260,7 @@
     display: none;
     /* Caché par défaut */
     position: fixed;
-    background-image: url(src/images/post-it1.png);
+    background-image: url(src/images/post-it1.webp);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 30vw;
@@ -358,6 +359,7 @@ textarea {
 .mail-container {
     position: relative;
     display: inline-block;
+    opacity: 1;
 }
 
 .mail-container::after {
@@ -367,11 +369,12 @@ textarea {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('src/images/mail-ferme.png');
-    background-size: contain;
+    background-image: url('src/images/mail-ferme.webp');
+    background-position-y: 19px;
+    background-position-x: 6px;
+    background-size: 80%;
     background-repeat: no-repeat;
     opacity: 0;
-    transition: opacity 0.3s ease;
 }
 
 .mail-container:hover::after {
@@ -381,14 +384,13 @@ textarea {
 /* Cacher l'image mail-ouvert au hover */
 .mail-container:hover img {
     opacity: 0;
-    transition: opacity 0.3s ease;
 }
 
 /* Responsive */
 @media screen and (max-width: 375px) {
     .a-propos {
         padding: 48px 5vw;
-        gap: 48px;
+        gap: 12px;
     }
 
     .a-propos-contenu {
@@ -396,13 +398,13 @@ textarea {
     }
 
     .a-propos-left-texte {
-        height: 380px;
+        height: fit-content;
         width: 90%;
 
         line-height: 2.2;
-        padding: 0 8vw 0 4vw;
+        padding: 52px 8vw 0 4vw;
         padding-top: 25px;
-
+        background-size: cover;
     }
 
     .a-propos-right {
@@ -410,38 +412,77 @@ textarea {
         width: 90vw;
     }
 
-    /* .etoile-a-propos {
-        margin-top: -90px;
+ .etoile-a-propos {
+        margin-top: 10px;
         margin-left: -3vw;
         max-width: 10vw;
-    } */
+    } 
 
-
+    /* Domaines */
     .domaines-expertises {
-        padding: 42px 5vw;
+        padding: 42px 0;
     }
 
     .domaines-expertises-contenu {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-        background-image: url(src/images/papier-jaune.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 80%;
-        padding: 7vw 35vw;
+        width: 100%;
+        background-size: cover;
+        padding: 2vw 35vw;
     }
 
     .domaines-expertises-titre {
-        display: flex;
-        flex-direction: column;
-        align-items: end;
-        gap: 16px;
+        align-items: center;
     }
 
     .polaroid .bouton {
-        position: relative;
-        z-index: 2;
-        margin: 0 0 -30px 1vw;
+        margin: 0 0 -30px 5vw;
     }
+    
+    .polaroid-row1 {
+        flex-direction: column;
+        margin-left: 0vw;
+    }
+
+    .polaroid-row2 {
+        margin-right: 0vw;
+        flex-direction: column;
+    }
+
+    .polaroid {
+        width: 65vw;
+        height: 290px;
+    }
+    .polaroid:nth-child(1){
+        align-self: flex-end;
+    }
+
+    .polaroid-img {
+        width: 65vw;
+        margin-top: 55px;
+    }
+
+    .polaroid-noir {
+        opacity: 0;
+    }
+ 
+    .telephone-cable {
+        max-width: 45vw;
+    }
+
+    .telephone-appareil {
+        max-width: 27vw;
+        margin-left: -0.5vw;
+    }
+
+    .contact {
+        padding: 100px 0;
+        gap: 64px;
+    }
+    .titre-contact{
+        align-items: center;
+    }
+
+    .contact-message img {
+        max-width: 8vw;
+    }
+    
 }

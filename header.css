@@ -41,7 +41,7 @@ h4 {
 
 body {
     height: 1000px;
-    cursor: url("src/images/souris.png"), auto;
+    cursor: url("src/images/souris.webp"), auto;
     background-color: #F6F6F6;
 }
 
@@ -94,18 +94,18 @@ header {
     margin-right: 2vw;
 }
 
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 nav ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 5vw;
-}
-
-.language {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
 }
 
 .bouton-menu {
@@ -191,7 +191,7 @@ main {
     text-align: right;
     width: 100%;
     height: 100vh;
-    background-image: url('./src/images/papier1.png');
+    background-image: url('./src/images/papier1.webp');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -212,10 +212,13 @@ main {
         width: 50%;
         line-height: 180%;
         margin-top: -64px;
+        text-align: center;
     }
 
     h2 {
+        width: 80%;
         font-size: 28px;
+        text-align: center;
     }
 
     h3 {

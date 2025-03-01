@@ -18,26 +18,30 @@
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href=./index.html><img class="logo1" src="./src/images/logo-1.webp"></a></li>
-                <li><a href=./mes-projets.html class="menu-mes-projets">
-                        <p>Mes projets</p>
-                        <img class="image-entoure" src="src/images/entoure.webp" alt="rond crayonné">
-                    </a></li>
-                <li><a href=./index.html#a-propos class="bouton-menu">
-                        <p>A propos</p>
-                        <img class="image-souligne" src="src/images/souligne.webp" alt="ligne crayonnée">
-                    </a></li>
-                <li><a href=./index.html#contact class="bouton-menu">
-                        <p>Contact</p>
-                        <img class="image-souligne" src="src/images/souligne2.webp" alt="ligne crayonnée">
-                    </a></li>
-            </ul>
+            <div class="nav-left">
+                <ul>
+                    <li><a href=./index.html><img class="logo1" src="./src/images/logo-1.webp"></a></li>
+                    <li><a href=./index.html class="bouton-menu">
+                            <p>Accueil</p>
+                            <img class="image-souligne" src="src/images/souligne2.webp" alt="ligne crayonnée">
+                        </a></li>
+                    <li><a href=./index.html#a-propos class="bouton-menu">
+                            <p>A propos</p>
+                            <img class="image-souligne" src="src/images/souligne.webp" alt="ligne crayonnée">
+                        </a></li>
+                    <li><a href=./mes-projets.html class="menu-mes-projets">
+                            <p>Mes projets</p>
+                            <img class="image-entoure" src="src/images/entoure.webp" alt="rond crayonné">
+                        </a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <a href=./index.html#contact class="bouton-menu">
+                    <p>Contact</p>
+                    <img class="image-souligne" src="src/images/souligne2.webp" alt="ligne crayonnée">
+                </a>
+            </div>
         </nav>
-        <div class="language">
-            <span><a href=#>FR</a></span>
-            <span><a href=#>EN</a></span>
-        </div>
     </header>
     <main>
         <section class="top-content">
@@ -86,9 +90,9 @@
                             <span>UI/UX</span>
                             <img src="src/images/fleche-noire.svg" alt="flèche noire">
                         </div>
-                        <div class="polaroid-image">
-                            <img class="polaroid-domaine" src="src/images/polaroid-uix.webp" alt="1er polaroid UIX">
-                            <img class="polaroid-noir" src="src/images/polaroid-noir.webp" alt="polaroid noir">
+                        <img class="polaroid-img polaroid-domaine" src="src/images/polaroid-uix.webp" alt="1er polaroid UIX">
+                        <div class="polaroid-img-visible">
+                            <img class="polaroid-img polaroid-noir" src="src/images/polaroid-noir.webp" alt="polaroid noir">
                         </div>
                     </a>
                     <a href="./mes-projets.html#graphisme" class="polaroid">
@@ -96,9 +100,9 @@
                             <span>Graphisme</span>
                             <img src="src/images/fleche-noire.svg" alt="flèche noire">
                         </div>
-                        <div class="polaroid-image">
-                            <img src="src/images/polaroid-graphisme.webp" alt="2ème polaroid Graphisme">
-                            <img class="polaroid-noir" src="src/images/polaroid-noir.webp" alt="polaroid noir">
+                        <img class="polaroid-img" src="src/images/polaroid-graphisme.webp" alt="2ème polaroid Graphisme">
+                        <div class="polaroid-img-visible">
+                            <img class="polaroid-noir polaroid-img" src="src/images/polaroid-noir.webp" alt="polaroid noir">
                         </div>
                     </a>
                 </div>
@@ -108,9 +112,9 @@
                             <span>Audiovisuel</span>
                             <img src="src/images/fleche-noire.svg" alt="flèche noire">
                         </div>
-                        <div class="polaroid-image">
-                            <img src="src/images/polaroid-audiovisuel.webp" alt="3ème polaroid audiovisuel">
-                            <img class="polaroid-noir" src="src/images/polaroid-noir.webp" alt="polaroid noir">
+                        <img class="polaroid-img" src="src/images/polaroid-audiovisuel.webp" alt="3ème polaroid audiovisuel">
+                        <div class="polaroid-img-visible">
+                            <img class="polaroid-noir polaroid-img" src="src/images/polaroid-noir.webp" alt="polaroid noir">
                         </div>
                     </a>
                     <a href="./mes-projets.html#illustrations" class="polaroid">
@@ -118,9 +122,9 @@
                             <span>Illustrations</span>
                             <img src="src/images/fleche-noire.svg" alt="flèche noire">
                         </div>
-                        <div class="polaroid-image">
-                            <img src="src/images/polaroid-illustrations.webp" alt="4ème polaroid audiovisuel">
-                            <img class="polaroid-noir" src="src/images/polaroid-noir.webp" alt="polaroid noir">
+                        <img class="polaroid-img" src="src/images/polaroid-illustrations.webp" alt="4ème polaroid audiovisuel">
+                        <div class="polaroid-img-visible">
+                            <img class="polaroid-noir polaroid-img" src="src/images/polaroid-noir.webp" alt="polaroid noir">
                         </div>
                     </a>
                 </div>
@@ -135,7 +139,8 @@
                 <div class="telephone">
                     <img class="telephone-cable" src="src/images/telephone_cable.webp" alt="cable de téléphone">
                     <!-- Lien pour déclencher le popup -->
-                    <a href="#" id="openForm"><img class="telephone-appareil" src="src/images/telephone_1.webp" alt="vieux téléphone"></a>
+                    <a href="#" id="openForm"><img class="telephone-appareil" src="src/images/telephone_1.webp"
+                            alt="vieux téléphone"></a>
                 </div>
                 <div class="contact-message">
                     <h3>clic!</h3>
@@ -190,8 +195,9 @@
         </div>
         <div class="footer-right">
             <ul>
-                <li><a href=./index.html><img src="src/images/email.webp" alt="email"></a></li>
-                <li><a href="https://www.linkedin.com/in/pauline-yvelin-a23188332"><img src="src/images/linkedin.webp"></a></li>
+                <li><a href="mailto:pauline.yvelin@mmibordeaux.com"><img src="src/images/email.webp" alt="email"></a></li>
+                <li><a target="_blank" href="https://www.linkedin.com/in/pauline-yvelin-a23188332"><img
+                            src="src/images/linkedin.webp"></a></li>
             </ul>
         </div>
     </footer>

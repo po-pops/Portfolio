@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Vérifier si les données sont présentes
     if (!empty($name) && !empty($email) && !empty($message)) {
         // L'adresse email où l'email sera envoyé
-        $to = "ton-email@domaine.com"; // Remplace par ton adresse email
+        $to = "pauline.yvelin@mmibordeaux.com";
 
         // Sujet de l'email
         $subject = "Nouveau message de contact";

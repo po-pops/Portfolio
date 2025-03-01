@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: 'Rawrote';
     src: url('./src/font/rawrote.woff2') format('woff2');
@@ -18,14 +17,14 @@
     font-style: normal;
     font-weight: normal;
     src: local('Marker Note Regular'), url('./src/font/MarkerNote-Regular.woff') format('woff');
-    }
+}
 
-    @font-face {
-        font-family: 'Lemon Milk';
-        font-style: normal;
-        font-weight: 300;
-        src: local('Lemon Milk'), url('./src/font/BricolageGrotesque-Light.woff') format('woff')
-    }
+@font-face {
+    font-family: 'Lemon Milk';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Lemon Milk'), url('./src/font/BricolageGrotesque-Light.woff') format('woff')
+}
 @font-face {
     font-family: 'Lemon Milk';
     font-style: normal;
