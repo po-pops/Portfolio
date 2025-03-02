@@ -26,7 +26,7 @@
             <div class="nav-left">
                 <ul>
                     <li><a href=./index.html><img class="logo1" src="./src/images/logo-1.webp"></a></li>
-                    <li><a href=./index.html class="bouton-menu bouton-accueil">
+                    <li class="bouton-accueil"><a href=./index.html class="bouton-menu">
                             <p>Accueil</p>
                             <img class="image-souligne" src="src/images/souligne2.webp" alt="ligne crayonnée">
                         </a></li>
@@ -157,7 +157,8 @@
             </div>
             <div class="graphisme-content">
                 <div class="graphisme-affiche">
-                    <img onclick="openPreview('src/images/affiche1.webp')" src="src/images/affiche1.webp" class="img-zoomable" alt="affiche">
+                    <img onclick="openPreview('src/images/affiche1.webp')" src="src/images/affiche1.webp"
+                        class="img-zoomable" alt="affiche">
                     <div class="graphisme-texte1">
                         <span>Affiche de film</span>
                         <p>basée sur "La princesse Mononoke" du Studio Ghibi.</p>
@@ -169,7 +170,8 @@
                         <p>inspirée par le film "500 days of Summer" de Marc Webb.
                         </p>
                     </div>
-                    <img onclick="openPreview('src/images/affiche2.webp')" src="src/images/affiche2.webp" class="img-zoomable" alt="affiche">
+                    <img onclick="openPreview('src/images/affiche2.webp')" src="src/images/affiche2.webp"
+                        class="img-zoomable" alt="affiche">
                 </div>
                 <div class="graphisme-logo">
                     <img class="graphisme-postit" src="src/images/graphisme-postit1.webp"
@@ -289,27 +291,31 @@
 
     </main>
     <footer>
-        <div class="footer-left">
-            <a href="./index.html"><img class="logo2" src="src/images/logo-2.webp" alt="logo avec pseudonyme Pops"></a>
-            <div class="footer-menu">
+        <div class="footer-top">
+            <div class="footer-left">
+                <a href="./index.html"><img class="logo2" src="src/images/logo-2.webp"
+                        alt="logo avec pseudonyme Pops"></a>
+                <div class="footer-menu">
+                    <ul>
+                        <li><a href="./mes-projets.html" class="footer-lien">Mes projets</a></li>
+                        <li><a href="./index.html#a-propos" class="footer-lien">A propos</a></li>
+                        <li><a href="./index.html#contact" class="footer-lien">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-right">
                 <ul>
-                    <li><a href="./mes-projets.html" class="footer-lien">Mes projets</a></li>
-                    <li><a href="./index.html#a-propos" class="footer-lien">A propos</a></li>
-                    <li><a href="./index.html#contact" class="footer-lien">Contact</a></li>
+                    <li><a href="mailto:pauline.yvelin@mmibordeaux.com"><img src="src/images/email.webp"
+                                alt="email"></a>
+                    </li>
+                    <li><a target="_blank" href="https://www.linkedin.com/in/pauline-yvelin-a23188332"><img
+                                src="src/images/linkedin.webp"></a></li>
                 </ul>
             </div>
         </div>
-        <div class="footer-middle">
+        <div class="footer-bottom">
             <p>© 2024 Pauline Yvelin | Tous droits réservés</p>
             <a href="#" class="footer-lien">Mentions légales</a>
-        </div>
-        <div class="footer-right">
-            <ul>
-                <li><a href="mailto:pauline.yvelin@mmibordeaux.com"><img src="src/images/email.webp" alt="email"></a>
-                </li>
-                <li><a target="_blank" href="https://www.linkedin.com/in/pauline-yvelin-a23188332"><img
-                            src="src/images/linkedin.webp"></a></li>
-            </ul>
         </div>
     </footer>
     <div id="filtre"></div>
@@ -348,7 +354,7 @@
         }
 
         let page = 1;
-        const nbPages = document.querySelector(".carnet-left").children.length;        
+        const nbPages = document.querySelector(".carnet-left").children.length;
         const carnetLeft = document.querySelector(".carnet-left");
         const carnetRight = document.querySelector(".carnet-right");
         function turnPage() {

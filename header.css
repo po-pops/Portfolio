@@ -237,10 +237,23 @@ main {
         gap: 28px
     }
 
+    nav a p {
+        font-size: 16px;
+    }
+
+    main a {
+        font-size: 18px;
+    }
+
     /* top content */
+    header {
+        padding: 0 5vw;
+        width: calc(100vw - 10vw);
+    }
 
     .top-content {
         height: 90vh;
+        min-height: 500px;
         gap: 48px;
     }
 
@@ -252,11 +265,22 @@ main {
         font-size: 28px;
     }
 
-    .logo1 {
-        width: 40px;
+    nav {
+        gap: 5vw;
+        justify-content: center;
     }
 
-    .bouton-accueil { 
-        display: none!important;
+    .nav-right {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo1 {
+        width: 40px;
+        margin-right: 0;
+    }
+
+    .bouton-accueil {
+        display: none;
     }
 }
