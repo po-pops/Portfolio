@@ -251,4 +251,12 @@ main {
         line-height: 150%;
         font-size: 28px;
     }
+
+    .logo1 {
+        width: 40px;
+    }
+
+    .bouton-accueil { 
+        display: none!important;
+    }
 }

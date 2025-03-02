@@ -260,26 +260,26 @@
 .graphisme-texte1 {
     position: relative;
     z-index: 1;
-    max-width: 20vw;
+    width: 22vw;
     background-image: url(src/images/PAPIER.webp);
-    background-position: right;
-    background-size: 30vw;
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    padding: 8vw;
-    margin-left: -8vw;
+    padding: 4vw 3vw 4vw 6vw;
+    margin-left: -2vw;
     line-height: 40px;
 }
 
 .graphisme-texte2 {
     position: relative;
     z-index: 1;
-    max-width: 20vw;
+    width: 22vw;
     background-image: url(src/images/PAPIER-gauche.webp);
-    background-position: left;
-    background-size: 30vw;
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    padding: 8vw;
-    margin-right: -10vw;
+    padding: 4vw 3vw 4vw 6vw;
+    margin-right: -2vw;
     line-height: 40px;
 }
 
