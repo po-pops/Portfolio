@@ -719,7 +719,7 @@
     .uiux-left {
         max-width: none;
         width: 100%;
-        margin: 0 5vw;
+        margin: 0 5vw!important;
     }
 
     .uiux-right {
@@ -777,33 +777,29 @@
     }
 
     .palette-couleurs {
+        max-width: 90vw;
         display: flex;
         flex-direction: row;
         justify-content: center;
+        position: relative;
+        margin: 0 5vw;
     }
 
     .palette {
-        position: relative;
+        position: absolute;
+        left: 85%;
+        top: 15%;
         z-index: 2;
         max-width: 20vw;
         height: auto;
-        margin-left: -3vw;
-        margin-top: -5vw;
     }
 
     .carres-couleurs {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        z-index: 2;
-        background-image: url(src/images/postit-uiux.webp);
-        background-repeat: no-repeat;
-        background-position: center;
-        padding: 5vw 4vw;
+        width: 100%;
+        background-size: 100%;
+        padding: 12vw 4vw;
         margin-top: 10px;
-        gap: 1vw;
+        gap: 2vw;
     }
 
     .carre {
@@ -814,14 +810,8 @@
 
     .carre p {
         opacity: 0;
-        margin-top: -4vw;
-        transition: opacity 0.5s ease-in-out;
-        -webkit-user-select: none;
-        -webkit-touch-callout: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        font-size: 18px;
+        margin-top: -10vw;
+        font-size: 12px;
     }
 
     .texte-blanc {
@@ -833,27 +823,27 @@
     }
 
     .bleu-fonce {
-        padding: 3.5vw;
+        padding: 8vw;
         background-color: #155A7A;
-        border-radius: 1vw;
+        border-radius: 2vw;
     }
 
     .bleu-clair {
-        padding: 3.5vw;
+        padding: 8vw;
         background-color: #609BBF;
-        border-radius: 1vw;
+        border-radius: 2vw;
     }
 
     .blanc {
-        padding: 3.5vw;
+        padding: 8vw;
         background-color: #F6F6F6;
-        border-radius: 1vw;
+        border-radius: 2vw;
     }
 
     .noir {
-        padding: 3.5vw;
+        padding: 8vw;
         background-color: #000000;
-        border-radius: 1vw;
+        border-radius: 2vw;
     }
 
     .encre {
@@ -871,6 +861,7 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
+        margin: 0 5vw;
     }
 
     .polices {
@@ -907,5 +898,15 @@
         margin-bottom: 12px;
     }
 
-
+    .carnet {
+        width: 100%;
+        height: 580px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(src/images/carnet.webp);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+    }
 }
