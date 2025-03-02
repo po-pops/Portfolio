@@ -1,3 +1,12 @@
+.audiovisuel span,
+.uiux span,
+.graphisme span {
+    font-family: 'Perpetua';
+    font-size: 24px;
+    color: black;
+    background-color: rgba(210, 205, 163, 0.5);
+}
+
 .mes-projets-contenu {
     display: flex;
     flex-direction: column;
@@ -19,14 +28,6 @@
     justify-content: center;
 }
 
-.audiovisuel {
-    padding-top: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 100px;
-}
-
 .catégorie-titres {
     display: flex;
     flex-direction: row;
@@ -35,275 +36,12 @@
     margin-left: 4vw;
 }
 
-.mes-projets-audiovisuel-card {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    align-items: start;
-}
-
-.computer1, .computer2 {
-    position: relative;
-    z-index: 2;
-    max-width: 30vw;
-    height: auto;
-    flex-shrink: 0;
-    transition: transform 0.3s ease-in-out;
-}
-
-.computer1:hover {
-    transform: rotate(-5deg);
-    cursor: pointer;
-}
-
-.computer2:hover {
-    transform: rotate(5deg);
-    cursor: pointer;
-}
-
-.post-it1 {
-    position: relative;
-    z-index: 1;
-    margin-right: -4.5vw;
-    max-width: 20vw;
-    background-image: url('./src/images/post-it1.webp');
-    background-repeat: no-repeat;
-    background-position: left;
-    padding: 70px 45px;
-    flex-shrink: 0;
-}
-
-.post-it2 {
-    position: relative;
-    z-index: 1;
-    margin-left: -3vw;
-    max-width: 20vw;
-    background-image: url('./src/images/post-it2.webp');
-    background-repeat: no-repeat;
-    background-position: left;
-    padding: 70px 45px;
-    flex-shrink: 0;
-}
-
-.popup {
-    display: none;
-    position: fixed;
-    z-index: 999999;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    justify-content: center;
-    align-items: center;
-}
-
-.popup-content {
-    position: relative;
-    z-index: 999999;
-    background: url('./src/images/papier.webp');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    padding: 35px 5vw;
-    border-radius: 10px;
-    width: 40vw;
-    height: auto;
-}
-.close {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.popup-content .close {
-    color: white;
-    background-color: transparent;
-}
-
-.no-scroll {
-    overflow: hidden;
-    height: 100vh;
-}
-
-
-.audiovisuel span,
-.uiux span,
-.graphisme span {
-    font-family: 'Perpetua';
-    font-size: 24px;
-    color: black;
-    background-color: rgba(210, 205, 163, 0.5);
-}
-
-.etoile-audiovisuel1 {
-    position: relative;
-    z-index: 2;
-    margin-right: -7vw;
-    margin-top: -40px;
-    width: 10vw;
-    height: auto;
-}
-
-.etoile-audiovisuel2 {
-    position: relative;
-    z-index: 2;
-    margin-left: -9vw;
-    margin-top: -30px;
-    width: 10vw;
-    height: auto;
-}
-
-.audiovisuel-cards {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 180px;
-}
-
 .uiux-top {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: end;
     gap: 12vw;
-}
-
-.television-frame {
-    max-width: 40vw;
-    height: auto;
-}
-
-.television {
-    position: relative;
-    z-index: 1;
-    background-image: url(src/images/papier-television.webp);
-    background-repeat: no-repeat;
-    background-position: right;
-    padding: 8vw 8vw 8vw 9.5vw;
-}
-
-.television-screen {
-    position: absolute;
-    top: 18%;
-    left: 23%;
-    width: 53.5%;
-    height: 52%;
-    overflow: hidden;
-    z-index: 1;
-    /* Toujours derrière la frame */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    scrollbar-width: none;
-    pointer-events: all;
-    mask-image: url("src/images/formes-televisions.svg");
-    -webkit-mask-image: url("src/images/formes-televisions.svg");
-
-    /* Empêcher la répétition */
-    mask-repeat: no-repeat;
-    -webkit-mask-repeat: no-repeat;
-
-    /* Ajuster la taille au conteneur */
-    mask-size: 100% 100%;
-}
-
-.television-screen::-webkit-scrollbar {
-    display: none;
-    /* Cache la scrollbar sur Chrome et Safari */
-}
-
-.scroll-content {
-    width: 100%;
-    height: 200%;
-    /* Longue image scrollable */
-}
-
-.scroll-content img {
-    padding: 28px 0;
-    width: 100%;
-    height: auto;
-}
-
-.graphisme {
-    display: flex;
-    flex-direction: column;
-    gap: 100px;
-    padding-top: 100px;
-}
-
-.graphisme-content {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-}
-
-.graphisme-affiche {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 1vw;
-    cursor: pointer;
-}
-
-.graphisme-affiche img {
-    position: relative;
-    z-index: 2;
-    width: 350px;
-    height: auto;
-}
-
-.graphisme-texte1 {
-    position: relative;
-    z-index: 1;
-    width: 22vw;
-    background-image: url(src/images/PAPIER.webp);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 4vw 3vw 4vw 6vw;
-    margin-left: -2vw;
-    line-height: 40px;
-}
-
-.graphisme-texte2 {
-    position: relative;
-    z-index: 1;
-    width: 22vw;
-    background-image: url(src/images/PAPIER-gauche.webp);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 4vw 3vw 4vw 6vw;
-    margin-right: -2vw;
-    line-height: 40px;
-}
-
-.graphisme-logo {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 1vw;
-}
-
-.graphisme-postit {
-    width: 25vw;
-    height: auto;
-}
-
-.graphisme-logo img {
-    width: 15vw;
-    height: auto;
-}
-
-.texte-logo {
-    width: 30vw;
 }
 
 .uiux {
@@ -527,6 +265,269 @@
     background: none;
 }
 
+.audiovisuel {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 100px;
+}
+
+.mes-projets-audiovisuel-card {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: start;
+}
+
+.computer1, .computer2 {
+    position: relative;
+    z-index: 2;
+    max-width: 30vw;
+    height: auto;
+    flex-shrink: 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.computer1:hover {
+    transform: rotate(-5deg);
+    cursor: pointer;
+}
+
+.computer2:hover {
+    transform: rotate(5deg);
+    cursor: pointer;
+}
+
+.post-it1 {
+    position: relative;
+    z-index: 1;
+    margin-right: -4.5vw;
+    max-width: 20vw;
+    background-image: url('./src/images/post-it1.webp');
+    background-repeat: no-repeat;
+    background-position: left;
+    padding: 70px 45px;
+    flex-shrink: 0;
+}
+
+.post-it2 {
+    position: relative;
+    z-index: 1;
+    margin-left: -3vw;
+    max-width: 20vw;
+    background-image: url('./src/images/post-it2.webp');
+    background-repeat: no-repeat;
+    background-position: left;
+    padding: 70px 45px;
+    flex-shrink: 0;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 999999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    position: relative;
+    z-index: 999999;
+    background: url('./src/images/papier.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 35px 5vw;
+    border-radius: 10px;
+    width: 40vw;
+    height: auto;
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.popup-content .close {
+    color: white;
+    background-color: transparent;
+}
+
+.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+}
+
+.etoile-audiovisuel1 {
+    position: relative;
+    z-index: 2;
+    margin-right: -7vw;
+    margin-top: -40px;
+    width: 10vw;
+    height: auto;
+}
+
+.etoile-audiovisuel2 {
+    position: relative;
+    z-index: 2;
+    margin-left: -9vw;
+    margin-top: -30px;
+    width: 10vw;
+    height: auto;
+}
+
+.audiovisuel-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 180px;
+}
+
+.television-frame {
+    max-width: 40vw;
+    height: auto;
+}
+
+.television {
+    position: relative;
+    z-index: 1;
+    background-image: url(src/images/papier-television.webp);
+    background-repeat: no-repeat;
+    background-position: right;
+    padding: 8vw 8vw 8vw 9.5vw;
+}
+
+.television-screen {
+    position: absolute;
+    top: 18%;
+    left: 23%;
+    width: 53.5%;
+    height: 52%;
+    overflow: hidden;
+    z-index: 1;
+    /* Toujours derrière la frame */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    scrollbar-width: none;
+    pointer-events: all;
+    mask-image: url("src/images/formes-televisions.svg");
+    -webkit-mask-image: url("src/images/formes-televisions.svg");
+
+    /* Empêcher la répétition */
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+
+    /* Ajuster la taille au conteneur */
+    mask-size: 100% 100%;
+}
+
+.television-screen::-webkit-scrollbar {
+    display: none;
+    /* Cache la scrollbar sur Chrome et Safari */
+}
+
+.scroll-content {
+    width: 100%;
+    height: 200%;
+    /* Longue image scrollable */
+}
+
+.scroll-content img {
+    padding: 28px 0;
+    width: 100%;
+    height: auto;
+}
+
+.graphisme {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    padding-top: 100px;
+}
+
+.graphisme-content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.graphisme-affiche {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+    cursor: pointer;
+}
+
+.graphisme-affiche img {
+    position: relative;
+    z-index: 2;
+    width: 350px;
+    height: auto;
+}
+
+.graphisme-texte1 {
+    position: relative;
+    z-index: 1;
+    width: 22vw;
+    background-image: url(src/images/PAPIER.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 4vw 3vw 4vw 6vw;
+    margin-left: -2vw;
+    line-height: 40px;
+}
+
+.graphisme-texte2 {
+    position: relative;
+    z-index: 1;
+    width: 22vw;
+    background-image: url(src/images/PAPIER-gauche.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 4vw 3vw 4vw 6vw;
+    margin-right: -2vw;
+    line-height: 40px;
+}
+
+.graphisme-logo {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+}
+
+.graphisme-postit {
+    width: 25vw;
+    height: auto;
+}
+
+.graphisme-logo img {
+    width: 15vw;
+    height: auto;
+}
+
+.texte-logo {
+    width: 30vw;
+}
+
+
+
 .illustrations {
     display: flex;
     flex-direction: column;
@@ -687,3 +688,224 @@
       transform: rotate(360deg);
     }
   }
+
+@media screen and (max-width:375px) {
+    .mes-projets-contenu {
+        gap: 200px;
+    }
+    
+    .mes-projets-titre img {
+        width: 5vw;
+        margin-top: -50px;
+        margin-bottom: 50px;
+    }
+
+    .catégorie-titres {
+        gap: 1vw;
+        margin-left: 4vw;
+    }
+    
+    .audiovisuel span,
+    .uiux span,
+    .graphisme span {
+        font-size: 18px;
+    }
+
+    .uiux-top {
+        gap: 12vw;
+        flex-direction: column;
+        margin: 0 5vw;
+    }
+    
+    .uiux {
+        gap: 50px;
+    }
+    
+    .uiux-left {
+        max-width: none;
+        width: 100%;
+    }
+    
+    .scroll {
+        gap: 1vw;
+    }
+    
+    .scroll h3 {
+        margin-left: -2vw;
+    }
+    
+    .details-uiux {
+        gap: 400px;
+        margin-right: -14vw;
+    }
+    
+    .lien img {
+        margin: -8px -8px 0 0;
+    }
+    
+    .etoiles {
+        width: 12vw;
+    }
+    
+    .palette-couleurs {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .palette {
+        position: relative;
+        z-index: 2;
+        max-width: 20vw;
+        height: auto;
+        margin-left: -3vw;
+        margin-top: -5vw;
+    }
+    
+    .carres-couleurs {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 2;
+        background-image: url(src/images/postit-uiux.webp);
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 5vw 4vw;
+        margin-top: 10px;
+        gap: 1vw;
+    }
+    
+    .carre {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .carre p {
+        opacity: 0;
+        margin-top: -4vw;
+        transition: opacity 0.5s ease-in-out;
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        font-size: 18px;
+    }
+    
+    .texte-blanc {
+        color: white;
+    }
+    
+    .carre:hover p {
+        opacity: 1;
+    }
+    
+    .bleu-fonce {
+        padding: 3.5vw;
+        background-color: #155A7A;
+        border-radius: 1vw;
+    }
+    
+    .bleu-clair {
+        padding: 3.5vw;
+        background-color: #609BBF;
+        border-radius: 1vw;
+    }
+    
+    .blanc {
+        padding: 3.5vw;
+        background-color: #F6F6F6;
+        border-radius: 1vw;
+    }
+    
+    .noir {
+        padding: 3.5vw;
+        background-color: #000000;
+        border-radius: 1vw;
+    }
+    
+    .encre {
+        display: flex;
+        flex-direction: column;
+        gap: 1vw;
+        position: relative;
+        z-index: 2;
+        max-width: 20vw;
+        height: auto;
+        margin-right: -5vw;
+    }
+    
+    .typographie {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .polices {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 2;
+        background-image: url(src/images/postit-uiux.webp);
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 3vw 6vw;
+        margin-top: 10px;
+        gap: 1vw;
+    }
+    
+    .right-typographie {
+        display: flex;
+        position: relative;
+        z-index: 1;
+        flex-direction: column;
+        align-items: end;
+    }
+    
+    .polices-titres,
+    .polices-corps {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .polices-titres p,
+    .polices-corps p {
+        margin-bottom: 12px;
+    }
+    
+    .polices-titres span {
+        font-family: 'Lemon Milk';
+        background: none;
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    
+    .bold {
+        font-weight: 700;
+    }
+    
+    .medium {
+        font-weight: 500;
+    }
+    
+    .regular {
+        font-weight: 400;
+    }
+    
+    .light {
+        font-weight: 300;
+    }
+    
+    .polices-corps span {
+        font-family: 'Bricolage Grotesque';
+        background: none;
+    }
+}
