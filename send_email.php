@@ -1,4 +1,8 @@
 <?php
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Récupérer les données envoyées
     $name = isset($_POST['name']) ? $_POST['name'] : '';
