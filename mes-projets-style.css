@@ -93,6 +93,63 @@
     text-decoration-thickness: 1.5px;
 }
 
+.television-frame {
+    max-width: 40vw;
+    height: auto;
+}
+
+.television {
+    position: relative;
+    z-index: 1;
+    background-image: url(src/images/papier-television.webp);
+    background-repeat: no-repeat;
+    background-position: right;
+    padding: 8vw 8vw 8vw 9.5vw;
+}
+
+.television-screen {
+    position: absolute;
+    top: 18%;
+    left: 23%;
+    width: 53.5%;
+    height: 52%;
+    overflow: hidden;
+    z-index: 1;
+    /* Toujours derrière la frame */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    scrollbar-width: none;
+    pointer-events: all;
+    mask-image: url("src/images/formes-televisions.svg");
+    -webkit-mask-image: url("src/images/formes-televisions.svg");
+
+    /* Empêcher la répétition */
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+
+    /* Ajuster la taille au conteneur */
+    mask-size: 100% 100%;
+}
+
+.television-screen::-webkit-scrollbar {
+    display: none;
+    /* Cache la scrollbar sur Chrome et Safari */
+}
+
+.scroll-content {
+    width: 100%;
+    height: 200%;
+    /* Longue image scrollable */
+}
+
+.scroll-content img {
+    padding: 28px 0;
+    width: 100%;
+    height: auto;
+}
+
 .etoiles {
     position: absolute;
     top: 48px;
@@ -391,63 +448,6 @@
     gap: 180px;
 }
 
-.television-frame {
-    max-width: 40vw;
-    height: auto;
-}
-
-.television {
-    position: relative;
-    z-index: 1;
-    background-image: url(src/images/papier-television.webp);
-    background-repeat: no-repeat;
-    background-position: right;
-    padding: 8vw 8vw 8vw 9.5vw;
-}
-
-.television-screen {
-    position: absolute;
-    top: 18%;
-    left: 23%;
-    width: 53.5%;
-    height: 52%;
-    overflow: hidden;
-    z-index: 1;
-    /* Toujours derrière la frame */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    scrollbar-width: none;
-    pointer-events: all;
-    mask-image: url("src/images/formes-televisions.svg");
-    -webkit-mask-image: url("src/images/formes-televisions.svg");
-
-    /* Empêcher la répétition */
-    mask-repeat: no-repeat;
-    -webkit-mask-repeat: no-repeat;
-
-    /* Ajuster la taille au conteneur */
-    mask-size: 100% 100%;
-}
-
-.television-screen::-webkit-scrollbar {
-    display: none;
-    /* Cache la scrollbar sur Chrome et Safari */
-}
-
-.scroll-content {
-    width: 100%;
-    height: 200%;
-    /* Longue image scrollable */
-}
-
-.scroll-content img {
-    padding: 28px 0;
-    width: 100%;
-    height: auto;
-}
-
 .graphisme {
     display: flex;
     flex-direction: column;
@@ -710,7 +710,6 @@
     .uiux-top {
         gap: 12vw;
         flex-direction: column;
-        margin: 0 5vw;
     }
 
     .uiux {
@@ -719,6 +718,11 @@
 
     .uiux-left {
         max-width: none;
+        width: 100%;
+        margin: 0 5vw;
+    }
+
+    .uiux-right {
         width: 100%;
     }
 
@@ -732,6 +736,40 @@
 
     .lien img {
         margin: -8px -8px 0 0;
+    }
+
+    .television-frame {
+        max-width: none;
+        width: 100%;   
+}
+    
+    .television {
+        width: 100%;
+        background-size: cover;
+    }
+    
+    .television-screen {
+        top: 3%;
+        left: 19%;
+        width: 62%;
+        height: 80%;
+    }
+    
+    .television-screen::-webkit-scrollbar {
+        display: none;
+        /* Cache la scrollbar sur Chrome et Safari */
+    }
+    
+    .scroll-content {
+        width: 100%;
+        height: 200%;
+        /* Longue image scrollable */
+    }
+    
+    .scroll-content img {
+        padding: 28px 0;
+        width: 100%;
+        height: auto;
     }
 
     .etoiles {
