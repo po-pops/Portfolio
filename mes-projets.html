@@ -2,22 +2,30 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
+    <!-- Balises pour les navigateurs -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mes projets | Pops'</title>
+
+    <!-- Balises pour une indexation optimisée -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="bingbot" content="index, follow">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="/header.css">
     <link rel="stylesheet" href="mes-projets-style.css">
     <link rel="stylesheet" href="/footer.css">
     <link rel="stylesheet" href="font.css">
-    <link rel="stylesheet" href="lang.css">
+
+    <!-- Meta -->
+    <title>Mes projets | Pops'</title>
+
     <link rel="icon" type="image/webp" href="src/images/favicon.webp">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <!-- Multi langues -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/polyglot.js/2.4.0/polyglot.min.js"></script>
-
 </head>
 
 <body>
@@ -25,7 +33,8 @@
         <nav>
             <div class="nav-left">
                 <ul>
-                    <li><a href=./index.html><img class="logo1" src="./src/images/logo-1.webp"></a></li>
+                    <li><a href="./index.html" title="Retour vers l'accueil"><img class="logo1"
+                                src="./src/images/logo-1.webp" alt="Logo Pauline Yvelin"></a></li>
                     <li class="bouton-accueil"><a href=./index.html class="bouton-menu">
                             <p>Accueil</p>
                             <img class="image-souligne" src="src/images/souligne2.webp" alt="ligne crayonnée">
@@ -154,27 +163,39 @@
                 </div>
                 <div class="graphisme-content">
                     <div class="graphisme-affiche">
-                        <img onclick="openPreview('src/images/affiche1.webp')" src="src/images/affiche1.webp" class="affiche  img-zoomable" alt="affiche">
-                        <div class="graphisme-texte1">
-                            <span>Affiche de film</span>
-                            <p>Ayant pour but d'adopter une approche artistique qui s’éloigne de l’esthétique traditionnelle du film pour proposer une vision plus moderne et graphique de "Princesse Mononoké".</p>
-                        </div>
-                    </div>
-                    <div class="graphisme-affiche">
-                        <div class="graphisme-texte2">
+                        <img onclick="openPreview('src/images/affiche1.webp')" src="src/images/affiche1.webp"
+                            class="affiche  img-zoomable" alt="affiche">
+                        <div class="graphisme-texte">
                             <div class="affiche-texte">
                                 <span>Affiche de film</span>
-                                <p>Revisitant "500 Days of Summer" avec une esthétique collage et pop-art, mêlant textures rétro et éléments graphiques pour capturer la nature fragmentée et introspective de l’histoire.</p>
+                                <p>Ayant pour but d'adopter une approche artistique qui s’éloigne de l’esthétique
+                                    traditionnelle du film pour proposer une vision plus moderne et graphique de
+                                    "Princesse
+                                    Mononoké".</p>
+                            </div>
+                            <img src="src/images/PAPIER.webp" class="affiche-texte-background">
+                        </div>
+
+                    </div>
+                    <div class="graphisme-affiche">
+                        <div class="graphisme-texte">
+                            <div class="affiche-texte">
+                                <span>Affiche de film</span>
+                                <p>Revisitant "500 Days of Summer" avec une esthétique collage et pop-art, mêlant
+                                    textures rétro et éléments graphiques pour capturer la nature fragmentée et
+                                    introspective de l’histoire.</p>
                             </div>
                             <img src="src/images/PAPIER-gauche.webp" class="affiche-texte-background">
                         </div>
-                        <img onclick="openPreview('src/images/affiche2.webp')" src="src/images/affiche2.webp" class="affiche img-zoomable" alt="affiche">
+                        <img onclick="openPreview('src/images/affiche2.webp')" src="src/images/affiche2.webp"
+                            class="affiche img-zoomable" alt="affiche">
                     </div>
                     <div class="graphisme-logo">
                         <img class="graphisme-postit" src="src/images/graphisme-postit1.webp"
                             alt="Post it avec mockup pulls">
                         <div class="texte-logo">
-                            <p><span>Logo</span> réalisé lors du <span>concours de pull</span> organisé par le BDE de l’IUT
+                            <p><span>Logo</span> réalisé lors du <span>concours de pull</span> organisé par le BDE de
+                                l’IUT
                                 Bordeaux Montaigne, puis choisi par l’ensemble de l’IUT lors d’un vote.<br>- 2024</p>
                         </div>
                         <img src="src/images/graphisme-logo.webp" alt="logos">
@@ -182,7 +203,8 @@
                     <div class="graphisme-logo">
                         <div class="texte-logo">
                             <p>Production d’un <span>logo</span> sur demande à l’occasion de la création d’un portfolio,
-                                contenant les initiales <span>T et R</span> et dans un style minimaliste moderne.<br>- 2024
+                                contenant les initiales <span>T et R</span> et dans un style minimaliste moderne.<br>-
+                                2024
                             </p>
                         </div>
                         <img class="graphisme-postit" src="src/images/graphisme-postit2.webp" alt="Post it avec logos">
@@ -305,14 +327,15 @@
                     <li><a href="mailto:pauline.yvelin@mmibordeaux.com"><img src="src/images/email.webp"
                                 alt="email"></a>
                     </li>
-                    <li><a target="_blank" href="https://www.linkedin.com/in/pauline-yvelin-a23188332"><img
-                                src="src/images/linkedin.webp"></a></li>
+                    <li><a target="_blank" href="https://www.linkedin.com/in/pauline-yvelin-a23188332"
+                            title="Linkedin Pauline Yvelin"><img src="src/images/linkedin.webp" alt="Logo LinkedIn"></a>
+                    </li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
             <p>© 2024 Pauline Yvelin | Tous droits réservés</p>
-            <a href="./mentions_legales.html" class="footer-lien">Mentions légales</a>
+            <a href="./mentions-legales.html" class="footer-lien">Mentions légales</a>
         </div>
     </footer>
     <div id="filtre"></div>

@@ -91,6 +91,7 @@ header {
 
 .logo1 {
     width: 3vw;
+    min-width: 40px;
     margin-right: 2vw;
 }
 
@@ -203,7 +204,7 @@ main {
     background-color: rgba(210, 205, 163, 0.5);
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
 
     /* Font */
     h1 {
@@ -237,7 +238,7 @@ main {
     }
 
     nav a p {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     main a {
@@ -266,7 +267,7 @@ main {
 
     nav {
         gap: 5vw;
-        justify-content: center;
+        justify-content: space-between;
     }
 
     .nav-right {
@@ -282,4 +283,82 @@ main {
     .bouton-accueil {
         display: none;
     }
+}
+
+@media screen and (min-width: 426px) and (max-width: 600px) {
+
+    /* Font */
+    h1 {
+        font-size: 56px;
+        width: 80%;
+        line-height: 180%;
+        margin-top: -64px;
+        text-align: center;
+    }
+
+    h2 {
+        width: 80%;
+        font-size: 28px;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    h4 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    main {
+        gap: 28px
+    }
+
+    nav a p {
+        font-size: 18px;
+    }
+
+    main a {
+        font-size: 18px;
+    }
+
+    /* top content */
+    header {
+        padding: 0 5vw;
+        width: calc(100vw - 10vw);
+    }
+
+    .top-content {
+        height: 90vh;
+        min-height: 500px;
+
+    }
+
+    .top-content span {
+        margin: 0;
+        width: fit-content;
+        line-height: 150%;
+        font-size: 28px;
+    }
+
+    nav {
+        gap: 5vw;
+        justify-content: space-between;
+    }
+
+    .nav-right {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo1 {
+        width: 40px;
+        margin-right: 0;
+    }
+
+
 }

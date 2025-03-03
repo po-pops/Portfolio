@@ -26,6 +26,7 @@
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: start;
+    position: relative;
 }
 
 .a-propos-left {
@@ -37,14 +38,15 @@
     margin-left: -11vw;
     width: 30vw;
     height: auto;
+    z-index: 1;
 }
 
 .etoile-a-propos {
-    position: relative;
-    margin-top: -90px;
-    margin-left: -3vw;
-    max-width: 10vw;
+    position: absolute;
+    width: 10vw;
     height: auto;
+    left: -3vw;
+    bottom: -28px;
 }
 
 .flex-title-domaines {
@@ -107,7 +109,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 80%;
-    padding: 7vw 35vw;
+    padding: 60px 35vw;
 }
 
 .polaroid-row1 {
@@ -127,13 +129,13 @@
     align-items: end;
     position: relative;
     width: 16vw;
-    height: 340px;
+    height: 280px;
 }
 
 .polaroid .bouton {
     position: absolute;
     z-index: 2;
-    bottom: 30px;
+    bottom: 24px;
     left: 18px;
 }
 
@@ -142,7 +144,6 @@
     left: 0;
     top: 0;
     width: 16vw;
-    margin-top: 55px;
 }
 
 .polaroid:hover .polaroid-img-visible {
@@ -398,7 +399,7 @@ textarea {
 }
 
 /* Responsive */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
     .a-propos {
         padding: 48px 3vw;
         gap: 12px;
@@ -429,9 +430,15 @@ textarea {
     }
 
     .etoile-a-propos {
-        margin-top: 10px;
-        margin-left: -3vw;
-        max-width: 10vw;
+        width: 20vw;
+        height: auto;
+        left: 0;
+        bottom: -16px;
+    }
+
+    .a-propos-left .bouton {
+        margin-left: 23vw;
+        margin-top: -10px;
     }
 
     /* Domaines */
@@ -463,12 +470,12 @@ textarea {
     }
 
     .polaroid {
-        width: 65vw;
-        height: 300px;
+        width: 200px;
+        height: 250px;
     }
 
     .polaroid .bouton {
-        bottom: 24px;
+        bottom: 27px;
     }
 
     .bouton span {
@@ -480,8 +487,135 @@ textarea {
     }
 
     .polaroid-img {
-        width: 65vw;
-        margin-top: 55px;
+        width: 200px;
+    }
+
+    .polaroid-noir {
+        opacity: 0;
+    }
+
+    .telephone-cable {
+        max-width: 45vw;
+    }
+
+    .telephone-appareil {
+        max-width: 27vw;
+        margin-left: -0.5vw;
+    }
+
+    .contact {
+        padding: 100px 0;
+        gap: 64px;
+    }
+
+    .titre-contact {
+        align-items: center;
+    }
+
+    .contact-message img {
+        max-width: 8vw;
+    }
+
+    .popup {
+        background-size: 100%;
+    }
+
+    .mail-container::after,
+    .mail-container img {
+        background-size: 100%;
+        width: 35px;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 600px) {
+    .a-propos {
+        padding: 48px 3vw;
+        gap: 12px;
+    }
+
+    .a-propos-contenu {
+        flex-direction: column-reverse;
+    }
+
+    .a-propos-left-texte {
+        background-image: url('src/images/background-apropos.png');
+        height: fit-content;
+        width: calc(100% - 8vw);
+        line-height: 2.2;
+        padding: 0 4vw 0 4vw;
+        height: 400px;
+        background-size: cover;
+    }
+
+    .a-propos-left-texte p {
+        width: 95%;
+        line-height: 200%;
+    }
+
+    .a-propos-right {
+        margin: 0;
+        width: 90vw;
+    }
+
+    .etoile-a-propos {
+        width: 20vw;
+        height: auto;
+        left: 0;
+        bottom: -16px;
+    }
+
+    .a-propos-left .bouton {
+        margin-left: 23vw;
+        margin-top: -10px;
+    }
+
+    /* Domaines */
+    .domaines-expertises {
+        padding: 32px 0;
+    }
+
+    .domaines-expertises-contenu {
+        background-image: url('src/images/background-category.png');
+        width: calc(100% - 10vw);
+        background-size: cover;
+        padding: 50px 5vw;
+    }
+
+    .domaines-expertises-titre {
+        align-items: center;
+    }
+
+
+
+    .polaroid-row1 {
+        flex-direction: column;
+        margin-left: 0vw;
+    }
+
+    .polaroid-row2 {
+        margin-right: 0vw;
+        flex-direction: column;
+    }
+
+    .polaroid {
+        width: 200px;
+        height: 250px;
+    }
+
+    .polaroid .bouton {
+        bottom: 27px;
+    }
+
+    .bouton span {
+        font-size: 16px;
+    }
+
+    .polaroid:nth-child(1) {
+        align-self: flex-end;
+    }
+
+    .polaroid-img {
+        width: 200px;
     }
 
     .polaroid-noir {
