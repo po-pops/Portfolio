@@ -179,7 +179,6 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 200px
 }
 
 .top-content {

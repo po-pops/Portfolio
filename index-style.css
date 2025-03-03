@@ -215,7 +215,7 @@
 }
 
 .contact {
-    padding: 100px;
+    padding-top: 100px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -387,6 +387,14 @@ textarea {
 /* Cacher l'image mail-ouvert au hover */
 .mail-container:hover img {
     opacity: 0;
+}
+
+.mentions-légales {
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+    margin: 0 6vw 200px 6vw;
+    text-align: justify;
 }
 
 /* Responsive */
