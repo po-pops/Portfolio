@@ -10,7 +10,7 @@
 .a-propos-contenu {
     display: flex;
     align-items: center;
-    position: relative;
+    justify-content: center;
 }
 
 .a-propos-left-texte {
@@ -34,11 +34,49 @@
     flex-direction: column;
 }
 
+.a-propos-left .bouton {
+    margin-left: 10vw;
+    margin-top: -30px;
+}
+
 .a-propos-right {
-    margin-left: -11vw;
-    width: 30vw;
-    height: auto;
-    z-index: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 10vw;
+    height:65px;
+}
+
+.photo1 {
+    position: absolute;
+    bottom: -50%;
+    right: 50%;
+    z-index: 3;
+    width: 10vw;
+}
+.photo2 {
+    position: absolute;
+    width: 15vw;
+    bottom: 100%;
+    right: 100%;
+    z-index: 4;
+    width: 14vw;
+    transform: rotate(10deg);
+}
+.photo3 {
+    position: absolute;
+    top: 0%;
+    right: -10%;
+    z-index: 2;
+    width: 10vw;
+    transform: rotate(-10deg);
+}
+.photo4 {
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    z-index: 2;
+    width: 10vw;
 }
 
 .etoile-a-propos {
@@ -47,6 +85,25 @@
     height: auto;
     left: -3vw;
     bottom: -28px;
+}
+
+.folded-corner {
+    position: relative;             /* pour servir de référent */
+}
+.folded-corner::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 1px solid transparent;
+    border-color: inherit;
+    background: #FFF;
+    transition: width .3s,height .3s;              /* pas vraiment nécessaire */
+}
+
+.folded-corner:hover::before {
+    width: 3em;
+    height: 3em;
 }
 
 .flex-title-domaines {
@@ -62,8 +119,6 @@
     align-items: end;
     gap: 16px;
 }
-
-
 
 .a-propos-contenu .bouton,
 .domaines-expertises-titre .bouton {
@@ -87,11 +142,6 @@
     color: black;
     font-size: 18px;
     text-transform: uppercase;
-}
-
-.a-propos-left .bouton {
-    margin-left: 10vw;
-    margin-top: -30px;
 }
 
 .domaines-expertises {
