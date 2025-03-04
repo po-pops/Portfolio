@@ -222,7 +222,7 @@ main {
     }
 
     h3 {
-        font-size: 24px;
+        font-size: 18px;
     }
 
     h4 {
@@ -247,11 +247,13 @@ main {
 
     /* top content */
     header {
+        height: 65px;
         padding: 0 5vw;
         width: calc(100vw - 10vw);
     }
 
     .top-content {
+        margin-top: 65px;
         height: 90vh;
         min-height: 500px;
         gap: 48px;
@@ -303,7 +305,7 @@ main {
     }
 
     h3 {
-        font-size: 24px;
+        font-size: 18px;
     }
 
     h4 {
@@ -359,6 +361,4 @@ main {
         width: 40px;
         margin-right: 0;
     }
-
-
 }
