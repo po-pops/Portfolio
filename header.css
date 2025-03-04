@@ -332,16 +332,16 @@ main {
     header {
         padding: 0 5vw;
         width: calc(100vw - 10vw);
+        height: 80px;
     }
 
     .top-content {
+        margin-top: 80px;
         height: 90vh;
         min-height: 500px;
-
     }
 
     .top-content span {
-        margin: 0;
         width: fit-content;
         line-height: 150%;
         font-size: 28px;

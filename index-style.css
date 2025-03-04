@@ -40,11 +40,11 @@
 }
 
 .etoile-a-propos {
-    position: relative;
-    margin-top: -90px;
-    margin-left: -3vw;
-    max-width: 10vw;
-    height: auto;
+    position: absolute;
+    bottom: -20px;
+    left: -3vw;
+    width: 12vw;
+    margin-left: 0;
 }
 
 .flex-title-domaines {
@@ -59,6 +59,10 @@
     flex-direction: column;
     align-items: end;
     gap: 16px;
+}
+
+.a-propos-contenu .bouton {
+    margin-left: 10vw;
 }
 
 .a-propos-contenu .bouton,
@@ -403,12 +407,150 @@ textarea {
 
     .a-propos-left-texte {
         background-image: url('src/images/background-apropos.png');
+        width: calc(100% - 14vw);
+        line-height: 2.2;
+        padding: 0 10vw 0 4vw;
+        height: 400px;
+        background-size: 100% 100%;
+    }
+
+    .a-propos-left-texte p {
+        width: 95%;
+        line-height: 200%;
+    }
+
+    .a-propos-right {
+        margin: 0;
+        width: 90vw;
+    }
+
+    .a-propos-contenu .bouton {
+        margin-left: 15vw;
+    }
+
+    .etoile-a-propos {
+        bottom: 0;
+        left: 1vw;
+    }
+
+    /* Domaines */
+    .domaines-expertises {
+        padding: 32px 0;
+    }
+
+    .domaines-expertises-contenu {
+        background-image: url('src/images/background-category.png');
+        width: calc(100% - 10vw);
+        background-size: cover;
+        padding: 50px 5vw;
+        gap: 0;
+    }
+
+    .domaines-expertises-titre {
+        align-items: center;
+    }
+
+    .polaroid-row1 {
+        flex-direction: column;
+        margin-left: 0vw;
+        gap:0;
+    }
+
+    .polaroid-row2 {
+        margin-right: 0vw;
+        flex-direction: column;
+        gap:0;
+    }
+
+    .polaroid {
+        width: 200px;
+        height: 300px;
+    }
+
+    .polaroid .bouton {
+        bottom: 20px;
+    }
+
+    .bouton span {
+        font-size: 16px;
+    }
+
+    .polaroid:nth-child(1) {
+        align-self: flex-end;
+    }
+
+    .polaroid-img {
+        width: 200px;
+        margin-top: 55px;
+    }
+
+    .polaroid-noir {
+        opacity: 0;
+    }
+
+    .telephone-cable {
+        max-width: 45vw;
+    }
+
+    .telephone-appareil {
+        max-width: 27vw;
+        margin-top: 2vw;
+        margin-left: -2vw;
+    }
+
+    .contact {
+        padding: 100px 0 0 0;
+        gap: 64px;
+    }
+
+    .titre-contact {
+        align-items: center;
+    }
+
+    .contact-message img {
+        max-width: 8vw;
+    }
+
+    .popup {
+        background-size: 100% 80%;
+    }
+
+    .popup h2{
+        text-align: start;
+    }
+
+    .mail-container::after,
+    .mail-container img {
+        background-size: 100%;
+        background-position: center;
+        left: 10%;
+        width: 35px;
+    }
+
+    .envoyer img {
+        width: 10vw;
+    }
+}
+
+@media screen and (min-width: 376px) and (max-width: 425px) {
+    .a-propos {
+        padding: 48px 3vw;
+        gap: 12px;
+    }
+
+    .a-propos-contenu {
+        flex-direction: column-reverse;
+    }
+
+    .a-propos-left-texte {
+        background-image: url('src/images/background-apropos.png');
         height: fit-content;
         width: calc(100% - 8vw);
         line-height: 2.2;
-        padding: 0 4vw 0 4vw;
+        padding: 0 5vw;
         height: 400px;
-        background-size: cover;
+        background-size: 100% 100%;
+        background-position: center;
     }
 
     .a-propos-left-texte p {
@@ -437,6 +579,7 @@ textarea {
         width: calc(100% - 10vw);
         background-size: cover;
         padding: 50px 5vw;
+        gap: 0;
     }
 
     .domaines-expertises-titre {
@@ -446,11 +589,15 @@ textarea {
     .polaroid-row1 {
         flex-direction: column;
         margin-left: 0vw;
+        gap: 60px;
+        margin-bottom: 80px;
     }
 
     .polaroid-row2 {
         margin-right: 0vw;
         flex-direction: column;
+        gap: 60px;
+        margin-bottom: 80px;
     }
 
     .polaroid {
@@ -459,7 +606,7 @@ textarea {
     }
 
     .polaroid .bouton {
-        bottom: 10px;
+        bottom: -50px;
     }
 
     .bouton span {
@@ -520,5 +667,150 @@ textarea {
 
     .envoyer img {
         width: 10vw;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 600px) {
+    .a-propos {
+        padding: 48px 3vw;
+        gap: 12px;
+    }
+
+    .a-propos-contenu {
+        flex-direction: column-reverse;
+    }
+
+    .a-propos-left-texte {
+        position: relative;
+        background-image: url('src/images/background-apropos.png');
+        height: fit-content;
+        width: calc(100% - 8vw);
+        line-height: 2.2;
+        padding: 0 5vw;
+        height: 300px;
+        background-size: 100% 100%;
+        background-position: center;
+    }
+
+    .a-propos-left-texte p {
+        width: 95%;
+        line-height: 200%;
+    }
+
+    .a-propos-right {
+        margin: 0;
+        width: 75vw;
+    }
+
+    .etoile-a-propos {
+        position: absolute;
+        bottom: -32px;
+        left: 0;
+        max-width: 20vw;
+        margin-left: 0;
+    }
+
+    .a-propos-contenu .bouton {
+        margin-left: 22vw;
+    }
+
+    /* Domaines */
+    .domaines-expertises {
+        padding: 32px 0;
+    }
+
+    .domaines-expertises-contenu {
+        background-image: url('src/images/background-category.png');
+        width: calc(100% - 10vw);
+        background-size: cover;
+        padding: 90px 5vw;
+        gap: 0;
+    }
+
+    .domaines-expertises-titre {
+        align-items: center;
+    }
+
+    .polaroid-row1 {
+        flex-direction: column;
+        margin-left: 0vw;
+        gap: 60px;
+        margin-bottom: 80px;
+    }
+
+    .polaroid-row2 {
+        margin-right: 0vw;
+        flex-direction: column;
+        gap: 60px;
+        margin-bottom: 80px;
+    }
+
+    .polaroid {
+        width: 55vw;
+        height: 370px;
+    }
+
+    .polaroid .bouton {
+        bottom: -50px;
+    }
+
+    .bouton span {
+        font-size: 16px;
+    }
+
+    .polaroid:nth-child(1) {
+        align-self: flex-end;
+    }
+
+    .polaroid-img {
+        width: 55vw;
+        margin-top: 55px;
+    }
+
+    .polaroid-noir {
+        opacity: 0;
+    }
+
+    .telephone-cable {
+        max-width: 45vw;
+    }
+
+    .telephone-appareil {
+        max-width: 27vw;
+        margin-top: 2vw;
+        margin-left: -2vw;
+    }
+
+    .contact {
+        padding: 100px 0;
+        gap: 64px;
+    }
+
+    .titre-contact {
+        align-items: center;
+    }
+
+    .contact-message img {
+        max-width: 8vw;
+    }
+
+    .popup {
+        background-size: 80% 100%;
+    }
+
+    .popup h2{
+        text-align: start;
+    }
+
+    .mail-container::after,
+    .mail-container img {
+        background-size: 100%;
+        background-position: center;
+        left: 10%;
+        width: 6vw!important;
+    }
+
+    .envoyer img {
+        width: 6vw;
     }
 }
