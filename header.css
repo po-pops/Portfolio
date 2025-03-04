@@ -287,7 +287,83 @@ main {
     }
 }
 
-@media screen and (min-width: 426px) and (max-width: 600px) {
+@media screen and (min-width: 425px) and (max-width: 600px) {
+
+    /* Font */
+    h1 {
+        font-size: 56px;
+        width: 80%;
+        line-height: 180%;
+        margin-top: -64px;
+        text-align: center;
+    }
+
+    h2 {
+        width: 80%;
+        font-size: 28px;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    h4 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    main {
+        gap: 28px
+    }
+
+    nav a p {
+        font-size: 18px;
+    }
+
+    main a {
+        font-size: 18px;
+    }
+
+    /* top content */
+    header {
+        padding: 0 5vw;
+        width: calc(100vw - 10vw);
+        height: 80px;
+    }
+
+    .top-content {
+        margin-top: 80px;
+        height: 90vh;
+        min-height: 500px;
+    }
+
+    .top-content span {
+        width: fit-content;
+        line-height: 150%;
+        font-size: 28px;
+    }
+
+    nav {
+        gap: 5vw;
+        justify-content: space-between;
+    }
+
+    .nav-right {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo1 {
+        width: 40px;
+        margin-right: 0;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 768px) {
 
     /* Font */
     h1 {

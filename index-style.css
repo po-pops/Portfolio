@@ -212,7 +212,7 @@
 }
 
 .contact {
-    padding: 100px;
+    padding: 100px 0 0 0;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -425,10 +425,11 @@ textarea {
     }
 
     .a-propos-contenu .bouton {
-        margin-left: 15vw;
+        margin-left: 25vw;
     }
 
     .etoile-a-propos {
+        width: 20vw;
         bottom: 0;
         left: 1vw;
     }
@@ -532,7 +533,7 @@ textarea {
     }
 }
 
-@media screen and (min-width: 376px) and (max-width: 425px) {
+@media screen and (min-width: 375px) and (max-width: 425px) {
     .a-propos {
         padding: 48px 3vw;
         gap: 12px;
@@ -563,10 +564,14 @@ textarea {
         width: 90vw;
     }
 
+    .a-propos-contenu .bouton {
+        margin-left: 25vw;
+    }
+
     .etoile-a-propos {
-        margin-top: 10px;
-        margin-left: -3vw;
-        max-width: 20vw;
+        width: 20vw;
+        bottom: 0;
+        left: 1vw;
     }
 
     /* Domaines */
@@ -601,12 +606,12 @@ textarea {
     }
 
     .polaroid {
-        width: 65vw;
+        width: 250px;
         height: 300px;
     }
 
     .polaroid .bouton {
-        bottom: -50px;
+        bottom: -30px;
     }
 
     .bouton span {
@@ -618,7 +623,7 @@ textarea {
     }
 
     .polaroid-img {
-        width: 65vw;
+        width: 250px;
         margin-top: 55px;
     }
 
@@ -637,7 +642,7 @@ textarea {
     }
 
     .contact {
-        padding: 100px 0;
+        padding: 100px 0 0 0;
         gap: 64px;
     }
 
@@ -670,7 +675,7 @@ textarea {
     }
 }
 
-@media screen and (min-width: 426px) and (max-width: 600px) {
+@media screen and (min-width: 425px) and (max-width: 600px) {
     .a-propos {
         padding: 48px 3vw;
         gap: 12px;
@@ -734,24 +739,24 @@ textarea {
     .polaroid-row1 {
         flex-direction: column;
         margin-left: 0vw;
-        gap: 60px;
-        margin-bottom: 80px;
+        margin-bottom: 15px;
+        gap: 0;
     }
 
     .polaroid-row2 {
         margin-right: 0vw;
         flex-direction: column;
-        gap: 60px;
         margin-bottom: 80px;
+        gap: 0;
     }
 
     .polaroid {
-        width: 55vw;
+        width: 275px;
         height: 370px;
     }
 
     .polaroid .bouton {
-        bottom: -50px;
+        bottom: 10px;
     }
 
     .bouton span {
@@ -763,7 +768,7 @@ textarea {
     }
 
     .polaroid-img {
-        width: 55vw;
+        width: 275px;
         margin-top: 55px;
     }
 
@@ -782,7 +787,7 @@ textarea {
     }
 
     .contact {
-        padding: 100px 0;
+        padding: 100px 0 0 0;
         gap: 64px;
     }
 
@@ -796,6 +801,297 @@ textarea {
 
     .popup {
         background-size: 80% 100%;
+    }
+
+    .popup h2{
+        text-align: start;
+    }
+
+    .mail-container::after,
+    .mail-container img {
+        background-size: 100%;
+        background-position: center;
+        left: 10%;
+        width: 6vw!important;
+    }
+
+    .envoyer img {
+        width: 6vw;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 768px) {
+    .a-propos {
+        padding: 48px 3vw;
+    }
+
+    .a-propos-contenu {
+        flex-direction: row;
+    }
+
+    .a-propos-left-texte {
+        position: relative;
+        background-image: url('src/images/background-apropos.png');
+        height: fit-content;
+        width: calc(100% - 8vw);
+        line-height: 2.2;
+        padding: 20px 5vw;
+        background-size: 100% 100%;
+    }
+
+    .a-propos-left-texte p {
+        width: 75%;
+        line-height: 200%;
+    }
+
+    .a-propos-right {
+        z-index: 2;
+        margin: 0;
+        width: 40vw;
+        margin-left: -11vw;
+    }
+
+    .etoile-a-propos {
+        position: absolute;
+        bottom: -32px;
+        left: 0;
+        max-width: 20vw;
+        margin-left: 0;
+    }
+
+    .a-propos-contenu .bouton {
+        margin-left: 15vw;
+    }
+
+    /* Domaines */
+    .domaines-expertises {
+        padding: 32px 0;
+    }
+
+    .domaines-expertises-contenu {
+        align-items: center;
+        background-image: url('src/images/papier-jaune.webp');
+        width: calc(100% - 10vw);
+        background-size: cover;
+        padding: 5vw;
+        gap: 0;
+    }
+
+    .domaines-expertises-titre {
+        align-items: center;
+    }
+
+    .polaroid-row1 {
+        flex-direction: row;
+        margin-left: 0vw;
+        margin-bottom: 15px;
+        gap: 5vw;
+        margin-top: 100px;
+    }
+
+    .polaroid-row2 {
+        margin-right: 0vw;
+        flex-direction: row;
+        margin-bottom: 80px;
+        gap: 5vw;
+    }
+
+    .polaroid {
+        width: 275px;
+        height: 370px;
+    }
+
+    .polaroid .bouton {
+        bottom: 10px;
+    }
+
+    .bouton span {
+        font-size: 16px;
+    }
+
+    .polaroid:nth-child(1) {
+        align-self: flex-end;
+    }
+
+    .polaroid-img {
+        width: 275px;
+        margin-top: 55px;
+    }
+
+    .polaroid-noir {
+        opacity: 0;
+    }
+
+    .telephone-cable {
+        max-width: 45vw;
+    }
+
+    .telephone-appareil {
+        max-width: 27vw;
+        margin-top: 2vw;
+        margin-left: -2vw;
+    }
+
+    .contact {
+        padding: 100px 0 0 0;
+        gap: 64px;
+    }
+
+    .titre-contact {
+        align-items: center;
+    }
+
+    .contact-message img {
+        max-width: 8vw;
+    }
+
+    .popup {
+        background-size: 80% 100%;
+    }
+
+    .popup h2{
+        text-align: start;
+    }
+
+    .mail-container::after,
+    .mail-container img {
+        background-size: 100%;
+        background-position: center;
+        left: 10%;
+        width: 6vw!important;
+    }
+
+    .envoyer img {
+        width: 6vw;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .a-propos {
+        padding: 48px 3vw;
+    }
+
+    .a-propos-contenu {
+        flex-direction: row;
+    }
+
+    .a-propos-left-texte {
+        position: relative;
+        background-image: url('src/images/background-apropos.png');
+        height: fit-content;
+        width: calc(100% - 8vw);
+        line-height: 2.2;
+        padding: 20px 5vw;
+        background-size: 100% 100%;
+    }
+
+    .a-propos-left-texte p {
+        width: 75%;
+        line-height: 200%;
+    }
+
+    .a-propos-right {
+        z-index: 2;
+        margin: 0;
+        width: 40vw;
+        margin-left: -11vw;
+    }
+
+    .etoile-a-propos {
+        position: absolute;
+        bottom: -32px;
+        left: 0;
+        max-width: 20vw;
+        margin-left: 0;
+    }
+
+    .a-propos-contenu .bouton {
+        margin-left: 15vw;
+    }
+
+    /* Domaines */
+    .domaines-expertises {
+        padding: 32px 0;
+    }
+
+    .domaines-expertises-contenu {
+        align-items: center;
+        background-image: url('src/images/papier-jaune.webp');
+        width: calc(100% - 10vw);
+        background-size: cover;
+        padding: 5vw;
+        gap: 0;
+    }
+
+    .domaines-expertises-titre {
+        align-items: center;
+    }
+
+    .polaroid-row1 {
+        flex-direction: row;
+        gap: 5vw;
+        margin: 100px 15vw 15px 0;
+    }
+
+    .polaroid-row2 {
+        margin-right: 0vw;
+        flex-direction: row;
+        margin-bottom: 80px;
+        margin-left: 15vw;
+        gap: 5vw;
+    }
+
+    .polaroid {
+        width: 275px;
+        height: 370px;
+    }
+
+    .polaroid .bouton {
+        bottom: 10px;
+    }
+
+    .bouton span {
+        font-size: 16px;
+    }
+
+    .polaroid:nth-child(1) {
+        align-self: flex-end;
+    }
+
+    .polaroid-img {
+        width: 275px;
+        margin-top: 55px;
+    }
+
+    .polaroid-noir {
+        opacity: 0;
+    }
+
+    .telephone-cable {
+        max-width: 45vw;
+    }
+
+    .telephone-appareil {
+        max-width: 27vw;
+        margin-top: 2vw;
+        margin-left: -2vw;
+    }
+
+    .contact {
+        padding: 100px 0 0 0;
+        gap: 64px;
+    }
+
+    .titre-contact {
+        align-items: center;
+    }
+
+    .contact-message img {
+        max-width: 8vw;
+    }
+
+    .popup {
+        background-size: 70% 70%;
     }
 
     .popup h2{
