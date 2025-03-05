@@ -406,7 +406,7 @@ textarea {
     }
 
     .a-propos-left-texte {
-        background-image: url('src/images/background-apropos.png');
+        background-image: url('src/images/background-paper/background-apropos.png');
         width: calc(100% - 14vw);
         line-height: 2.2;
         padding: 0 10vw 0 4vw;
@@ -440,7 +440,7 @@ textarea {
     }
 
     .domaines-expertises-contenu {
-        background-image: url('src/images/background-category.png');
+        background-image: url('src/images/background-paper/background-category.png');
         width: calc(100% - 10vw);
         background-size: cover;
         padding: 50px 5vw;
@@ -454,13 +454,13 @@ textarea {
     .polaroid-row1 {
         flex-direction: column;
         margin-left: 0vw;
-        gap:0;
+        gap: 0;
     }
 
     .polaroid-row2 {
         margin-right: 0vw;
         flex-direction: column;
-        gap:0;
+        gap: 0;
     }
 
     .polaroid {
@@ -516,7 +516,7 @@ textarea {
         background-size: 100% 80%;
     }
 
-    .popup h2{
+    .popup h2 {
         text-align: start;
     }
 
@@ -544,7 +544,7 @@ textarea {
     }
 
     .a-propos-left-texte {
-        background-image: url('src/images/background-apropos.png');
+        background-image: url('src/images/background-paper/background-apropos.png');
         height: fit-content;
         width: calc(100% - 8vw);
         line-height: 2.2;
@@ -580,7 +580,7 @@ textarea {
     }
 
     .domaines-expertises-contenu {
-        background-image: url('src/images/background-category.png');
+        background-image: url('src/images/background-paper/background-category.png');
         width: calc(100% - 10vw);
         background-size: cover;
         padding: 50px 5vw;
@@ -658,7 +658,7 @@ textarea {
         background-size: 100% 80%;
     }
 
-    .popup h2{
+    .popup h2 {
         text-align: start;
     }
 
@@ -687,7 +687,7 @@ textarea {
 
     .a-propos-left-texte {
         position: relative;
-        background-image: url('src/images/background-apropos.png');
+        background-image: url('src/images/background-paper/background-apropos.png');
         height: fit-content;
         width: calc(100% - 8vw);
         line-height: 2.2;
@@ -725,7 +725,7 @@ textarea {
     }
 
     .domaines-expertises-contenu {
-        background-image: url('src/images/background-category.png');
+        background-image: url('src/images/background-paper/background-category.png');
         width: calc(100% - 10vw);
         background-size: cover;
         padding: 90px 5vw;
@@ -803,7 +803,7 @@ textarea {
         background-size: 80% 100%;
     }
 
-    .popup h2{
+    .popup h2 {
         text-align: start;
     }
 
@@ -812,7 +812,7 @@ textarea {
         background-size: 100%;
         background-position: center;
         left: 10%;
-        width: 6vw!important;
+        width: 6vw !important;
     }
 
     .envoyer img {
@@ -831,7 +831,7 @@ textarea {
 
     .a-propos-left-texte {
         position: relative;
-        background-image: url('src/images/background-apropos.png');
+        background-image: url('src/images/background-paper/background-apropos.png');
         height: fit-content;
         width: calc(100% - 8vw);
         line-height: 2.2;
@@ -949,7 +949,7 @@ textarea {
         background-size: 80% 100%;
     }
 
-    .popup h2{
+    .popup h2 {
         text-align: start;
     }
 
@@ -958,7 +958,7 @@ textarea {
         background-size: 100%;
         background-position: center;
         left: 10%;
-        width: 6vw!important;
+        width: 6vw !important;
     }
 
     .envoyer img {
@@ -977,7 +977,7 @@ textarea {
 
     .a-propos-left-texte {
         position: relative;
-        background-image: url('src/images/background-apropos.png');
+        background-image: url('src/images/background-paper/background-apropos.png');
         height: fit-content;
         width: calc(100% - 8vw);
         line-height: 2.2;
@@ -1094,7 +1094,7 @@ textarea {
         background-size: 70% 70%;
     }
 
-    .popup h2{
+    .popup h2 {
         text-align: start;
     }
 
@@ -1103,7 +1103,7 @@ textarea {
         background-size: 100%;
         background-position: center;
         left: 10%;
-        width: 6vw!important;
+        width: 6vw !important;
     }
 
     .envoyer img {
