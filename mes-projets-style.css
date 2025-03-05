@@ -17,7 +17,7 @@
 .mes-projets-titre img {
     position: absolute;
     bottom: 50%;
-    left:100%;
+    left: 100%;
     width: 5vw;
     transform: scaleX(-1);
 }
@@ -416,10 +416,12 @@
 }
 
 .mes-projets-audiovisuel-card {
+    width: fit-content;
     display: flex;
     justify-content: center;
     flex-direction: row;
     align-items: start;
+    position: relative;
 }
 
 .computer1,
@@ -511,19 +513,19 @@
 }
 
 .etoile-audiovisuel1 {
-    position: relative;
+    position: absolute;
     z-index: 2;
-    margin-right: -7vw;
-    margin-top: -40px;
+    left: -3vw;
+    top: -40px;
     width: 10vw;
     height: auto;
 }
 
 .etoile-audiovisuel2 {
-    position: relative;
+    position: absolute;
     z-index: 2;
-    margin-left: -9vw;
-    margin-top: -30px;
+    right: -1.5vw;
+    top: -35px;
     width: 10vw;
     height: auto;
 }
@@ -532,6 +534,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 180px;
 }
 
@@ -692,13 +695,13 @@
     }
 }
 
-@media screen and (max-width:375px) {
+@media screen and (max-width:425px) {
     .catégorie-titres img {
         width: 10vw;
     }
 
     .mes-projets-contenu {
-        gap: 50px;
+        gap: 36px;
     }
 
     .mes-projets-titre img {
@@ -779,7 +782,7 @@
 
     .etoiles {
         width: 20vw;
-        top:0;
+        top: 0;
     }
 
     .palette-couleurs {
@@ -871,20 +874,9 @@
         display: none;
     }
 
-    .carnet {
-        width: 100%;
-        height: 580px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-image: url(src/images/carnet.webp);
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
-    }
 
     .graphisme {
-        gap:50px;
+        gap: 50px;
     }
 
     .graphisme-content {
@@ -900,6 +892,7 @@
     }
 
     .graphisme-texte {
+        overflow: hidden;
         position: relative;
         display: flex;
         align-items: center;
@@ -910,7 +903,7 @@
     /* AFFICHE  */
 
     .affiche {
-        width:75%;
+        width: 75%;
     }
 
     .affiche-texte {
@@ -919,9 +912,18 @@
         z-index: 2;
         line-height: 25px;
         width: 75vw;
-        padding-left: 12%;
+        padding-left: 0;
     }
-    
+
+    .graphisme-affiche:first-child .affiche-texte {
+        left: 5vw;
+    }
+
+    .graphisme-affiche:nth-of-type(2) .affiche-texte {
+        right: 6vw;
+        left: auto;
+    }
+
     .affiche-texte-background {
         position: absolute;
         z-index: 1;
@@ -935,169 +937,472 @@
     }
 
     .affiche-texte-background2 {
-        margin-right: -5vw;  /* ???? */
+        right: -3vw;
+        left: auto;
     }
-    
+
     .graphisme-logo {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: 1vw;
+        flex-direction: column;
+        gap: 32px;
     }
-    
-    .graphisme-postit {
-        width: 25vw;
-        height: auto;
+
+    .graphisme-logo:nth-last-of-type(1) {
+        flex-direction: column-reverse;
     }
-    
+
+
     .graphisme-logo img {
-        width: 15vw;
+        width: 60vw;
         height: auto;
     }
-    
+
     .texte-logo {
-        width: 30vw;
+        width: 90vw;
     }
-    
+
 
     .audiovisuel {
-        padding-top: 100px;
-        gap: 100px;
+        padding-top: 32px;
+        gap: 64px;
     }
 
     .audiovisuel-cards {
-        flex-direction: column;
-        gap: 180px;
+        gap: 64px;
     }
 
     .mes-projets-audiovisuel-card {
         flex-direction: column-reverse;
+        gap: 24px;
+        align-items: center;
     }
 
     .mes-projets-audiovisuel-card:nth-child(2) {
         flex-direction: column;
     }
-    
+
     .computer1,
     .computer2 {
-        max-width: 30vw;
-        flex-shrink: 0;
-        transition: transform 0.3s ease-in-out;
+        max-width: none;
+        width: 80vw;
     }
-    
+
     .post-it1 {
-        margin-right: -4.5vw;
-        max-width: 20vw;
-        padding: 70px 45px;
-        flex-shrink: 0;
+        margin-right: 0;
+        max-width: none;
+        width: 75.5%;
+        padding: 64px 24px;
     }
-    
+
     .post-it2 {
-        margin-left: -3vw;
-        max-width: 20vw;
-        padding: 70px 45px;
-        flex-shrink: 0;
+        margin-right: 0;
+        max-width: none;
+        width: 75.5%;
+        padding: 64px 24px;
     }
-    
-    .popup {
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.8);
-    }
-    
+
     .popup-content {
-        z-index: 999999;
-        background-size: 100%;
         padding: 35px 5vw;
-        border-radius: 10px;
-        width: 40vw;
+        width: 90vw;
     }
-    
-    .close {
-        top: 10px;
-        right: 15px;
-        font-size: 20px;
-    }
-    
-    .no-scroll {
-        height: 100vh;
-    }
-    
+
     .etoile-audiovisuel1 {
-        margin-right: -7vw;
-        margin-top: -40px;
-        width: 10vw;
+        width: 20vw;
+        top: -20px;
     }
-    
+
     .etoile-audiovisuel2 {
-        margin-left: -9vw;
-        margin-top: -30px;
+        width: 20vw;
+        top: -20px;
+    }
+
+    /* Illustrations */
+
+    .illustrations {
+        padding-top: 64px;
+        gap: 32px;
+    }
+
+    .illustrations-contenu {
+        height: 300px;
+    }
+
+    .carnet {
+        width: 100%;
+        height: 580px;
+    }
+
+    .carnet {
+        scale: 1;
+    }
+
+
+    .indications {
+        gap: 5vw;
+    }
+
+    .indications h3 {
+        text-align: center;
+    }
+
+    .indications img {
+        max-width: none;
         width: 10vw;
     }
-    
-    .audiovisuel-message {
+
+}
+
+@media screen and (min-width: 426px) and (max-width: 600px) {
+    .catégorie-titres img {
+        width: 10vw;
+    }
+
+    .mes-projets-contenu {
+        gap: 36px;
+    }
+
+    .mes-projets-titre img {
+        width: 30px;
+        left: auto;
+        right: 25%;
+        bottom: 0%;
+    }
+
+    .catégorie-titres {
         gap: 1vw;
+        margin-left: 4vw;
     }
-    
-    .audiovisuel-message img {
-        max-width: 5vw;
-        transform: rotate(50);
+
+    .audiovisuel span,
+    .uiux span,
+    .graphisme span {
+        font-size: 18px;
     }
-    
-    .audiovisuel-content {
-        gap: 10px;
+
+    .uiux-top {
+        gap: 12vw;
+        flex-direction: column;
     }
-    
-    #filtre {
-        z-index: 800;
-        position: fixed;
-        height: 100%;
+
+    .uiux {
+        gap: 50px;
+        padding-top: 50px;
+    }
+
+    .uiux-left {
+        max-width: none;
+        width: calc(100%-5vw);
+        padding: 0 5vw;
+    }
+
+    .uiux-right {
         width: 100%;
-        pointer-events: none;
+    }
+
+    .scroll {
+        flex-direction: row;
+        gap: 1vw;
+        bottom: 0;
+        margin-bottom: -20px;
+        margin-left: 5vw;
+    }
+
+    .scroll h3 {
+        margin-left: -2vw;
+    }
+
+    .scroll img {
+        width: 15vw;
+        transform: rotate(-20deg);
+    }
+
+    .lien img {
+        margin: -8px -8px 0 0;
+    }
+
+    .television-frame {
+        max-width: none;
+        width: 100%;
+    }
+
+    .television {
+        width: 100%;
+        background-size: cover;
+    }
+
+    .television-screen {
+        top: 3%;
+        left: 19%;
+        width: 62%;
+        height: 80%;
+    }
+
+    .etoiles {
+        width: 20vw;
         top: 0;
-        left: 0;
-    
-        &.dark {
-            background-color: rgba(0, 0, 0, 0.7);
-            pointer-events: all;
-    
-            &::after {
-                display: inline-block;
-            }
-        }
     }
-    
-    #preview-image {
-        position: fixed;
-        z-index: 999;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        border-radius: 0.5em;
-        --preview-image-width: min(calc(95vw),
-                calc((95vh) * var(--image-width) / var(--image-height)));
-        width: var(--preview-image-width);
-        height: calc(var(--preview-image-width) * var(--image-height) / var(--image-width));
-        cursor: pointer;
+
+    .palette-couleurs {
+        margin-right: 0;
     }
-    
-    #filtre::after {
-        content: "";
+
+    .palette {
+        bottom: 70%;
+        left: 85%;
+        width: 20vw;
+    }
+
+    .carres-couleurs {
+        background-size: 100%;
+        padding: 11vw 4vw;
+        gap: 2vw;
+    }
+
+    .carre p {
+        opacity: 0;
+        margin-top: -10vw;
+        font-size: 12px;
+    }
+
+    .bleu-fonce {
+        padding: 8vw;
+        border-radius: 2vw;
+    }
+
+    .bleu-clair {
+        padding: 8vw;
+        border-radius: 2vw;
+    }
+
+    .blanc {
+        padding: 8vw;
+        border-radius: 2vw;
+    }
+
+    .noir {
+        padding: 8vw;
+        border-radius: 2vw;
+    }
+
+    .encre {
         position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 3em;
-        height: 3em;
-        z-index: 801;
-        border: 5px solid #fff;
-        border-bottom-color: transparent;
-        border-radius: 50%;
-        display: none;
-        box-sizing: border-box;
-        animation: rotation 1s linear infinite;
+        z-index: 3;
+        top: -20%;
+        right: 65%;
+        width: 35vw;
     }
+
+    .polices {
+        align-items: start;
+        background-size: 100% 100%;
+        padding: 3vw 6vw;
+        gap: 3vw;
+    }
+
+    .typographie {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 5vw;
+        gap: 2vw;
+    }
+
+    .polices-titres,
+    .polices-corps {
+        display: flex;
+        flex-direction: column;
+        width: 35vw;
+    }
+
+    .polices-corps {
+        width: 31vw;
+    }
+
+    .polices-titres p,
+    .polices-corps p {
+        margin-bottom: 12px;
+    }
+
+    .medium {
+        display: none;
+    }
+
+    .light {
+        display: none;
+    }
+
+
+    .graphisme {
+        gap: 50px;
+    }
+
+    .graphisme-content {
+        margin: 0;
+    }
+
+    .graphisme-affiche:nth-of-type(1) {
+        flex-direction: column;
+    }
+
+    .graphisme-affiche:nth-of-type(2) {
+        flex-direction: column-reverse;
+    }
+
+    .graphisme-texte {
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: none;
+    }
+
+    /* AFFICHE  */
+
+    .affiche {
+        width: 75%;
+    }
+
+    .affiche-texte {
+        position: absolute;
+        left: 0;
+        z-index: 2;
+        line-height: 25px;
+        width: 75vw;
+        padding-left: 0;
+    }
+
+    .graphisme-affiche:first-child .affiche-texte {
+        left: 5vw;
+    }
+
+    .graphisme-affiche:nth-of-type(2) .affiche-texte {
+        right: 6vw;
+        left: auto;
+    }
+
+    .affiche-texte-background {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 80%;
+        left: 0;
+    }
+
+    .affiche-texte-background1 {
+        margin-left: -5vw;
+    }
+
+    .affiche-texte-background2 {
+        right: -3vw;
+        left: auto;
+    }
+
+    .graphisme-logo {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .graphisme-logo:nth-last-of-type(1) {
+        flex-direction: column-reverse;
+    }
+
+
+    .graphisme-logo img {
+        width: 60vw;
+        height: auto;
+    }
+
+    .texte-logo {
+        width: 90vw;
+    }
+
+
+    .audiovisuel {
+        padding-top: 32px;
+        gap: 64px;
+    }
+
+    .audiovisuel-cards {
+        gap: 64px;
+    }
+
+    .mes-projets-audiovisuel-card {
+        flex-direction: column-reverse;
+        gap: 24px;
+        align-items: center;
+    }
+
+    .mes-projets-audiovisuel-card:nth-child(2) {
+        flex-direction: column;
+    }
+
+    .computer1,
+    .computer2 {
+        max-width: none;
+        width: 80vw;
+    }
+
+    .post-it1 {
+        margin-right: 0;
+        max-width: none;
+        width: 75.5%;
+        padding: 64px 24px;
+    }
+
+    .post-it2 {
+        margin-right: 0;
+        max-width: none;
+        width: 75.5%;
+        padding: 64px 24px;
+    }
+
+    .popup-content {
+        padding: 35px 5vw;
+        width: 90vw;
+    }
+
+    .etoile-audiovisuel1 {
+        width: 20vw;
+        top: -20px;
+    }
+
+    .etoile-audiovisuel2 {
+        width: 20vw;
+        top: -20px;
+    }
+
+    /* Illustrations */
+
+    .illustrations {
+        padding-top: 64px;
+        gap: 32px;
+    }
+
+    .illustrations-contenu {
+        height: 300px;
+    }
+
+    .carnet {
+        width: 100%;
+        height: 580px;
+    }
+
+    .carnet {
+        scale: 1;
+    }
+
+
+    .indications {
+        gap: 5vw;
+    }
+
+    .indications h3 {
+        text-align: center;
+    }
+
+    .indications img {
+        max-width: none;
+        width: 10vw;
+    }
+
 }
