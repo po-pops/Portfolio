@@ -251,6 +251,10 @@ main {
         padding: 0 5vw;
         width: calc(100vw - 10vw);
     }
+    
+    .image-souligne {
+        width: 65px;
+    }
 
     .top-content {
         margin-top: 65px;
@@ -333,6 +337,10 @@ main {
         padding: 0 5vw;
         width: calc(100vw - 10vw);
         height: 80px;
+    }
+
+    .image-souligne {
+        width: 65px;
     }
 
     .top-content {
@@ -436,5 +444,9 @@ main {
     .logo1 {
         width: 40px;
         margin-right: 0;
+    }
+
+    .image-souligne {
+        width: 65px;
     }
 }
