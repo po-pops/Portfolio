@@ -406,7 +406,7 @@ textarea {
     }
 
     .a-propos-left-texte {
-        background-image: url('src/images/background-paper/background-apropos.png');
+        background-image: url('src/images/background-paper/background-apropos.webp');
         width: calc(100% - 14vw);
         line-height: 2.2;
         padding: 0 10vw 0 4vw;
@@ -440,7 +440,7 @@ textarea {
     }
 
     .domaines-expertises-contenu {
-        background-image: url('src/images/background-paper/background-category.png');
+        background-image: url('src/images/background-paper/background-category.webp');
         width: calc(100% - 10vw);
         background-size: cover;
         padding: 50px 5vw;
@@ -544,7 +544,7 @@ textarea {
     }
 
     .a-propos-left-texte {
-        background-image: url('src/images/background-paper/background-apropos.png');
+        background-image: url('src/images/background-paper/background-apropos.webp');
         height: fit-content;
         width: calc(100% - 8vw);
         line-height: 2.2;
@@ -580,7 +580,7 @@ textarea {
     }
 
     .domaines-expertises-contenu {
-        background-image: url('src/images/background-paper/background-category.png');
+        background-image: url('src/images/background-paper/background-category.webp');
         width: calc(100% - 10vw);
         background-size: cover;
         padding: 50px 5vw;
@@ -687,7 +687,7 @@ textarea {
 
     .a-propos-left-texte {
         position: relative;
-        background-image: url('src/images/background-paper/background-apropos.png');
+        background-image: url('src/images/background-paper/background-apropos.webp');
         height: fit-content;
         width: calc(100% - 8vw);
         line-height: 2.2;
@@ -725,7 +725,7 @@ textarea {
     }
 
     .domaines-expertises-contenu {
-        background-image: url('src/images/background-paper/background-category.png');
+        background-image: url('src/images/background-paper/background-category.webp');
         width: calc(100% - 10vw);
         background-size: cover;
         padding: 90px 5vw;
@@ -831,7 +831,7 @@ textarea {
 
     .a-propos-left-texte {
         position: relative;
-        background-image: url('src/images/background-paper/background-apropos.png');
+        background-image: url('src/images/background-paper/background-apropos.webp');
         height: fit-content;
         width: calc(100% - 8vw);
         line-height: 2.2;
@@ -977,7 +977,7 @@ textarea {
 
     .a-propos-left-texte {
         position: relative;
-        background-image: url('src/images/background-paper/background-apropos.png');
+        background-image: url('src/images/background-paper/background-apropos.webp');
         height: fit-content;
         width: calc(100% - 8vw);
         line-height: 2.2;
