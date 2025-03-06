@@ -194,7 +194,7 @@
                         <img onclick="openPreview('src/images/affiche2.webp')" src="src/images/affiche2.webp"
                             class="affiche img-zoomable" alt="affiche">
                     </div>
-                    <div class="graphisme-logo">
+                    <div class="graphisme-logo-container">
                         <img class="graphisme-postit" src="src/images/graphisme-postit1.webp"
                             alt="Post it avec mockup pulls">
                         <div class="texte-logo">
@@ -202,9 +202,9 @@
                                 l’IUT
                                 Bordeaux Montaigne, puis choisi par l’ensemble de l’IUT lors d’un vote.<br>- 2024</p>
                         </div>
-                        <img src="src/images/graphisme-logo.webp" alt="logos">
+                        <img class="logo-graphisme" src="src/images/graphisme-logo.webp" alt="logos">
                     </div>
-                    <div class="graphisme-logo">
+                    <div class="graphisme-logo-container">
                         <div class="texte-logo">
                             <p>Production d’un <span>logo</span> sur demande à l’occasion de la création d’un portfolio,
                                 contenant les initiales <span>T et R</span> et dans un style minimaliste moderne.<br>-
@@ -396,6 +396,19 @@
         tvScreen.addEventListener("wheel", (event) => {
             event.preventDefault();
             tvScreen.scrollTop += event.deltaY;
+        });
+
+        let startTouch = 0;
+
+        tvScreen.addEventListener("touchstart", (event) => {
+            startTouch = event.touches[0].clientY;
+        });
+
+        tvScreen.addEventListener("touchmove", (event) => {
+            event.preventDefault();
+            let moveTouch = startTouch - event.touches[0].clientY;
+            tvScreen.scrollTop += moveTouch;
+            startTouch = event.touches[0].clientY;
         });
 
         const filtre = document.getElementById("filtre");

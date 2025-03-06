@@ -63,6 +63,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-self: end;
 }
 
 .scroll {
@@ -343,7 +344,6 @@
     display: flex;
     flex-direction: column;
     gap: 50px;
-    margin: 0 18vw;
 }
 
 .graphisme-affiche {
@@ -356,7 +356,8 @@
 .affiche {
     position: relative;
     z-index: 3;
-    width: 350px;
+    width: 30vw;
+    max-width: 400px;
     cursor: pointer;
 }
 
@@ -373,33 +374,49 @@
     left: 0;
     z-index: 2;
     line-height: 48px;
-    width: 30vw;
-    padding-left: 32px;
+    width: 32vw;
+    min-width: 400px;
 }
 
 .affiche-texte-background {
     position: absolute;
     z-index: 1;
     width: 43vw;
-    left: -5vw;
+    min-width: 500px;
+
 }
 
-.graphisme-logo {
+.graphisme-affiche:first-child .affiche-texte {
+    left: 3vw;
+}
+
+.graphisme-affiche:nth-of-type(2) .affiche-texte {
+    right: 3vw;
+    left: auto;
+}
+
+
+.graphisme-affiche:first-child .affiche-texte-background {
+    left: -1vw;
+}
+
+.graphisme-affiche:nth-of-type(2) .affiche-texte-background {
+    right: -1vw;
+    left: auto;
+}
+
+.graphisme-logo-container {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 1vw;
+    gap: 4vw;
 }
 
-.graphisme-postit {
-    width: 25vw;
-    height: auto;
-}
-
-.graphisme-logo img {
-    width: 15vw;
+.graphisme-postit,
+.logo-graphisme {
+    width: 18vw;
     height: auto;
 }
 
@@ -711,11 +728,6 @@
         bottom: 0%;
     }
 
-    .catégorie-titres {
-        gap: 1vw;
-        margin-left: 4vw;
-    }
-
     .audiovisuel span,
     .uiux span,
     .graphisme span {
@@ -774,9 +786,9 @@
     }
 
     .television-screen {
-        top: 3%;
-        left: 19%;
-        width: 62%;
+        top: 2.5%;
+        left: 18.5%;
+        width: 62.5%;
         height: 80%;
     }
 
@@ -911,8 +923,27 @@
         left: 0;
         z-index: 2;
         line-height: 25px;
-        width: 75vw;
+        width: 80vw;
+        min-width: auto;
         padding-left: 0;
+    }
+
+    .graphisme-affiche:first-child .affiche-texte-background {
+        left: -8vw;
+    }
+
+    .graphisme-affiche:nth-of-type(2) .affiche-texte-background {
+        right: -8vw;
+        left: auto;
+    }
+
+    .graphisme-affiche:first-child .affiche-texte {
+        left: 5vw;
+    }
+
+    .graphisme-affiche:nth-of-type(2) .affiche-texte {
+        right: 6vw;
+        left: auto;
     }
 
     .graphisme-affiche:first-child .affiche-texte {
@@ -941,19 +972,23 @@
         left: auto;
     }
 
-    .graphisme-logo {
+    .graphisme-logo-container {
         flex-direction: column;
         gap: 32px;
     }
 
-    .graphisme-logo:nth-last-of-type(1) {
+    .graphisme-logo-container:nth-last-of-type(1) {
         flex-direction: column-reverse;
     }
 
 
-    .graphisme-logo img {
+    .graphisme-logo-container .graphisme-postit {
         width: 60vw;
         height: auto;
+    }
+
+    .logo-graphisme {
+        width: 40vw;
     }
 
     .texte-logo {
@@ -1067,11 +1102,6 @@
         bottom: 0%;
     }
 
-    .catégorie-titres {
-        gap: 1vw;
-        margin-left: 4vw;
-    }
-
     .audiovisuel span,
     .uiux span,
     .graphisme span {
@@ -1090,12 +1120,13 @@
 
     .uiux-left {
         max-width: none;
-        width: calc(100%-5vw);
-        padding: 0 5vw;
+        width: calc(100% - 20vw);
+        padding: 0 10vw;
     }
 
     .uiux-right {
         width: 100%;
+        justify-content: end;
     }
 
     .scroll {
@@ -1125,14 +1156,15 @@
     }
 
     .television {
+        max-width: 350px;
         width: 100%;
         background-size: cover;
     }
 
     .television-screen {
-        top: 3%;
-        left: 19%;
-        width: 62%;
+        top: 2.5%;
+        left: 18.5%;
+        width: 62.5%;
         height: 80%;
     }
 
@@ -1186,9 +1218,9 @@
     .encre {
         position: absolute;
         z-index: 3;
-        top: -20%;
-        right: 65%;
-        width: 35vw;
+        top: -30%;
+        left: -5%;
+        width: 25vw;
     }
 
     .polices {
@@ -1211,6 +1243,7 @@
         display: flex;
         flex-direction: column;
         width: 35vw;
+        gap: 8px;
     }
 
     .polices-corps {
@@ -1220,14 +1253,6 @@
     .polices-titres p,
     .polices-corps p {
         margin-bottom: 12px;
-    }
-
-    .medium {
-        display: none;
-    }
-
-    .light {
-        display: none;
     }
 
 
@@ -1253,13 +1278,23 @@
         display: flex;
         align-items: center;
         width: 100%;
-        height: none;
+        max-width: 500px;
+
+    }
+
+    .graphisme-affiche:first-child .graphisme-texte {
+        align-self: start;
+    }
+
+    .graphisme-affiche:nth-of-type(2) .graphisme-texte {
+        align-self: end;
     }
 
     /* AFFICHE  */
 
     .affiche {
         width: 75%;
+        max-width: 350px;
     }
 
     .affiche-texte {
@@ -1267,8 +1302,18 @@
         left: 0;
         z-index: 2;
         line-height: 25px;
-        width: 75vw;
+        width: 80vw;
+        min-width: auto;
         padding-left: 0;
+    }
+
+    .graphisme-affiche:first-child .affiche-texte-background {
+        left: -8vw;
+    }
+
+    .graphisme-affiche:nth-of-type(2) .affiche-texte-background {
+        right: -8vw;
+        left: auto;
     }
 
     .graphisme-affiche:first-child .affiche-texte {
@@ -1297,23 +1342,28 @@
         left: auto;
     }
 
-    .graphisme-logo {
+    .graphisme-logo-container {
         flex-direction: column;
-        gap: 32px;
+        gap: 48px;
     }
 
-    .graphisme-logo:nth-last-of-type(1) {
+    .graphisme-logo-container:nth-last-of-type(1) {
         flex-direction: column-reverse;
     }
 
 
-    .graphisme-logo img {
+    .graphisme-logo-container .graphisme-postit {
         width: 60vw;
+        max-width: 250px;
         height: auto;
     }
 
+    .logo-graphisme {
+        width: 35vw;
+    }
+
     .texte-logo {
-        width: 90vw;
+        width: 80vw;
     }
 
 
@@ -1340,20 +1390,23 @@
     .computer2 {
         max-width: none;
         width: 80vw;
+        max-width: 350px;
     }
 
     .post-it1 {
         margin-right: 0;
         max-width: none;
         width: 75.5%;
-        padding: 64px 24px;
+        padding: 48px 32px;
+        background-size: 100%;
     }
 
     .post-it2 {
         margin-right: 0;
         max-width: none;
         width: 75.5%;
-        padding: 64px 24px;
+        padding: 48px 32px;
+        background-size: 100%;
     }
 
     .popup-content {
@@ -1362,13 +1415,14 @@
     }
 
     .etoile-audiovisuel1 {
-        width: 20vw;
+        width: 15vw;
         top: -20px;
     }
 
     .etoile-audiovisuel2 {
-        width: 20vw;
+        width: 15vw;
         top: -20px;
+        right: -15px;
     }
 
     /* Illustrations */
@@ -1379,7 +1433,7 @@
     }
 
     .illustrations-contenu {
-        height: 300px;
+        height: 380px;
     }
 
     .carnet {
@@ -1403,6 +1457,659 @@
     .indications img {
         max-width: none;
         width: 10vw;
+    }
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 768px) {
+    .catégorie-titres img {
+        width: 10vw;
+    }
+
+    .mes-projets-contenu {
+        gap: 36px;
+    }
+
+    .mes-projets-titre img {
+        width: 30px;
+        left: auto;
+        right: 25%;
+        bottom: 0%;
+    }
+
+    .audiovisuel span,
+    .uiux span,
+    .graphisme span {
+        font-size: 22px;
+    }
+
+    .uiux-top {
+        gap: 12vw;
+        flex-direction: column;
+    }
+
+    .uiux {
+        gap: 50px;
+        padding-top: 50px;
+    }
+
+    .uiux-left {
+        max-width: 500px;
+        width: calc(100% - 20vw);
+        padding: 0 10vw;
+    }
+
+    .uiux-right {
+        width: 100%;
+        justify-content: end;
+    }
+
+    .scroll {
+        flex-direction: row;
+        gap: 1vw;
+        bottom: 0;
+        margin-bottom: -20px;
+    }
+
+    .scroll h3 {
+        margin-left: -2vw;
+    }
+
+    .scroll img {
+        width: 15vw;
+        transform: rotate(-20deg);
+    }
+
+    .lien img {
+        margin: -8px -8px 0 0;
+    }
+
+    .television-frame {
+        max-width: none;
+        width: 100%;
+    }
+
+    .television {
+        max-width: 350px;
+        width: 100%;
+        background-size: cover;
+    }
+
+    .television-screen {
+        top: 3%;
+        left: 22%;
+        width: 56%;
+        height: 80%;
+    }
+
+    .etoiles {
+        width: 15vw;
+        top: 0;
+    }
+
+    .palette-couleurs {
+        margin-right: 0;
+    }
+
+    .palette {
+        bottom: 70%;
+        left: 85%;
+        width: 20vw;
+    }
+
+    .carres-couleurs {
+        background-size: 100%;
+        padding: 11vw 50px;
+        gap: 2vw;
+    }
+
+    .carre p {
+        opacity: 0;
+        margin-top: -10vw;
+        font-size: 12px;
+    }
+
+    .bleu-fonce {
+        padding: 5vw;
+        border-radius: 15px;
+    }
+
+    .bleu-clair {
+        padding: 5vw;
+        border-radius: 15px;
+    }
+
+    .blanc {
+        padding: 5vw;
+        border-radius: 15px;
+    }
+
+    .noir {
+        padding: 5vw;
+        border-radius: 15px;
+    }
+
+    .encre {
+        position: absolute;
+        z-index: 3;
+        top: -20%;
+        left: -10%;
+        width: 25vw;
+    }
+
+    .polices {
+        align-items: start;
+        background-size: 100% 100%;
+        padding: 3vw 6vw;
+        gap: 3vw;
+    }
+
+    .typographie {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 5vw;
+        gap: 2vw;
+    }
+
+    .polices-titres,
+    .polices-corps {
+        display: flex;
+        flex-direction: column;
+        width: 35vw;
+        gap: 8px;
+    }
+
+    .polices-corps {
+        width: 31vw;
+    }
+
+    .polices-titres p,
+    .polices-corps p {
+        margin-bottom: 12px;
+    }
+
+
+    .graphisme {
+        gap: 50px;
+    }
+
+    .graphisme-content {
+        margin: 0;
+    }
+
+    .graphisme-affiche:nth-of-type(1) {
+        flex-direction: column;
+    }
+
+    .graphisme-affiche:nth-of-type(2) {
+        flex-direction: column-reverse;
+    }
+
+    .graphisme-texte {
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: 550px;
+
+    }
+
+    .graphisme-affiche:first-child .graphisme-texte {
+        align-self: start;
+    }
+
+    .graphisme-affiche:nth-of-type(2) .graphisme-texte {
+        align-self: end;
+    }
+
+    /* AFFICHE  */
+
+    .affiche {
+        width: 75%;
+        max-width: 350px;
+    }
+
+    .affiche-texte {
+        position: absolute;
+        left: 0;
+        z-index: 2;
+        line-height: 25px;
+        width: 55vw;
+        max-width: 500px;
+        padding-left: 0;
+    }
+
+    .graphisme-affiche:first-child .affiche-texte {
+        left: 5vw;
+    }
+
+    .graphisme-affiche:nth-of-type(2) .affiche-texte {
+        right: 4vw;
+        left: auto;
+    }
+
+    .affiche-texte-background {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 80%;
+        left: 0;
+    }
+
+    .affiche-texte-background1 {
+        margin-left: -5vw;
+    }
+
+    .affiche-texte-background2 {
+        right: -3vw;
+        left: auto;
+    }
+
+    .graphisme-logo-container {
+        flex-direction: column;
+        gap: 48px;
+    }
+
+    .graphisme-logo-container:nth-last-of-type(1) {
+        flex-direction: column-reverse;
+    }
+
+
+    .graphisme-logo-container .graphisme-postit {
+        width: 60vw;
+        max-width: 250px;
+        height: auto;
+    }
+
+    .logo-graphisme {
+        width: 35vw;
+    }
+
+    .texte-logo {
+        width: 60vw;
+    }
+
+
+    .audiovisuel {
+        padding-top: 32px;
+        gap: 64px;
+    }
+
+    .audiovisuel-cards {
+        gap: 64px;
+    }
+
+    .mes-projets-audiovisuel-card {
+        flex-direction: column-reverse;
+        gap: 24px;
+        align-items: center;
+    }
+
+    .mes-projets-audiovisuel-card:nth-child(2) {
+        flex-direction: column;
+    }
+
+    .computer1,
+    .computer2 {
+        max-width: none;
+        width: 80vw;
+        max-width: 350px;
+    }
+
+    .post-it1 {
+        margin-right: 0;
+        max-width: none;
+        width: 60%;
+        padding: 56px 48px;
+        background-size: 100%;
+    }
+
+    .post-it2 {
+        margin-right: 0;
+        max-width: none;
+        width: 60%;
+        padding: 56px 48px;
+        background-size: 100%;
+    }
+
+    .popup-content {
+        padding: 35px 5vw;
+        width: 90vw;
+    }
+
+    .etoile-audiovisuel1 {
+        width: 15vw;
+        top: -20px;
+    }
+
+    .etoile-audiovisuel2 {
+        width: 15vw;
+        top: -20px;
+        right: -15px;
+    }
+
+    /* Illustrations */
+
+    .illustrations {
+        padding-top: 64px;
+        gap: 32px;
+    }
+
+    .illustrations-contenu {
+        height: 440px;
+    }
+
+    .carnet {
+        width: 100%;
+        height: 580px;
+    }
+
+    .carnet {
+        scale: 1;
+    }
+
+
+    .indications {
+        gap: 5vw;
+    }
+
+    .indications h3 {
+        text-align: center;
+    }
+
+    .indications img {
+        max-width: none;
+        width: 10vw;
+    }
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+
+    .mes-projets-contenu {
+        gap: 36px;
+    }
+
+    .mes-projets-titre img {
+        width: 50px;
+        left: auto;
+        right: -15%;
+        bottom: 0%;
+    }
+
+    .uiux-top {
+        gap: 2vw;
+    }
+
+    .uiux {
+        padding-top: 50px;
+    }
+
+    .uiux-left {
+        max-width: 300px;
+        width: calc(100% - 10vw);
+        padding: 0 5vw;
+    }
+
+    .uiux-right {
+        width: 100%;
+        justify-content: end;
+    }
+
+    .scroll {
+        flex-direction: row;
+        gap: 1vw;
+        bottom: 0;
+        margin-bottom: -20px;
+    }
+
+    .scroll h3 {
+        margin-left: -2vw;
+    }
+
+    .scroll img {
+        width: 10vw;
+        transform: rotate(-20deg);
+    }
+
+    .lien img {
+        margin: -8px -8px 0 0;
+    }
+
+    .television-frame {
+        max-width: none;
+        width: 100%;
+    }
+
+    .television {
+        max-width: 350px;
+        width: 100%;
+        background-size: cover;
+    }
+
+    .television-screen {
+        top: 4%;
+        left: 25.5%;
+        width: 50.5%;
+        height: 80%;
+    }
+
+    .etoiles {
+        width: 10vw;
+        top: 0;
+    }
+
+    .palette-couleurs {
+        margin-right: 0;
+    }
+
+    .palette {
+        width: 10vw;
+        left: auto;
+        right: -10%;
+    }
+
+    .carres-couleurs {
+        background-size: 100%;
+        padding: 11vw 50px;
+        gap: 2vw;
+    }
+
+    .carre p {
+        opacity: 0;
+        font-size: 12px;
+    }
+
+    .bleu-fonce {
+        padding: 4vw;
+        border-radius: 15px;
+    }
+
+    .bleu-clair {
+        padding: 4vw;
+        border-radius: 15px;
+    }
+
+    .blanc {
+        padding: 4vw;
+        border-radius: 15px;
+    }
+
+    .noir {
+        padding: 4vw;
+        border-radius: 15px;
+    }
+
+    .encre {
+        top: -20%;
+        left: -10%;
+        width: 20vw;
+    }
+
+    .polices {
+        align-items: start;
+        background-size: 100% 100%;
+        padding: 3vw 6vw;
+    }
+
+    .typographie {
+        margin: 0 5vw;
+        gap: 2vw;
+    }
+
+    .polices-titres,
+    .polices-corps {
+        width: 30vw;
+        gap: 8px;
+    }
+
+    .polices-corps {
+        width: 31vw;
+    }
+
+    .polices-titres p,
+    .polices-corps p {
+        margin-bottom: 12px;
+    }
+
+
+    .graphisme {
+        gap: 50px;
+    }
+
+    .graphisme-content {
+        margin: 0;
+    }
+
+    .graphisme-texte {
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: 550px;
+
+    }
+
+    /* AFFICHE  */
+
+    .affiche-texte {
+        position: absolute;
+        left: 0;
+        z-index: 2;
+        line-height: 25px;
+        width: 40vw;
+        padding-left: 0;
+    }
+
+    .graphisme-affiche:first-child .affiche-texte {
+        left: 3vw;
+    }
+
+    .graphisme-affiche:nth-of-type(2) .affiche-texte {
+        right: 3vw;
+        left: auto;
+    }
+
+    .affiche-texte-background {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 80%;
+        left: 0;
+    }
+
+    .affiche-texte-background1 {
+        margin-left: -5vw;
+    }
+
+    .affiche-texte-background2 {
+        right: -3vw;
+        left: auto;
+    }
+
+    .graphisme-logo-container {
+        gap: 3vw;
+    }
+
+    .graphisme-logo-container .graphisme-postit {
+        width: 60vw;
+        max-width: 250px;
+        height: auto;
+    }
+
+    .logo-graphisme {
+        width: 15vw;
+    }
+
+    .texte-logo {
+        width: 40vw;
+    }
+
+
+    .audiovisuel {
+        padding-top: 32px;
+        gap: 64px;
+    }
+
+    .computer1,
+    .computer2 {
+        width: 80vw;
+        max-width: 350px;
+    }
+
+    .mes-projets-audiovisuel-card {
+        align-items: center;
+    }
+
+    .post-it1 {
+        margin-right: 0;
+        max-width: none;
+        width: 30%;
+        padding: 56px 48px;
+        background-size: 100%;
+    }
+
+    .post-it2 {
+        margin-right: 0;
+        max-width: none;
+        width: 30%;
+        padding: 56px 48px;
+        background-size: 100%;
+    }
+
+    .popup-content {
+        padding: 35px 5vw;
+        width: 90vw;
+    }
+
+    .etoile-audiovisuel1 {
+        width: 10vw;
+        top: -20px;
+    }
+
+    .etoile-audiovisuel2 {
+        width: 10vw;
+        top: -20px;
+        right: -15px;
+    }
+
+    /* Illustrations */
+
+    .illustrations {
+        padding-top: 64px;
+        gap: 32px;
+    }
+
+    .illustrations-contenu {
+        height: 500px;
+    }
+
+    .indications {
+        gap: 5vw;
     }
 
 }
