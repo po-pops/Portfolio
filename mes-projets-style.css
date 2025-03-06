@@ -106,7 +106,7 @@
 .television {
     position: relative;
     z-index: 1;
-    background-image: url(src/images/papier-television.webp);
+    background-image: url('src/images/background-paper/papier-television.webp');
     background-repeat: no-repeat;
     background-position: right;
     padding: 8vw 8vw 8vw 9.5vw;
@@ -197,7 +197,7 @@
     justify-content: center;
     position: relative;
     z-index: 2;
-    background-image: url(src/images/postit-uiux.webp);
+    background-image: url('src/images/background-paper/postit-uiux.webp');
     background-repeat: no-repeat;
     background-position: center;
     padding: 5vw 4vw;
@@ -261,7 +261,7 @@
     justify-content: center;
     position: relative;
     z-index: 2;
-    background-image: url(src/images/postit-uiux.webp);
+    background-image: url('src/images/background-paper/postit-uiux.webp');
     background-repeat: no-repeat;
     background-position: center;
     padding: 3vw 6vw;
@@ -466,7 +466,7 @@
     z-index: 1;
     margin-right: -4.5vw;
     max-width: 20vw;
-    background-image: url('./src/images/post-it1.webp');
+    background-image: url('./src/images/background-paper/post-it1.webp');
     background-repeat: no-repeat;
     background-position: left;
     padding: 70px 45px;
@@ -478,7 +478,7 @@
     z-index: 1;
     margin-left: -3vw;
     max-width: 20vw;
-    background-image: url('./src/images/post-it2.webp');
+    background-image: url('./src/images/background-paper/post-it2.webp');
     background-repeat: no-repeat;
     background-position: left;
     padding: 70px 45px;
@@ -501,7 +501,7 @@
 .popup-content {
     position: relative;
     z-index: 999999;
-    background: url('./src/images/papier.webp');
+    background: url('./src/images/background-paper/papier.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -645,7 +645,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(src/images/carnet.webp);
+    background-image: url('src/images/background-paper/carnet.webp');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;

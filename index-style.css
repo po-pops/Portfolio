@@ -22,7 +22,7 @@
     line-height: 2.2;
     padding: 0 10vw 0 4vw;
     padding-top: 25px;
-    background-image: url('src/images/PAPIER.webp');
+    background-image: url('src/images/background-paper/papier.webp');
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: start;
@@ -100,7 +100,7 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
-    background-image: url(src/images/papier-jaune.webp);
+    background-image: url('src/images/background-paper/papier-jaune.webp');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 80%;
@@ -260,7 +260,7 @@
     display: none;
     /* Caché par défaut */
     position: fixed;
-    background-image: url(src/images/post-it1.webp);
+    background-image: url('src/images/background-paper/post-it1.webp');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 30vw;
@@ -870,7 +870,7 @@ textarea {
 
     .domaines-expertises-contenu {
         align-items: center;
-        background-image: url('src/images/papier-jaune.webp');
+        background-image: url('src/images/background-paper/papier-jaune.webp');
         width: calc(100% - 10vw);
         background-size: cover;
         padding: 5vw;
@@ -1016,7 +1016,7 @@ textarea {
 
     .domaines-expertises-contenu {
         align-items: center;
-        background-image: url('src/images/papier-jaune.webp');
+        background-image: url('src/images/background-paper/papier-jaune.webp');
         width: calc(100% - 10vw);
         background-size: cover;
         padding: 5vw;

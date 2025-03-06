@@ -191,7 +191,7 @@ main {
     text-align: right;
     width: 100%;
     height: 100vh;
-    background-image: url('./src/images/papier1.webp');
+    background-image: url('./src/images/background-paper/papier1.webp');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -251,7 +251,7 @@ main {
         padding: 0 5vw;
         width: calc(100vw - 10vw);
     }
-    
+
     .image-souligne {
         width: 65px;
     }

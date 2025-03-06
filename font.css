@@ -3,7 +3,6 @@
     src: url('./src/font/rawrote.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
-    ;
     font-display: swap;
 }
 
@@ -12,7 +11,6 @@
     font-style: normal;
     font-weight: 700;
     src: url('./src/font/Perpetua.woff') format('woff');
-    ;
     font-display: swap;
 }
 
@@ -21,7 +19,6 @@
     font-style: normal;
     font-weight: normal;
     src: local('Marker Note Regular'), url('./src/font/MarkerNote-Regular.woff') format('woff');
-    ;
     font-display: swap;
 }
 
