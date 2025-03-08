@@ -394,6 +394,11 @@ textarea {
     text-align: justify;
 }
 
+
+main .mentions-légales {
+    margin-top: 96px;
+}
+
 /* Responsive */
 @media screen and (max-width: 375px) {
     .a-propos {
