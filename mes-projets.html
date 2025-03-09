@@ -120,7 +120,7 @@
                         <div class="television">
                             <img class="etoiles" src="src/images/etoiles2.webp" alt="étoiles">
                             <img class="television-frame" src="src/images/television.webp" alt="cadre télévision">
-                            <div class="television-screen" id="écran television">
+                            <div class="television-screen" id="television-screen">
                                 <div class="scroll-content">
                                     <img src="src/images/maquette.webp" alt="maquette UI/UX">
                                 </div>
@@ -372,20 +372,8 @@
     </footer>
     <div id="filtre"></div>
     <img id="preview-image" alt="preview" src="" style="display: none;">
+    <script src="./src/js/header.js"></script>
     <script>
-        let header = document.querySelector("header");
-        let lastScrollValue = 0;
-
-        document.addEventListener('scroll',() => {
-                let top  = document.documentElement.scrollTop;
-            if(lastScrollValue < top) {
-                header.classList.add("hidden");
-            } else {
-                header.classList.remove("hidden");
-            }
-            lastScrollValue = top;
-        });
-
         function openPopup(element) {
             const videoUrl = element.getAttribute("data-video");
             const popupId = element.getAttribute("data-popup");
