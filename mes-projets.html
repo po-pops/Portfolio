@@ -20,9 +20,9 @@
     <link rel="stylesheet" href="font.css">
 
     <!-- Meta -->
-    <title>Mes projets | Pops'</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <title>Pauline Yvelin | Portfolio - Graphisme, UI/UX, Audiovisuel, Illustration</title>
+    <meta name="description" content="Jeune artiste et designer graphique aussi passionnée par l’UI/UX, j’explore le graphisme et l’art avec curiosité. Découvrez mon portfolio créatif !">
+    <meta name="keywords" content="Pauline Yvelin, artiste, portfolio, dessin, illustration, cinéma, audiovisuel, MMI, créativité, design graphique, logo, affiche, UI/UX, maquette, court-métrage, graphisme, art numérique">
     <meta name="author" content="Pauline Yvelin">
     <meta name="theme-color" content="#ffffff">
 
@@ -38,24 +38,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
     <!-- Balises de liaison -->
-    <link rel="canonical" href="">
+    <link rel="canonical" href="https://pauline.yvelin.net">
 
     <!-- Balises pour les réseaux sociaux -->
     <meta property="og:locale" content="fr_FR">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="">
+    <meta property="og:title" content="Pauline Yvelin | Portfolio - Graphisme, UI/UX, Audiovisuel, Illustration">
     <meta property="og:site_name" content="Pauline Yvelin - Portfolio">
     <meta property="og:url" content="https://pauline.yvelin.net">
-    <meta property="og:description" content="">
-    <meta property="og:image" content="">
+    <meta property="og:description" content="Jeune artiste et designer graphique aussi passionnée par l’UI/UX, j’explore le graphisme et l’art avec curiosité. Découvrez mon portfolio créatif !">
+    <meta property="og:image" content="https://pauline.yvelin.net/src/images/og-img.webp">
+    <meta property="og:url" content="https://pauline.yvelin.net">
 
     <!-- Balises pour Twitter -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@pauline-yvelin">
-    <meta name="twitter:title" content="">
-    <meta name="twitter:description" content="">
+    <meta name="twitter:title" content="Pauline Yvelin | Portfolio - Graphisme, UI/UX, Audiovisuel, Illustration">
+    <meta name="twitter:description" content="Jeune artiste et designer graphique aussi passionnée par l’UI/UX, j’explore le graphisme et l’art avec curiosité. Découvrez mon portfolio créatif !">
     <meta name="twitter:url" content="https://pauline.yvelin.net">
-    <meta property="twitter:image" content="">
+    <meta property="twitter:image" content="https://pauline.yvelin.net/src/images/og-img.webp">
 </head>
 
 <body>
@@ -65,22 +66,22 @@
                 <ul>
                     <li><a href="./index.html" title="Retour vers l'accueil"><img class="logo1"
                                 src="./src/images/logo-1.webp" alt="Logo Pauline Yvelin"></a></li>
-                    <li class="bouton-accueil"><a href=./index.html class="bouton-menu">
+                    <li class="bouton-accueil"><a href="./index.html" class="bouton-menu">
                             <p>Accueil</p>
                             <img class="image-souligne" src="src/images/souligne2.webp" alt="ligne crayonnée">
                         </a></li>
-                    <li><a href=./index.html#a-propos class="bouton-menu">
+                    <li><a href="./index.html#a-propos" class="bouton-menu">
                             <p>A propos</p>
                             <img class="image-souligne" src="src/images/souligne.webp" alt="ligne crayonnée">
                         </a></li>
-                    <li><a href=./mes-projets.html class="menu-mes-projets">
+                    <li><a href="./mes-projets.html" class="menu-mes-projets">
                             <p>Mes projets</p>
                             <img class="image-entoure" src="src/images/entoure.webp" alt="rond crayonné">
                         </a></li>
                 </ul>
             </div>
             <div class="nav-right">
-                <a href=./index.html#contact class="bouton-menu">
+                <a href="./index.html#contact" class="bouton-menu">
                     <p>Contact</p>
                     <img class="image-souligne" src="src/images/souligne2.webp" alt="ligne crayonnée">
                 </a>
@@ -118,8 +119,8 @@
                     <div class="uiux-right">
                         <div class="television">
                             <img class="etoiles" src="src/images/etoiles2.webp" alt="étoiles">
-                            <img class="television-frame" src="src/images/television.webp" alt="frame télévision">
-                            <div class="television-screen" id="television-screen">
+                            <img class="television-frame" src="src/images/television.webp" alt="cadre télévision">
+                            <div class="television-screen" id="écran television">
                                 <div class="scroll-content">
                                     <img src="src/images/maquette.webp" alt="maquette UI/UX">
                                 </div>
@@ -469,6 +470,19 @@
                 }
             };
         }
+
+        let header = document.querySelector("header");
+        let lastScrollValue = 0;
+
+        document.addEventListener('scroll',() => {
+                let top  = document.documentElement.scrollTop;
+            if(lastScrollValue < top) {
+                header.classList.add("hidden");
+            } else {
+                header.classList.remove("hidden");
+            }
+            lastScrollValue = top;
+        });
     </script>
 </body>
 

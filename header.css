@@ -86,7 +86,14 @@ header {
     height: 100px;
     position: fixed;
     top: 0;
+    left: 0;
     z-index: 999;
+    transition: top 0.4s; /* Ajoute une transition pour un effet fluide */
+    transition-delay: 0.2s;
+}
+
+header.hidden {
+    top: -80px;
 }
 
 .logo1 {
