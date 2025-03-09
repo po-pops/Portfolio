@@ -57,7 +57,7 @@
 </head>
 
 <body>
-    <header id="header">
+    <header>
         <nav>
             <div class="nav-left">
                 <ul>
@@ -281,28 +281,18 @@
             }
         });
 
-        let header = document.getElementById("header");
+        let header = document.querySelector("header");
         let lastScrollValue = 0;
-        let headerInitialPosition = header.offsetTop; 
 
-        document.addEventListener('scroll', () => {
-            let top = document.documentElement.scrollTop;
-
-            if (top > headerInitialPosition) {
-                header.classList.add("sticky");
-            } else {
-                header.classList.remove("sticky");
-            }
-
-            if (lastScrollValue < top) {
+        document.addEventListener('scroll',() => {
+                let top  = document.documentElement.scrollTop;
+            if(lastScrollValue < top) {
                 header.classList.add("hidden");
             } else {
                 header.classList.remove("hidden");
             }
-
             lastScrollValue = top;
         });
-
     </script>
 
 </body>

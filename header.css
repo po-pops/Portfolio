@@ -84,7 +84,7 @@ header {
     padding: 0 6vw;
     width: calc(100vw - 12vw);
     height: 100px;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 999;
@@ -94,10 +94,6 @@ header {
 
 header.hidden {
     top: -80px;
-}
-
-.sticky {
-    position: fixed;
 }
 
 .logo1 {
