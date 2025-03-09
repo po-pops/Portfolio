@@ -2139,7 +2139,7 @@ height: 100%;
 
 }
 
-@media screen and (min-width: 1440px) and (max-width: 2560px) {
+@media screen and (min-width: 1800px) and (max-width: 2560px) {
     .television {
         background-size: 100% 100%;
     }
