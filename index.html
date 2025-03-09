@@ -21,8 +21,10 @@
 
     <!-- Meta -->
     <title>Pauline Yvelin | Portfolio - Graphisme, UI/UX, Audiovisuel, Illustration</title>
-    <meta name="description" content="Jeune artiste et designer graphique aussi passionnée par l’UI/UX, j’explore le graphisme et l’art avec curiosité. Découvrez mon portfolio créatif !">
-    <meta name="keywords" content="Pauline Yvelin, artiste, portfolio, dessin, illustration, cinéma, audiovisuel, MMI, créativité, design graphique, logo, affiche, UI/UX, maquette, court-métrage, graphisme, art numérique">
+    <meta name="description"
+        content="Jeune artiste et designer graphique aussi passionnée par l’UI/UX, j’explore le graphisme et l’art avec curiosité. Découvrez mon portfolio créatif !">
+    <meta name="keywords"
+        content="Pauline Yvelin, artiste, portfolio, dessin, illustration, cinéma, audiovisuel, MMI, créativité, design graphique, logo, affiche, UI/UX, maquette, court-métrage, graphisme, art numérique">
     <meta name="author" content="Pauline Yvelin">
     <meta name="theme-color" content="#ffffff">
 
@@ -43,7 +45,8 @@
     <meta property="og:title" content="Pauline Yvelin | Portfolio - Graphisme, UI/UX, Audiovisuel, Illustration">
     <meta property="og:site_name" content="Pauline Yvelin - Portfolio">
     <meta property="og:url" content="https://pauline.yvelin.net">
-    <meta property="og:description" content="Jeune artiste et designer graphique aussi passionnée par l’UI/UX, j’explore le graphisme et l’art avec curiosité. Découvrez mon portfolio créatif !">
+    <meta property="og:description"
+        content="Jeune artiste et designer graphique aussi passionnée par l’UI/UX, j’explore le graphisme et l’art avec curiosité. Découvrez mon portfolio créatif !">
     <meta property="og:image" content="https://pauline.yvelin.net/src/images/og-img.webp">
     <meta property="og:url" content="https://pauline.yvelin.net">
 
@@ -51,7 +54,8 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@pauline-yvelin">
     <meta name="twitter:title" content="Pauline Yvelin | Portfolio - Graphisme, UI/UX, Audiovisuel, Illustration">
-    <meta name="twitter:description" content="Jeune artiste et designer graphique aussi passionnée par l’UI/UX, j’explore le graphisme et l’art avec curiosité. Découvrez mon portfolio créatif !">
+    <meta name="twitter:description"
+        content="Jeune artiste et designer graphique aussi passionnée par l’UI/UX, j’explore le graphisme et l’art avec curiosité. Découvrez mon portfolio créatif !">
     <meta name="twitter:url" content="https://pauline.yvelin.net">
     <meta property="twitter:image" content="https://pauline.yvelin.net/src/images/og-img.webp">
 </head>
@@ -183,7 +187,7 @@
         <section id="contact" class="contact">
             <div class="titre-contact">
                 <h2>une idee ? un projet ?</h2>
-                    <h2>contactez moi !</h2>
+                <h2>contactez moi !</h2>
             </div>
             <div class="contact-content">
                 <div class="telephone">
@@ -281,18 +285,32 @@
             }
         });
 
-        let header = document.querySelector("header");
-        let lastScrollValue = 0;
+        let lastScrollY = 0;
+        let headerVisible = true;
+        let scrollThreshold = 0;
 
-        document.addEventListener('scroll',() => {
-                let top  = document.documentElement.scrollTop;
-            if(lastScrollValue < top) {
-                header.classList.add("hidden");
+        function handleScroll() {
+            const currentScrollY = window.scrollY;
+            const header = document.querySelector("header");
+
+            if (currentScrollY > scrollThreshold) {
+                if (currentScrollY > lastScrollY) {
+                    header.classList.add("hidden"); // Cache le header
+                } else {
+                    header.classList.remove("hidden"); // Montre le header
+                }
             } else {
-                header.classList.remove("hidden");
+                header.classList.remove("hidden"); // Toujours visible en haut de la page
             }
-            lastScrollValue = top;
+
+            lastScrollY = currentScrollY;
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            scrollThreshold = window.innerHeight * 0.05;
+            window.addEventListener("scroll", handleScroll);
         });
+
     </script>
 
 </body>
