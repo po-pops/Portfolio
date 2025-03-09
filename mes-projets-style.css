@@ -2138,3 +2138,38 @@ height: 100%;
     }
 
 }
+
+@media screen and (min-width: 1440px) and (max-width: 2560px) {
+    .television {
+        background-size: 100% 100%;
+    }
+
+    .carres-couleurs {
+        background-size: 100% 100%;
+    }
+
+    .polices {
+        background-size: 100% 100%;
+    }
+
+    .post-it1 {
+        background-size: 100% 100%;
+    }
+
+    .post-it2 {
+        background-size: 100% 100%;
+    }
+
+    .carnet {
+        scale: 1.2;
+    }
+
+    .illustrations-contenu {
+        height: 600px;
+        gap: 70px;
+    }
+
+    .indications {
+        gap: 200px;
+    }
+}
