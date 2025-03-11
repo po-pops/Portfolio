@@ -457,3 +457,69 @@ main {
         width: 65px;
     }
 }
+
+@media screen and (min-width: 1740px) and (max-width: 2561px) {
+    h1 {
+        font-family: 'Rawrote';
+        font-size: 120px;
+        color: #960000;
+        text-transform: uppercase;
+    }
+    
+    h2 {
+        font-family: 'Rawrote';
+        font-size: 42px;
+        color: #960000;
+        text-transform: uppercase;
+    }
+    
+    h3 {
+        font-family: 'Marker Note Regular';
+        font-size: 32px;
+        color: #960000;
+        text-transform: uppercase;
+    }
+    
+    h4 {
+        font-family: 'Rawrote';
+        font-size: 38px;
+        color: #960000;
+    }
+    
+    body {
+        height: 1000px;
+        cursor: url("src/images/souris.webp"), auto;
+        background-color: #F6F6F6;
+    }
+    
+    p {
+        font-family: 'Perpetua';
+        font-size: 32px;
+        color: black;
+    }
+    
+    .footer-lien {
+        font-size: 32px!important;
+    }
+    
+    nav a {
+        font-family: 'Perpetua';
+        font-size: 32px;
+        text-decoration: none;
+        color: black;
+    }
+    
+    header span {
+        font-family: 'Rawrote';
+        font-size: 32px;
+        color: #960000;
+        text-transform: uppercase;
+    }
+    
+    main a {
+        font-family: 'Perpetua';
+        font-size: 32px;
+        text-decoration: none;
+        color: #960000;
+    }
+}

@@ -20,11 +20,11 @@
     align-items: center;
     justify-content: center;
     line-height: 2.2;
-    padding: 0 10vw 0 4vw;
+    padding: 4vw 10vw 4vw 4vw;
     padding-top: 25px;
     background-image: url('src/images/background-paper/papier.webp');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100% 100%;
     background-position: start;
 }
 
@@ -110,13 +110,13 @@
 .polaroid-row1 {
     display: flex;
     margin-left: -6vw;
-    gap: 30px;
+    gap: 8vw;
 }
 
 .polaroid-row2 {
     display: flex;
     margin-right: -6vw;
-    gap: 30px;
+    gap: 8vw;
 }
 
 .polaroid {
@@ -132,13 +132,14 @@
     z-index: 2;
     bottom: 10px;
     left: 18px;
+    white-space: nowrap;
 }
 
 .polaroid-img {
     position: absolute;
     left: 0;
     top: 0;
-    width: 16vw;
+    width: 250px;
     margin-top: 55px;
 }
 
@@ -1116,13 +1117,22 @@ main .mentions-légales {
     }
 }
 
-@media screen and (min-width: 1800px) and (max-width: 2560px) {
+@media screen and (min-width: 1620px) and (max-width: 1740px) {
     .polaroid .bouton {
-        bottom: none;
-        top: 350px;
+        top: 310px;
+    }
+}
+
+@media screen and (min-width: 1740px) and (max-width: 2561px) {
+    .domaines-expertises-contenu {
+        padding: 11vw 30vw;;
     }
 
-    .a-propos-left-texte {
-        background-size: 100% 100%;
+    .polaroid-img {
+        width: 300px;
+    }
+
+    .polaroid .bouton {
+        bottom: -50px;
     }
 }
