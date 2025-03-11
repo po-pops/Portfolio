@@ -1,9 +1,9 @@
-
 @font-face {
     font-family: 'Rawrote';
     src: url('./src/font/rawrote.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -11,6 +11,7 @@
     font-style: normal;
     font-weight: 700;
     src: url('./src/font/Perpetua.woff') format('woff');
+    font-display: swap;
 }
 
 @font-face {
@@ -18,31 +19,39 @@
     font-style: normal;
     font-weight: normal;
     src: local('Marker Note Regular'), url('./src/font/MarkerNote-Regular.woff') format('woff');
-    }
+    font-display: swap;
+}
 
-    @font-face {
-        font-family: 'Lemon Milk';
-        font-style: normal;
-        font-weight: 300;
-        src: local('Lemon Milk'), url('./src/font/BricolageGrotesque-Light.woff') format('woff')
-    }
+@font-face {
+    font-family: 'Lemon Milk';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Lemon Milk'), url('./src/font/BricolageGrotesque-Light.woff') format('woff');
+    font-display: swap;
+}
+
 @font-face {
     font-family: 'Lemon Milk';
     font-style: normal;
     font-weight: 400;
-    src: local('Lemon Milk'), url('./src/font/BricolageGrotesque-Regular.woff') format('woff')
+    src: local('Lemon Milk'), url('./src/font/BricolageGrotesque-Regular.woff') format('woff');
+    font-display: swap;
 }
+
 @font-face {
     font-family: 'Lemon Milk';
     font-style: normal;
     font-weight: 500;
-    src: local('Lemon Milk'), url('./src/font/BricolageGrotesque-Medium.woff') format('woff')
+    src: local('Lemon Milk'), url('./src/font/BricolageGrotesque-Medium.woff') format('woff');
+    font-display: swap;
 }
+
 @font-face {
     font-family: 'Lemon Milk';
     font-style: normal;
     font-weight: 700;
-    src: local('Lemon Milk'), url('./src/font/BricolageGrotesque-Bold.woff') format('woff')
+    src: local('Lemon Milk'), url('./src/font/BricolageGrotesque-Bold.woff') format('woff');
+    font-display: swap;
 }
 
 
@@ -50,23 +59,30 @@
     font-family: 'Bricolage Grotesque';
     font-style: normal;
     font-weight: 300;
-    src: local('Bricolage Grotesque'), url('./src/font/BricolageGrotesque-Light.woff') format('woff')
+    src: local('Bricolage Grotesque'), url('./src/font/BricolageGrotesque-Light.woff') format('woff');
+    font-display: swap;
 }
+
 @font-face {
     font-family: 'Bricolage Grotesque';
     font-style: normal;
     font-weight: 400;
-    src: local('Bricolage Grotesque'), url('./src/font/BricolageGrotesque-Regular.woff') format('woff')
+    src: local('Bricolage Grotesque'), url('./src/font/BricolageGrotesque-Regular.woff') format('woff');
+    font-display: swap;
 }
+
 @font-face {
     font-family: 'Bricolage Grotesque';
     font-style: normal;
     font-weight: 500;
-    src: local('Bricolage Grotesque'), url('./src/font/BricolageGrotesque-Medium.woff') format('woff')
+    src: local('Bricolage Grotesque'), url('./src/font/BricolageGrotesque-Medium.woff') format('woff');
+    font-display: swap;
 }
+
 @font-face {
     font-family: 'Bricolage Grotesque';
     font-style: normal;
     font-weight: 700;
-    src: local('Bricolage Grotesque'), url('./src/font/BricolageGrotesque-Bold.woff') format('woff')
+    src: local('Bricolage Grotesque'), url('./src/font/BricolageGrotesque-Bold.woff') format('woff');
+    font-display: swap;
 }

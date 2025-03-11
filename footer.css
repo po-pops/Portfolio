@@ -2,10 +2,18 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     padding: 65px 6vw 65px 6vw;
-    width: calc(100vw - 12vw);
+    width: calc(100% - 12vw);
     height: 100px;
-    gap: 24vw;
+    gap: 8px;
+    margin-top: 100px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
 footer p {
@@ -18,7 +26,8 @@ footer p {
 }
 
 .logo2 {
-    width: 3vw;
+    width: 5vw;
+    min-width: 50px;
     height: auto;
 }
 
@@ -29,27 +38,30 @@ footer p {
     gap: 2vw;
 }
 
-.footer-menu {
+.footer-menu ul {
     display: flex;
     flex-direction: column;
+    gap: 12px;
 }
 
-.footer-middle {
-    margin-top: 150px;
+.footer-right ul {
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-
-.footer-right {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+    gap: 12px;
 }
 
 .footer-right img {
-    max-width: 2.5vw;
+    width: 2.5vw;
+    min-width: 30px;
     height: auto;
+}
+
+.footer-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
 }
 
 .footer-lien {
@@ -62,4 +74,61 @@ footer p {
 
 .footer-lien:hover {
     color: #960000;
+}
+
+@media screen and (max-width:425px) {
+    footer {
+        padding: 65px 8vw 65px 8vw;
+        width: calc(100% - 16vw);
+        gap: 24px;
+    }
+
+    footer p {
+        font-size: 16px;
+    }
+
+    .footer-left {
+        gap: 5vw;
+    }
+
+    .footer-right ul {
+        gap: 12px;
+    }
+
+    .footer-lien {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width:426px) and (max-width:600px) {
+    footer {
+        gap: 24px;
+    }
+
+    footer p {
+        font-size: 18px;
+    }
+
+    .footer-left {
+        gap: 5vw;
+    }
+
+    .footer-right ul {
+        gap: 12px;
+    }
+
+    .footer-lien {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width:601px) and (max-width:1024px) {
+
+    footer p {
+        font-size: 18px;
+    }
+
+    .footer-lien {
+        font-size: 18px;
+    }
 }

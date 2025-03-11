@@ -2,62 +2,106 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
+    <!-- Balises pour les navigateurs -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pops - Portfolio | Mes projets</title>
+
+    <!-- Balises pour une indexation optimisée -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="bingbot" content="index, follow">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="/header.css">
     <link rel="stylesheet" href="mes-projets-style.css">
     <link rel="stylesheet" href="/footer.css">
     <link rel="stylesheet" href="font.css">
-    <link rel="stylesheet" href="lang.css">
-    <link rel="icon" type="image/png" href="src/images/favicon.PNG">
+
+    <!-- Meta -->
+    <title>Pauline Yvelin | Portfolio - Graphisme, UI/UX, Audiovisuel, Illustration</title>
+    <meta name="description" content="Jeune artiste et designer graphique aussi passionnée par l’UI/UX, j’explore le graphisme et l’art avec curiosité. Découvrez mon portfolio créatif !">
+    <meta name="keywords" content="Pauline Yvelin, artiste, portfolio, dessin, illustration, cinéma, audiovisuel, MMI, créativité, design graphique, logo, affiche, UI/UX, maquette, court-métrage, graphisme, art numérique">
+    <meta name="author" content="Pauline Yvelin">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/src/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/src/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/src/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/src/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Pauline Yvelin" />
+    <link rel="manifest" href="/src/favicon/site.webmanifest" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <!-- Multi langues -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/polyglot.js/2.4.0/polyglot.min.js"></script>
 
+    <!-- Balises de liaison -->
+    <link rel="canonical" href="https://pauline.yvelin.net">
+
+    <!-- Balises pour les réseaux sociaux -->
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Pauline Yvelin | Portfolio - Graphisme, UI/UX, Audiovisuel, Illustration">
+    <meta property="og:site_name" content="Pauline Yvelin - Portfolio">
+    <meta property="og:url" content="https://pauline.yvelin.net">
+    <meta property="og:description" content="Jeune artiste et designer graphique aussi passionnée par l’UI/UX, j’explore le graphisme et l’art avec curiosité. Découvrez mon portfolio créatif !">
+    <meta property="og:image" content="https://pauline.yvelin.net/src/images/og-img.webp">
+    <meta property="og:url" content="https://pauline.yvelin.net">
+
+    <!-- Balises pour Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@pauline-yvelin">
+    <meta name="twitter:title" content="Pauline Yvelin | Portfolio - Graphisme, UI/UX, Audiovisuel, Illustration">
+    <meta name="twitter:description" content="Jeune artiste et designer graphique aussi passionnée par l’UI/UX, j’explore le graphisme et l’art avec curiosité. Découvrez mon portfolio créatif !">
+    <meta name="twitter:url" content="https://pauline.yvelin.net">
+    <meta property="twitter:image" content="https://pauline.yvelin.net/src/images/og-img.webp">
 </head>
 
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href=./index.html><img class="logo1" src="./src/images/logo-1.png"></a></li>
-                <li><a href=./mes-projets.html class="menu-mes-projets">
-                        <p>Mes projets</p>
-                        <img class="image-entoure" src="src/images/entoure.png">
-                    </a></li>
-                <li><a href=./index.html#a-propos class="bouton-menu">
-                        <p>A propos</p>
-                        <img class="image-souligne" src="src/images/souligne.png">
-                    </a></li>
-                <li><a href=./index.html#contact class="bouton-menu">
-                        <p>Contact</p>
-                        <img class="image-souligne" src="src/images/souligne2.png">
-                    </a></li>
-            </ul>
+            <div class="nav-left">
+                <ul>
+                    <li><a href="./index.html" title="Retour vers l'accueil"><img class="logo1"
+                                src="./src/images/logo-1.webp" alt="Logo Pauline Yvelin"></a></li>
+                    <li class="bouton-accueil"><a href="./index.html" class="bouton-menu">
+                            <p>Accueil</p>
+                            <img class="image-souligne" src="src/images/souligne2.webp" alt="ligne crayonnée">
+                        </a></li>
+                    <li><a href="./index.html#a-propos" class="bouton-menu">
+                            <p>A propos</p>
+                            <img class="image-souligne" src="src/images/souligne.webp" alt="ligne crayonnée">
+                        </a></li>
+                    <li><a href="./mes-projets.html" class="menu-mes-projets">
+                            <p>Mes projets</p>
+                            <img class="image-entoure" src="src/images/entoure.webp" alt="rond crayonné">
+                        </a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <a href="./index.html#contact" class="bouton-menu">
+                    <p>Contact</p>
+                    <img class="image-souligne" src="src/images/souligne2.webp" alt="ligne crayonnée">
+                </a>
+            </div>
         </nav>
-        <div class="language">
-            <span><a href="./index.html" onclick="changeLanguage('fr')">FR</a></span>
-            <span><a href="./index.html" onclick="changeLanguage('en')">EN</a></span>
-        </div>
     </header>
     <main>
         <section class="top-content">
             <h1>Mes projets</h1>
             <span>et creations numeriques</span>
         </section>
+        <div class="mes-projets-titre">
+            <h2>bienvenue dans mon monde !</h2>
+            <img src="src/images/smiley.webp" alt="smiley">
+        </div>
         <section class="mes-projets-contenu">
-            <div class="mes-projets-titre">
-                <h2>bienvenue dans mon monde !</h2>
-                <img src="src/images/smiley.png" alt="smiley">
-            </div>
             <section id="uiux" class="uiux">
                 <div class="catégorie-titres">
                     <h4>ui/ux</h4>
-                    <img src="src/images/mes-projets-fleche.png">
+                    <img src="src/images/mes-projets-fleche.webp" alt="flèche">
                 </div>
                 <div class="uiux-top">
                     <div class="uiux-left">
@@ -68,31 +112,30 @@
                             propositions.<br><br></p>
                         <div class="lien">
                             <a href="https://musbar.netlify.app/#" target="_blank">musbar.netlify.app</a><br><br>
-                            <img src="src/images/traits-liens.svg">
+                            <img src="src/images/traits-liens.svg" alt="traits lien">
                         </div>
                         <span>UI/UX - Développement web</span>
                     </div>
                     <div class="uiux-right">
-                        <div class="details-uiux">
-                            <img src="src/images/etoiles2 1.png">
-                            <div class="scroll">
-                                <h3>Scroll</h3>
-                                <img src="src/images/fleche-scroll.png">
-                            </div>
-                        </div>
                         <div class="television">
-                            <img class="television-frame" src="src/images/television.png">
+                            <img class="etoiles" src="src/images/etoiles2.webp" alt="étoiles">
+                            <img class="television-frame" src="src/images/television.webp" alt="cadre télévision">
                             <div class="television-screen" id="television-screen">
                                 <div class="scroll-content">
-                                    <img src="src/images/maquette.png">
+                                    <img src="src/images/maquette.webp" alt="maquette UI/UX">
                                 </div>
+                            </div>
+                            <div class="scroll">
+                                <h3>Scroll</h3>
+                                <img src="src/images/fleche-scroll.webp" alt="flèche scroll">
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="palette-couleurs">
-                    <div class="left-palette-couleurs">
-                        <span>Palette de couleurs</span>
+                    <span>Palette de couleurs</span>
+                    <div class="palette-content">
+                        <img class="palette" src="src/images/palette.webp" alt="palette de couleurs">
                         <div class="carres-couleurs">
                             <div class="carre">
                                 <div class="noir">
@@ -116,16 +159,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="right-palette-couleurs">
-                        <img class="palette" src="src/images/palette.png">
-                    </div>
                 </div>
                 <div class="typographie">
-                    <div class="encre">
-                        <img src="src/images/encre.png">
-                    </div>
-                    <div class="right-typographie">
-                        <span>Typographie</span>
+                    <span>Typographie</span>
+                    <div class="typographie-content">
+                        <img src="src/images/encre.webp" alt="encre" class="encre">
                         <div class="polices">
                             <div class="polices-titres">
                                 <p>Titres</p>
@@ -148,75 +186,104 @@
             <section id="graphisme" class="graphisme">
                 <div class="catégorie-titres">
                     <h4>graphisme</h4>
-                    <img src="src/images/mes-projets-fleche.png">
+                    <img src="src/images/mes-projets-fleche.webp" alt="flèche">
                 </div>
-                <div class="graphisme-affiche">
-                    <img src="src/images/halles-bacalan.jpg">
-                    <div class="graphisme-texte1">
-                        <span>Affiche touristique</span>
-                        <p>pour les Halles Bacalan à Bordeaux à l’occasion du projet d’intégration à l’IUT MMI de
-                            Bordeaux Montaigne.</p>
+                <div class="graphisme-content">
+                    <div class="graphisme-affiche">
+                        <img onclick="openPreview('src/images/affiche1.webp')" src="src/images/affiche1.webp"
+                            class="affiche  img-zoomable" alt="affiche">
+                        <div class="graphisme-texte">
+                            <div class="affiche-texte">
+                                <span>Affiche de film</span>
+                                <p>Ayant pour but d'adopter une approche artistique qui s’éloigne de l’esthétique
+                                    traditionnelle du film pour proposer une vision plus moderne et graphique de
+                                    "Princesse
+                                    Mononoké".</p>
+                            </div>
+                            <img src="src/images/background-paper/papier.webp"
+                                class="affiche-texte-background affiche-texte-background1" alt="background en papier">
+                        </div>
+
                     </div>
-                </div>
-                <div class="graphisme-affiche">
-                    <div class="graphisme-texte2">
-                        <span>Affiche de film</span>
-                        <p>pour notre court-métrage de bac “La 7ème minute” à partir d’une photo prise sur le tournage.
-                        </p>
+                    <div class="graphisme-affiche">
+                        <div class="graphisme-texte">
+                            <div class="affiche-texte">
+                                <span>Affiche de film</span>
+                                <p>Revisitant "500 Days of Summer" avec une esthétique collage et pop-art, mêlant
+                                    textures rétro et éléments graphiques pour capturer la nature fragmentée et
+                                    introspective de l’histoire.</p>
+                            </div>
+                            <img src="src/images/background-paper/papier-gauche.webp"
+                                class="affiche-texte-background affiche-texte-background2" alt="background en papier">
+                        </div>
+                        <img onclick="openPreview('src/images/affiche2.webp')" src="src/images/affiche2.webp"
+                            class="affiche img-zoomable" alt="affiche">
                     </div>
-                    <img src="src/images/7eme-minute-affiche.png">
-                </div>
-                <div class="graphisme-logo">
-                    <img class="graphisme-postit" src="src/images/graphisme-postit1.png">
-                    <div class="graphisme-texte-logo">
-                        <p><span>Logo</span> réalisé lors du <span>concours de pull</span> organisé par le BDE de l’IUT
-                            Bordeaux Montaigne, puis choisi par l’ensemble de l’IUT lors d’un vote.<br>- 2024</p>
-                        <img src="src/images/graphisme-logo.png">
+                    <div class="graphisme-logo-container">
+                        <img class="graphisme-postit" src="src/images/graphisme-postit1.webp"
+                            alt="Post it avec mockup pulls">
+                        <div class="texte-logo">
+                            <p><span>Logo</span> réalisé lors du <span>concours de pull</span> organisé par le BDE de
+                                l’IUT
+                                Bordeaux Montaigne, puis choisi par l’ensemble de l’IUT lors d’un vote.<br>- 2024</p>
+                        </div>
                     </div>
-                </div>
-                <div class="graphisme-logo">
-                    <div class="graphisme-texte-logo">
-                        <p>Production d’un <span>logo</span> sur demande à l’occasion de la création d’un portfolio,
-                            contenant les initiales <span>T et R</span> et dans un style minimaliste moderne.<br>- 2024
+                    <div class="graphisme-logo-container">
+                        <div class="texte-logo">
+                            <p>Production d’un <span>logo</span> sur demande à l’occasion de la création d’un portfolio,
+                                contenant les initiales <span>T et R</span> et dans un style minimaliste moderne.<br>-
+                                2024
+                            </p>
+                        </div>
+                        <img class="graphisme-postit" src="src/images/graphisme-postit2.webp" alt="Post it avec logos">
                     </div>
-                    <img class="graphisme-postit" src="src/images/graphisme-postit2.png">
                 </div>
             </section>
             <section id="audiovisuel" class="audiovisuel">
                 <div class="catégorie-titres">
                     <h4>audiovisuel</h4>
-                    <img src="src/images/mes-projets-fleche.png">
+                    <img src="src/images/mes-projets-fleche.webp" alt="flèche">
                 </div>
                 <div class="audiovisuel-cards">
-                    <div class="mes-projets-audiovisuel-card1">
-                        <img class="etoile-audiovisuel1" src="src/images/etoiles2 1.png">
+                    <div class="mes-projets-audiovisuel-card">
                         <div class="post-it1">
+                            <img class="etoile-audiovisuel1" src="src/images/etoiles2.webp" alt="étoiles">
                             <span>“Ligne Droite”</span><br>
                             <p>Charles Bousquet - 2024<br><br>Un homme au volant d’une voiture américaine. Une longue
                                 ligne droite dans un paysage de western. Un feu rouge comme sorti de nulle part.</p>
                             <br><br>
                             <div class="lien">
                                 <a href="https://vimeo.com/936982096" target="_blank">Ligne Droite</a>
-                                <img src="src/images/traits-liens.svg">
+                                <img src="src/images/traits-liens.svg" alt="traits lien">
                             </div>
                             <br><br><span>À l’occasion du Nikon Project</span>
                         </div>
-                        <img class="computer1" src="src/images/computer-ligne-droite.png" 
-                            data-video="https://www.youtube.com/embed/c1_Go7CIrng?si=lqgtnJd55EUi8xap" 
-                            data-popup="videoPopup2" 
-                            onclick="openPopup(this)">
+                        <div class="audiovisuel-content">
+                            <img class="computer1" src="src/images/computer-ligne-droite.webp"
+                                data-video="https://player.vimeo.com/video/936982096"
+                                data-popup="videoPopup2" onclick="openPopup(this)" alt="ordinateur">
+                            <div class="audiovisuel-message">
+                                <img src="src/images/fleche-gauche.webp" alt="flèche">
+                                <h3>Clic !</h3>
+                            </div>
+                        </div>
                         <div class="popup" id="videoPopup1" onclick="closePopupOutside(event, 'videoPopup1')">
                             <div class="popup-content">
                                 <span class="close" onclick="closePopup('videoPopup1')">&times;</span>
-                                <iframe width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+                                <iframe src="" frameborder="0" allowfullscreen></iframe>
                             </div>
                         </div>
                     </div>
-                    <div class="mes-projets-audiovisuel-card2">
-                        <img class="computer2" src="src/images/computer-7ememinute.png" 
-                            data-video="https://player.vimeo.com/video/936982096" 
-                            data-popup="videoPopup1" 
-                            onclick="openPopup(this)">
+                    <div class="mes-projets-audiovisuel-card">
+                        <div class="audiovisuel-content">
+                            <img class="computer2" src="src/images/computer-7ememinute.webp"
+                                data-video="https://www.youtube.com/embed/c1_Go7CIrng?si=lqgtnJd55EUi8xap" data-popup="videoPopup1"
+                                onclick="openPopup(this)" alt="ordinateur">
+                            <div class="audiovisuel-message">
+                                <h3>Clic !</h3>
+                                <img src="src/images/fleche-droite.webp" alt="flèche">
+                            </div>
+                        </div>
                         <div class="popup" id="videoPopup2" onclick="closePopupOutside(event, 'videoPopup2')">
                             <div class="popup-content">
                                 <span class="close" onclick="closePopup('videoPopup2')">&times;</span>
@@ -224,6 +291,7 @@
                             </div>
                         </div>
                         <div class="post-it2">
+                            <img class="etoile-audiovisuel2" src="src/images/etoiles1.webp" alt="étoiles">
                             <span>“La 7ème minute”</span><br>
                             <p>Pauline Yvelin - Lenny Ochudlo<br>2024<br><br>Que reste-t-il de nos vies, quand on s'en
                                 va ? Quelles images en garde notre cerveau, auquel il reste environ 7 minutes de pensée,
@@ -231,62 +299,80 @@
                             <div class="lien">
                                 <a href="https://youtu.be/c1_Go7CIrng?si=gS8-nZQikJpFSFAq" target="_blank">La 7ème
                                     minute</a>
-                                <img src="src/images/traits-liens.svg">
+                                <img src="src/images/traits-liens.svg" alt="traits lien">
                             </div>
                             <br><br><span>Réalisé pour le film de bac</span>
                         </div>
-                        <img class="etoile-audiovisuel2" src="src/images/etoiles2 1.png">
                     </div>
                 </div>
             </section>
-            <section class="illustrations">
+            <section id="illustrations" class="illustrations">
                 <div class="catégorie-titres">
                     <h4>illustrations</h4>
-                    <img src="src/images/mes-projets-fleche.png">
+                    <img src="src/images/mes-projets-fleche.webp" alt="flèche">
                 </div>
                 <div class="illustrations-contenu">
                     <div class="carnet">
                         <div class="carnet-left">
-                            <img class="dessin dessin1" src="src/images/sam.png">
-                            <img class="dessin dessin2" src="src/images/lava.png">
+                            <img onclick="openPreview('src/images/sam.webp')" class="dessin dessin1 visible"
+                                src="src/images/sam.webp" alt="dessin1">
+                            <img onclick="openPreview('src/images/lava.webp')" class="dessin dessin2"
+                                src="src/images/lava.webp" alt="dessin2">
+                            <img onclick="openPreview('src/images/bonhomme.webp')" class="dessin dessin3"
+                                src="src/images/bonhomme.webp" alt="dessin3">
                         </div>
                         <div class="carnet-right">
-                            <img class="dessin dessin1" src="src/images/sorciere.png">
-                            <img class="dessin dessin2" src="src/images/musique.png">
+                            <img onclick="openPreview('src/images/sorciere.webp')" class="dessin dessin1 visible"
+                                src="src/images/sorciere.webp" alt="dessin4">
+                            <img onclick="openPreview('src/images/musique.webp')" class="dessin dessin2"
+                                src="src/images/musique.webp" alt="dessin5">
+                            <img onclick="openPreview('src/images/camera.webp')" class="dessin dessin3"
+                                src="src/images/camera.webp" alt="dessin6">
                         </div>
                     </div>
                     <div class="indications">
-                        <img src="src/images/fleche-gauche.png" onclick="turnPage()">
+                        <img class=indications-fleche src="src/images/fleche-gauche.webp" onclick="turnPage()"
+                            alt="flèche gauche">
                         <h3>Tourne la page !</h3>
-                        <img src="src/images/fleche-droite.png" onclick="turnPage()">
+                        <img class=indications-fleche src="src/images/fleche-droite.webp" onclick="turnPage()"
+                            alt="flèche droite">
                     </div>
                 </div>
             </section>
         </section>
     </main>
     <footer>
-        <div class="footer-left">
-            <a href="./index.html"><img class="logo2" src="src/images/logo-2.png"></a>
-            <div class="footer-menu">
+        <div class="footer-top">
+            <div class="footer-left">
+                <a href="./index.html"><img class="logo2" src="src/images/logo-2.webp"
+                        alt="logo avec pseudonyme Pops"></a>
+                <div class="footer-menu">
+                    <ul>
+                        <li><a href="./mes-projets.html" class="footer-lien">Mes projets</a></li>
+                        <li><a href="./index.html#a-propos" class="footer-lien">A propos</a></li>
+                        <li><a href="./index.html#contact" class="footer-lien">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-right">
                 <ul>
-                    <li><a href="./mes-projets.html" class="footer-lien">Mes projets</a></li>
-                    <li><a href="./index.html#a-propos" class="footer-lien">A propos</a></li>
-                    <li><a href="./index.html#contact" class="footer-lien">Contact</a></li>
+                    <li><a href="mailto:pauline.yvelin@mmibordeaux.com"><img src="src/images/email.webp"
+                                alt="email"></a>
+                    </li>
+                    <li><a target="_blank" href="https://www.linkedin.com/in/pauline-yvelin-a23188332"
+                            title="Linkedin Pauline Yvelin"><img src="src/images/linkedin.webp" alt="Logo LinkedIn"></a>
+                    </li>
                 </ul>
             </div>
         </div>
-        <div class="footer-middle">
+        <div class="footer-bottom">
             <p>© 2024 Pauline Yvelin | Tous droits réservés</p>
-            <a href="#" class="footer-lien">Mentions légales</a>
-        </div>
-        <div class="footer-right">
-            <ul>
-                <li><a href=./index.html><img src="src/images/email.png"></a></li>
-                <li><a href="https://www.linkedin.com/in/pauline-yvelin-a23188332"><img
-                            src="src/images/linkedin.png"></a></li>
-            </ul>
+            <a href="./mentions-legales.html" class="footer-lien">Mentions légales</a>
         </div>
     </footer>
+    <div id="filtre"></div>
+    <img id="preview-image" alt="preview" src="" style="display: none;">
+    <script src="./src/js/header.js"></script>
     <script>
         function openPopup(element) {
             const videoUrl = element.getAttribute("data-video");
@@ -313,32 +399,79 @@
             document.body.classList.remove("no-scroll");
         }
 
-    
+
         function closePopupOutside(event, popupId) {
             if (event.target.id === popupId) {
                 closePopup(popupId);
             }
         }
 
+        let page = 1;
+        const nbPages = document.querySelector(".carnet-left").children.length;
+        const carnetLeft = document.querySelector(".carnet-left");
+        const carnetRight = document.querySelector(".carnet-right");
         function turnPage() {
-            const dessins1 = document.querySelectorAll(".dessin1");
-            const dessins2 = document.querySelectorAll(".dessin2");
 
-            dessins1.forEach((dessin1, index) => {
-                const dessin2 = dessins2[index]; // Associe chaque dessin1 à son dessin2 correspondant
+            carnetLeft.querySelector(`:nth-child(${page})`).classList.remove("visible");
+            carnetRight.querySelector(`:nth-child(${page})`).classList.remove("visible");
 
-                if (dessin1.style.opacity === "1" || dessin1.style.opacity === "") {
-                    dessin1.style.opacity = "0";
-                    dessin2.style.opacity = "1";
-                } else {
-                    dessin1.style.opacity = "1";
-                    dessin2.style.opacity = "0";
-                }
+            page = (page + 1) % nbPages || nbPages;
+
+            carnetLeft.querySelector(`:nth-child(${page})`).classList.add("visible");
+            carnetRight.querySelector(`:nth-child(${page})`).classList.add("visible");
+        }
+
+        const tvScreen = document.getElementById("television-screen");
+        tvScreen.addEventListener("wheel", (event) => {
+            event.preventDefault();
+            tvScreen.scrollTop += event.deltaY;
+        });
+
+        let startTouch = 0;
+
+        tvScreen.addEventListener("touchstart", (event) => {
+            startTouch = event.touches[0].clientY;
+        });
+
+        tvScreen.addEventListener("touchmove", (event) => {
+            event.preventDefault();
+            let moveTouch = startTouch - event.touches[0].clientY;
+            tvScreen.scrollTop += moveTouch;
+            startTouch = event.touches[0].clientY;
+        });
+
+        const filtre = document.getElementById("filtre");
+        const previewImage = document.getElementById("preview-image");
+        if (previewImage) {
+            previewImage.addEventListener("click", () => {
+                closePreview();
+            });
+
+            filtre.addEventListener("click", () => {
+                closePreview();
             });
         }
 
+        window.closePreview = () => {
+            previewImage.style.display = "none";
+            filtre.classList.toggle("dark");
+        };
 
-            
+        function openPreview(src) {
+            const image = new Image();
+            image.src = src;
+            filtre.classList.toggle("dark");
+
+            image.onload = function () {
+                if (filtre.classList.contains("dark")) {
+                    previewImage.style.setProperty("--image-width", image.width);
+                    previewImage.style.setProperty("--image-height", image.height);
+                    previewImage.setAttribute("src", src);
+                    previewImage.style.display = "block";
+                }
+            };
+        }
     </script>
 </body>
+
 </html>

@@ -22,9 +22,9 @@
     line-height: 2.2;
     padding: 0 10vw 0 4vw;
     padding-top: 25px;
-    background-image: url('src/images/PAPIER.png');
+    background-image: url('src/images/background-paper/papier.webp');
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: 100%;
     background-position: start;
 }
 
@@ -35,14 +35,16 @@
 
 .a-propos-right {
     margin-left: -11vw;
+    width: 30vw;
+    height: auto;
 }
 
 .etoile-a-propos {
-    position: relative;
-    margin-top: -90px;
-    margin-left: -3vw;
-    max-width: 10vw;
-    height: auto;
+    position: absolute;
+    bottom: -20px;
+    left: -3vw;
+    width: 12vw;
+    margin-left: 0;
 }
 
 .flex-title-domaines {
@@ -59,13 +61,12 @@
     gap: 16px;
 }
 
-.polaroid .bouton {
-    position: relative;
-    z-index: 2;
-    margin: 0 0 -30px 1vw;
+.a-propos-contenu .bouton {
+    margin-left: 10vw;
 }
 
-.a-propos-contenu .bouton, .domaines-expertises-titre .bouton {
+.a-propos-contenu .bouton,
+.domaines-expertises-titre .bouton {
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -74,7 +75,8 @@
     text-decoration-color: #960000;
 }
 
-.a-propos-contenu .bouton:hover, .domaines-expertises-titre .bouton:hover {
+.a-propos-contenu .bouton:hover,
+.domaines-expertises-titre .bouton:hover {
     text-decoration: underline;
     text-decoration-color: #960000;
     text-decoration-thickness: 1.5px;
@@ -85,11 +87,6 @@
     color: black;
     font-size: 18px;
     text-transform: uppercase;
-}
-
-.a-propos-left .bouton {
-    margin-left: 10vw;
-    margin-top: -30px;
 }
 
 .domaines-expertises {
@@ -103,7 +100,7 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
-    background-image: url(src/images/papier-jaune.png);
+    background-image: url('src/images/background-paper/papier-jaune.webp');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 80%;
@@ -127,10 +124,17 @@
     align-items: end;
     position: relative;
     width: 16vw;
-    height: 290px;
+    height: 340px;
 }
 
-.polaroid-image img {
+.polaroid .bouton {
+    position: absolute;
+    z-index: 2;
+    bottom: 10px;
+    left: 18px;
+}
+
+.polaroid-img {
     position: absolute;
     left: 0;
     top: 0;
@@ -138,18 +142,17 @@
     margin-top: 55px;
 }
 
-.polaroid-noir:hover {
+.polaroid:hover .polaroid-img-visible {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
 }
 
-.polaroid-noir {
+.polaroid .polaroid-img-visible {
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
 }
 
-.polaroid-noir:hover,
-.polaroid-domaine {
+.polaroid:hover {
     animation: shake 0.4s ease-in-out;
 }
 
@@ -186,11 +189,11 @@
     margin-left: -0.5vw;
 }
 
-.telephone:hover .telephone-appareil {
+.telephone-appareil:hover {
     animation: shake 0.5s ease-in-out;
 }
 
-.telephone:hover .telephone-cable {
+.telephone-appareil:hover .telephone-cable {
     animation: stretch 0.7s ease-in-out;
 }
 
@@ -209,7 +212,7 @@
 }
 
 .contact {
-    padding: 100px;
+    padding: 100px 0 0 0;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -254,9 +257,10 @@
 
 /* Style du popup */
 .popup {
-    display: none;  /* Caché par défaut */
+    display: none;
+    /* Caché par défaut */
     position: fixed;
-    background-image: url(src/images/post-it1.png);
+    background-image: url('src/images/background-paper/post-it1.webp');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 30vw;
@@ -294,7 +298,8 @@
     justify-content: center;
 }
 
-.contact-form-content input, .contact-form-content textarea {
+.contact-form-content input,
+.contact-form-content textarea {
     width: 280px;
 }
 
@@ -304,7 +309,8 @@ form {
     flex-direction: column;
 }
 
-input, textarea {
+input,
+textarea {
     margin-bottom: 10px;
     padding: 8px;
     border: none;
@@ -321,7 +327,7 @@ input, textarea {
     gap: 5px;
 }
 
-.envoyer img{
+.envoyer img {
     width: 3vw;
     height: auto;
 }
@@ -337,7 +343,7 @@ input, textarea {
 
 .span-envoyer {
     font-family: 'Marker Note Regular';
-    color:#960000;
+    color: #960000;
     font-size: 18px;
     text-transform: uppercase;
     background-color: transparent;
@@ -350,51 +356,54 @@ input, textarea {
     border: none;
 }
 
-.envoyer-email-image {
-    position: absolute;
-    right: 0;
-    left: 0;
-    bottom: 0;
+.mail-container {
+    position: relative;
+    display: inline-block;
+    opacity: 1;
 }
 
-.mail-ouvert {
-    position: relative;  /* Nécessaire pour positionner ::after correctement */
-    display: inline-block;  /* Assure que l'image est rendue comme un élément en ligne */
-}
-
-.mail-ouvert::after {
-    content: '';  /* Nécessaire pour créer l'élément */
+.mail-container::after {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('src/images/mail-ferme.png');
-    background-size: contain;  /* Ajuste l'image pour qu'elle couvre tout l'élément */
+    background-image: url('src/images/mail-ferme.webp');
+    background-position-y: 19px;
+    background-position-x: 6px;
+    background-size: 80%;
     background-repeat: no-repeat;
-    opacity: 0;  /* Cache l'image au départ */
-    transition: opacity 0.3s ease;  /* Transition de l'opacité pour l'effet de survol */
+    opacity: 0;
 }
 
-.mail-ouvert:hover::after {
-    opacity: 1;  /* L'image mail-ferme devient visible au survol */
+.mail-container:hover::after {
+    opacity: 1;
 }
 
-.mail-ouvert:hover {
-    opacity: 0;  /* Cache l'image mail-ouvert au survol */
+/* Cacher l'image mail-ouvert au hover */
+.mail-container:hover img {
+    opacity: 0;
+}
+
+.mentions-légales {
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+    margin: 0 6vw 200px 6vw;
+    text-align: justify;
 }
 
 
-
-
-
-
+main .mentions-légales {
+    margin-top: 96px;
+}
 
 /* Responsive */
 @media screen and (max-width: 375px) {
     .a-propos {
-        padding: 48px 5vw;
-        gap: 48px;
+        padding: 48px 3vw;
+        gap: 12px;
     }
 
     .a-propos-contenu {
@@ -402,13 +411,17 @@ input, textarea {
     }
 
     .a-propos-left-texte {
-        height: 380px;
-        width: 90%;
-
+        background-image: url('src/images/background-paper/background-apropos.webp');
+        width: calc(100% - 14vw);
         line-height: 2.2;
-        padding: 0 8vw 0 4vw;
-        padding-top: 25px;
+        padding: 0 10vw 0 4vw;
+        height: 400px;
+        background-size: 100% 100%;
+    }
 
+    .a-propos-left-texte p {
+        width: 95%;
+        line-height: 200%;
     }
 
     .a-propos-right {
@@ -416,38 +429,700 @@ input, textarea {
         width: 90vw;
     }
 
-    /* .etoile-a-propos {
-        margin-top: -90px;
-        margin-left: -3vw;
-        max-width: 10vw;
-    } */
+    .a-propos-contenu .bouton {
+        margin-left: 25vw;
+    }
 
+    .etoile-a-propos {
+        width: 20vw;
+        bottom: 0;
+        left: 1vw;
+    }
 
+    /* Domaines */
     .domaines-expertises {
-        padding: 42px 5vw;
+        padding: 32px 0;
     }
 
     .domaines-expertises-contenu {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-        background-image: url(src/images/papier-jaune.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 80%;
-        padding: 7vw 35vw;
+        background-image: url('src/images/background-paper/background-category.webp');
+        width: calc(100% - 10vw);
+        background-size: cover;
+        padding: 50px 5vw;
+        gap: 0;
     }
 
     .domaines-expertises-titre {
-        display: flex;
+        align-items: center;
+    }
+
+    .polaroid-row1 {
         flex-direction: column;
-        align-items: end;
-        gap: 16px;
+        margin-left: 0vw;
+        gap: 0;
+    }
+
+    .polaroid-row2 {
+        margin-right: 0vw;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .polaroid {
+        width: 200px;
+        height: 300px;
     }
 
     .polaroid .bouton {
+        bottom: 20px;
+    }
+
+    .bouton span {
+        font-size: 16px;
+    }
+
+    .polaroid:nth-child(1) {
+        align-self: flex-end;
+    }
+
+    .polaroid-img {
+        width: 200px;
+        margin-top: 55px;
+    }
+
+    .polaroid-noir {
+        opacity: 0;
+    }
+
+    .telephone-cable {
+        max-width: 45vw;
+    }
+
+    .telephone-appareil {
+        max-width: 27vw;
+        margin-top: 2vw;
+        margin-left: -2vw;
+    }
+
+    .contact {
+        padding: 100px 0 0 0;
+        gap: 64px;
+    }
+
+    .titre-contact {
+        align-items: center;
+    }
+
+    .contact-message img {
+        max-width: 8vw;
+    }
+
+    .popup {
+        background-size: 100% 80%;
+    }
+
+    .popup h2 {
+        text-align: start;
+    }
+
+    .mail-container::after,
+    .mail-container img {
+        background-size: 100%;
+        background-position: center;
+        left: 10%;
+        width: 35px;
+    }
+
+    .envoyer img {
+        width: 10vw;
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 425px) {
+    .a-propos {
+        padding: 48px 3vw;
+        gap: 12px;
+    }
+
+    .a-propos-contenu {
+        flex-direction: column-reverse;
+    }
+
+    .a-propos-left-texte {
+        background-image: url('src/images/background-paper/background-apropos.webp');
+        height: fit-content;
+        width: calc(100% - 8vw);
+        line-height: 2.2;
+        padding: 0 5vw;
+        height: 400px;
+        background-size: 100% 100%;
+        background-position: center;
+    }
+
+    .a-propos-left-texte p {
+        width: 95%;
+        line-height: 200%;
+    }
+
+    .a-propos-right {
+        margin: 0;
+        width: 90vw;
+    }
+
+    .a-propos-contenu .bouton {
+        margin-left: 25vw;
+    }
+
+    .etoile-a-propos {
+        width: 20vw;
+        bottom: 0;
+        left: 1vw;
+    }
+
+    /* Domaines */
+    .domaines-expertises {
+        padding: 32px 0;
+    }
+
+    .domaines-expertises-contenu {
+        background-image: url('src/images/background-paper/background-category.webp');
+        width: calc(100% - 10vw);
+        background-size: cover;
+        padding: 50px 5vw;
+        gap: 0;
+    }
+
+    .domaines-expertises-titre {
+        align-items: center;
+    }
+
+    .polaroid-row1 {
+        flex-direction: column;
+        margin-left: 0vw;
+        gap: 60px;
+        margin-bottom: 80px;
+    }
+
+    .polaroid-row2 {
+        margin-right: 0vw;
+        flex-direction: column;
+        gap: 60px;
+        margin-bottom: 80px;
+    }
+
+    .polaroid {
+        width: 250px;
+        height: 300px;
+    }
+
+    .polaroid .bouton {
+        bottom: -30px;
+    }
+
+    .bouton span {
+        font-size: 16px;
+    }
+
+    .polaroid:nth-child(1) {
+        align-self: flex-end;
+    }
+
+    .polaroid-img {
+        width: 250px;
+        margin-top: 55px;
+    }
+
+    .polaroid-noir {
+        opacity: 0;
+    }
+
+    .telephone-cable {
+        max-width: 45vw;
+    }
+
+    .telephone-appareil {
+        max-width: 27vw;
+        margin-top: 2vw;
+        margin-left: -2vw;
+    }
+
+    .contact {
+        padding: 100px 0 0 0;
+        gap: 64px;
+    }
+
+    .titre-contact {
+        align-items: center;
+    }
+
+    .contact-message img {
+        max-width: 8vw;
+    }
+
+    .popup {
+        background-size: 100% 80%;
+    }
+
+    .popup h2 {
+        text-align: start;
+    }
+
+    .mail-container::after,
+    .mail-container img {
+        background-size: 100%;
+        background-position: center;
+        left: 10%;
+        width: 35px;
+    }
+
+    .envoyer img {
+        width: 10vw;
+    }
+}
+
+@media screen and (min-width: 425px) and (max-width: 600px) {
+    .a-propos {
+        padding: 48px 3vw;
+        gap: 12px;
+    }
+
+    .a-propos-contenu {
+        flex-direction: column-reverse;
+    }
+
+    .a-propos-left-texte {
         position: relative;
+        background-image: url('src/images/background-paper/background-apropos.webp');
+        height: fit-content;
+        width: calc(100% - 8vw);
+        line-height: 2.2;
+        padding: 0 5vw;
+        height: 300px;
+        background-size: 100% 100%;
+        background-position: center;
+    }
+
+    .a-propos-left-texte p {
+        width: 95%;
+        line-height: 200%;
+    }
+
+    .a-propos-right {
+        margin: 0;
+        width: 75vw;
+    }
+
+    .etoile-a-propos {
+        position: absolute;
+        bottom: -32px;
+        left: 0;
+        max-width: 20vw;
+        margin-left: 0;
+    }
+
+    .a-propos-contenu .bouton {
+        margin-left: 22vw;
+    }
+
+    /* Domaines */
+    .domaines-expertises {
+        padding: 32px 0;
+    }
+
+    .domaines-expertises-contenu {
+        background-image: url('src/images/background-paper/background-category.webp');
+        width: calc(100% - 10vw);
+        background-size: cover;
+        padding: 90px 5vw;
+        gap: 0;
+    }
+
+    .domaines-expertises-titre {
+        align-items: center;
+    }
+
+    .polaroid-row1 {
+        flex-direction: column;
+        margin-left: 0vw;
+        margin-bottom: 15px;
+        gap: 0;
+    }
+
+    .polaroid-row2 {
+        margin-right: 0vw;
+        flex-direction: column;
+        margin-bottom: 80px;
+        gap: 0;
+    }
+
+    .polaroid {
+        width: 275px;
+        height: 370px;
+    }
+
+    .polaroid .bouton {
+        bottom: 10px;
+    }
+
+    .bouton span {
+        font-size: 16px;
+    }
+
+    .polaroid:nth-child(1) {
+        align-self: flex-end;
+    }
+
+    .polaroid-img {
+        width: 275px;
+        margin-top: 55px;
+    }
+
+    .polaroid-noir {
+        opacity: 0;
+    }
+
+    .telephone-cable {
+        max-width: 45vw;
+    }
+
+    .telephone-appareil {
+        max-width: 27vw;
+        margin-top: 2vw;
+        margin-left: -2vw;
+    }
+
+    .contact {
+        padding: 100px 0 0 0;
+        gap: 64px;
+    }
+
+    .titre-contact {
+        align-items: center;
+    }
+
+    .contact-message img {
+        max-width: 8vw;
+    }
+
+    .popup {
+        background-size: 80% 100%;
+    }
+
+    .popup h2 {
+        text-align: start;
+    }
+
+    .mail-container::after,
+    .mail-container img {
+        background-size: 100%;
+        background-position: center;
+        left: 10%;
+        width: 6vw !important;
+    }
+
+    .envoyer img {
+        width: 6vw;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 768px) {
+    .a-propos {
+        padding: 48px 3vw;
+    }
+
+    .a-propos-contenu {
+        flex-direction: row;
+    }
+
+    .a-propos-left-texte {
+        position: relative;
+        background-image: url('src/images/background-paper/background-apropos.webp');
+        height: fit-content;
+        width: calc(100% - 8vw);
+        line-height: 2.2;
+        padding: 20px 5vw;
+        background-size: 100% 100%;
+    }
+
+    .a-propos-left-texte p {
+        width: 75%;
+        line-height: 200%;
+    }
+
+    .a-propos-right {
         z-index: 2;
-        margin: 0 0 -30px 1vw;
+        margin: 0;
+        width: 40vw;
+        margin-left: -11vw;
+    }
+
+    .etoile-a-propos {
+        position: absolute;
+        bottom: -32px;
+        left: 0;
+        max-width: 20vw;
+        margin-left: 0;
+    }
+
+    .a-propos-contenu .bouton {
+        margin-left: 15vw;
+    }
+
+    /* Domaines */
+    .domaines-expertises {
+        padding: 32px 0;
+    }
+
+    .domaines-expertises-contenu {
+        align-items: center;
+        background-image: url('src/images/background-paper/papier-jaune.webp');
+        width: calc(100% - 10vw);
+        background-size: cover;
+        padding: 5vw;
+        gap: 0;
+    }
+
+    .domaines-expertises-titre {
+        align-items: center;
+    }
+
+    .polaroid-row1 {
+        flex-direction: row;
+        margin-left: 0vw;
+        margin-bottom: 15px;
+        gap: 5vw;
+        margin-top: 100px;
+    }
+
+    .polaroid-row2 {
+        margin-right: 0vw;
+        flex-direction: row;
+        margin-bottom: 80px;
+        gap: 5vw;
+    }
+
+    .polaroid {
+        width: 275px;
+        height: 370px;
+    }
+
+    .polaroid .bouton {
+        bottom: 10px;
+    }
+
+    .bouton span {
+        font-size: 16px;
+    }
+
+    .polaroid:nth-child(1) {
+        align-self: flex-end;
+    }
+
+    .polaroid-img {
+        width: 275px;
+        margin-top: 55px;
+    }
+
+    .polaroid-noir {
+        opacity: 0;
+    }
+
+    .telephone-cable {
+        max-width: 45vw;
+    }
+
+    .telephone-appareil {
+        max-width: 27vw;
+        margin-top: 2vw;
+        margin-left: -2vw;
+    }
+
+    .contact {
+        padding: 100px 0 0 0;
+        gap: 64px;
+    }
+
+    .titre-contact {
+        align-items: center;
+    }
+
+    .contact-message img {
+        max-width: 8vw;
+    }
+
+    .popup {
+        background-size: 80% 100%;
+    }
+
+    .popup h2 {
+        text-align: start;
+    }
+
+    .mail-container::after,
+    .mail-container img {
+        background-size: 100%;
+        background-position: center;
+        left: 10%;
+        width: 6vw !important;
+    }
+
+    .envoyer img {
+        width: 6vw;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .a-propos {
+        padding: 48px 3vw;
+    }
+
+    .a-propos-contenu {
+        flex-direction: row;
+    }
+
+    .a-propos-left-texte {
+        position: relative;
+        background-image: url('src/images/background-paper/background-apropos.webp');
+        height: fit-content;
+        width: calc(100% - 8vw);
+        line-height: 2.2;
+        padding: 20px 5vw;
+        background-size: 100% 100%;
+    }
+
+    .a-propos-left-texte p {
+        width: 75%;
+        line-height: 200%;
+    }
+
+    .a-propos-right {
+        z-index: 2;
+        margin: 0;
+        width: 40vw;
+        margin-left: -11vw;
+    }
+
+    .etoile-a-propos {
+        position: absolute;
+        bottom: -32px;
+        left: 0;
+        max-width: 20vw;
+        margin-left: 0;
+    }
+
+    .a-propos-contenu .bouton {
+        margin-left: 15vw;
+    }
+
+    /* Domaines */
+    .domaines-expertises {
+        padding: 32px 0;
+    }
+
+    .domaines-expertises-contenu {
+        align-items: center;
+        background-image: url('src/images/background-paper/papier-jaune.webp');
+        width: calc(100% - 10vw);
+        background-size: cover;
+        padding: 5vw;
+        gap: 0;
+    }
+
+    .domaines-expertises-titre {
+        align-items: center;
+    }
+
+    .polaroid-row1 {
+        flex-direction: row;
+        gap: 5vw;
+        margin: 100px 15vw 15px 0;
+    }
+
+    .polaroid-row2 {
+        margin-right: 0vw;
+        flex-direction: row;
+        margin-bottom: 80px;
+        margin-left: 15vw;
+        gap: 5vw;
+    }
+
+    .polaroid {
+        width: 275px;
+        height: 370px;
+    }
+
+    .polaroid .bouton {
+        bottom: 10px;
+    }
+
+    .bouton span {
+        font-size: 16px;
+    }
+
+    .polaroid:nth-child(1) {
+        align-self: flex-end;
+    }
+
+    .polaroid-img {
+        width: 275px;
+        margin-top: 55px;
+    }
+
+    .polaroid-noir {
+        opacity: 0;
+    }
+
+    .telephone-cable {
+        max-width: 45vw;
+    }
+
+    .telephone-appareil {
+        max-width: 27vw;
+        margin-top: 2vw;
+        margin-left: -2vw;
+    }
+
+    .contact {
+        padding: 100px 0 0 0;
+        gap: 64px;
+    }
+
+    .titre-contact {
+        align-items: center;
+    }
+
+    .contact-message img {
+        max-width: 8vw;
+    }
+
+    .popup {
+        background-size: 70% 70%;
+    }
+
+    .popup h2 {
+        text-align: start;
+    }
+
+    .mail-container::after,
+    .mail-container img {
+        background-size: 100%;
+        background-position: center;
+        left: 10%;
+        width: 6vw !important;
+    }
+
+    .envoyer img {
+        width: 6vw;
+    }
+}
+
+@media screen and (min-width: 1800px) and (max-width: 2560px) {
+    .polaroid .bouton {
+        bottom: none;
+        top: 350px;
+    }
+
+    .a-propos-left-texte {
+        background-size: 100% 100%;
     }
 }

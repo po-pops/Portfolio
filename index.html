@@ -2,42 +2,92 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
+    <!-- Balises pour les navigateurs -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pops - Portfolio | Accueil</title>
+
+    <!-- Balises pour une indexation optimisée -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="bingbot" content="index, follow">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="index-style.css">
     <link rel="stylesheet" href="/header.css">
     <link rel="stylesheet" href="/footer.css">
     <link rel="stylesheet" href="font.css">
-    <link rel="stylesheet" href="lang.css">
-    <link rel="icon" type="image/png" href="src/images/favicon.PNG">
 
+    <!-- Meta -->
+    <title>Pauline Yvelin | Portfolio - Graphisme, UI/UX, Audiovisuel, Illustration</title>
+    <meta name="description"
+        content="Jeune artiste et designer graphique aussi passionnée par l’UI/UX, j’explore le graphisme et l’art avec curiosité. Découvrez mon portfolio créatif !">
+    <meta name="keywords"
+        content="Pauline Yvelin, artiste, portfolio, dessin, illustration, cinéma, audiovisuel, MMI, créativité, design graphique, logo, affiche, UI/UX, maquette, court-métrage, graphisme, art numérique">
+    <meta name="author" content="Pauline Yvelin">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/src/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/src/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/src/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/src/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Pauline Yvelin" />
+    <link rel="manifest" href="/src/favicon/site.webmanifest" />
+
+    <!-- Balises de liaison -->
+    <link rel="canonical" href="https://pauline.yvelin.net">
+
+    <!-- Balises pour les réseaux sociaux -->
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Pauline Yvelin | Portfolio - Graphisme, UI/UX, Audiovisuel, Illustration">
+    <meta property="og:site_name" content="Pauline Yvelin - Portfolio">
+    <meta property="og:url" content="https://pauline.yvelin.net">
+    <meta property="og:description"
+        content="Jeune artiste et designer graphique aussi passionnée par l’UI/UX, j’explore le graphisme et l’art avec curiosité. Découvrez mon portfolio créatif !">
+    <meta property="og:image" content="https://pauline.yvelin.net/src/images/og-img.webp">
+    <meta property="og:url" content="https://pauline.yvelin.net">
+
+    <!-- Balises pour Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@pauline-yvelin">
+    <meta name="twitter:title" content="Pauline Yvelin | Portfolio - Graphisme, UI/UX, Audiovisuel, Illustration">
+    <meta name="twitter:description"
+        content="Jeune artiste et designer graphique aussi passionnée par l’UI/UX, j’explore le graphisme et l’art avec curiosité. Découvrez mon portfolio créatif !">
+    <meta name="twitter:url" content="https://pauline.yvelin.net">
+    <meta property="twitter:image" content="https://pauline.yvelin.net/src/images/og-img.webp">
 </head>
 
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href=./index.html><img class="logo1" src="./src/images/logo-1.png"></a></li>
-                <li><a href=./mes-projets.html class="menu-mes-projets">
-                        <p>Mes projets</p>
-                        <img class="image-entoure" src="src/images/entoure.png">
-                    </a></li>
-                <li><a href=./index.html#a-propos class="bouton-menu">
-                        <p>A propos</p>
-                        <img class="image-souligne" src="src/images/souligne.png">
-                    </a></li>
-                <li><a href=./index.html#contact class="bouton-menu">
-                        <p>Contact</p>
-                        <img class="image-souligne" src="src/images/souligne2.png">
-                    </a></li>
-            </ul>
+            <div class="nav-left">
+                <ul>
+                    <li><a href="./index.html" title="Retour vers l'accueil"><img class="logo1"
+                                src="./src/images/logo-1.webp" alt="Logo Pauline Yvelin"></a></li>
+                    <li class="bouton-accueil"><a href="./index.html" class="bouton-menu">
+                            <p>Accueil</p>
+                            <img class="image-souligne" src="src/images/souligne2.webp" alt="ligne crayonnée">
+                        </a></li>
+                    <li><a href="./index.html#a-propos" class="bouton-menu">
+                            <p>A propos</p>
+                            <img class="image-souligne" src="src/images/souligne.webp" alt="ligne crayonnée">
+                        </a></li>
+                    <li><a href="./mes-projets.html" class="menu-mes-projets">
+                            <p>Mes projets</p>
+                            <img class="image-entoure" src="src/images/entoure.webp" alt="rond crayonné">
+                        </a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <a href="./index.html#contact" class="bouton-menu">
+                    <p>Contact</p>
+                    <img class="image-souligne" src="src/images/souligne2.webp" alt="ligne crayonnée">
+                </a>
+            </div>
         </nav>
-        <div class="language">
-            <span><a href=#>FR</a></span>
-            <span><a href=#>EN</a></span>
-        </div>
     </header>
     <main>
         <section class="top-content">
@@ -49,23 +99,23 @@
             <div class="a-propos-contenu">
                 <div class="a-propos-left">
                     <div class="a-propos-left-texte">
-                        <p>Jeune artiste de 19 ans et passionnée par les arts divers et variés depuis mon enfance, je
-                            m’intéresse actuellement principalement au graphisme, à l’audiovisuel et à l’UI/UX design.
+                        <p>Jeune artiste de 19 ans passionnée par les arts divers et variés depuis mon enfance, je
+                            m’intéresse désormais principalement au graphisme et à l’UI/UX design.
                             <br>
                             De nature très curieuse et polyvalente, j’adore découvrir et apprendre de nouvelles
                             techniques
                             créatives.
                         </p>
+                        <img class="etoile-a-propos" src="src/images/etoiles1.webp" alt="étoiles">
                     </div>
-                    <img class="etoile-a-propos" src="src/images/etoiles1 1.png">
                     <div class="bouton">
                         <a href="src/CV_Pauline_Yvelin.pdf" target="_blank">
                             Télécharger mon CV
-                            <img src="src/images/fleche-rouge.svg">
+                            <img src="src/images/fleche-rouge.svg" alt="flèche rouge">
                         </a>
                     </div>
                 </div>
-                <img class="a-propos-right" src="src/images/droite.png" alt="photos noires et blanches pauline yvelin">
+                <img class="a-propos-right" src="src/images/droite.webp" alt="photos noires et blanches pauline yvelin">
             </div>
         </section>
         <section class="domaines-expertises">
@@ -74,7 +124,7 @@
                     <h2>Voici mes domaines d'expertises</h2>
                     <div class="bouton">
                         <a href="./mes-projets.html">Découvrir mes projets
-                            <img src="src/images/fleche-rouge.svg">
+                            <img src="src/images/fleche-rouge.svg" alt="flèche rouge">
                         </a>
                     </div>
                 </div>
@@ -84,43 +134,51 @@
                     <a href="./mes-projets.html#uiux" class="polaroid">
                         <div class="bouton">
                             <span>UI/UX</span>
-                            <img src="src/images/fleche-noire.svg">
+                            <img src="src/images/fleche-noire.svg" alt="flèche noire">
                         </div>
-                        <div class="polaroid-image">
-                            <img class="polaroid-domaine" src="src/images/polaroid-uix.png" alt="1er polaroid UIX">
-                            <img class="polaroid-noir" src="src/images/polaroid-noir.png">
+                        <img class="polaroid-img polaroid-domaine" src="src/images/polaroid-uix.webp"
+                            alt="1er polaroid UIX">
+                        <div class="polaroid-img-visible">
+                            <img class="polaroid-img polaroid-noir" src="src/images/polaroid-noir.webp"
+                                alt="polaroid noir">
                         </div>
                     </a>
                     <a href="./mes-projets.html#graphisme" class="polaroid">
                         <div class="bouton">
                             <span>Graphisme</span>
-                            <img src="src/images/fleche-noire.svg">
+                            <img src="src/images/fleche-noire.svg" alt="flèche noire">
                         </div>
-                        <div class="polaroid-image">
-                            <img src="src/images/polaroid-graphisme.png" alt="2ème polaroid Graphisme">
-                            <img class="polaroid-noir" src="src/images/polaroid-noir.png">
+                        <img class="polaroid-img" src="src/images/polaroid-graphisme.webp"
+                            alt="2ème polaroid Graphisme">
+                        <div class="polaroid-img-visible">
+                            <img class="polaroid-noir polaroid-img" src="src/images/polaroid-noir.webp"
+                                alt="polaroid noir">
                         </div>
                     </a>
                 </div>
                 <div class="polaroid-row2">
-                    <a href=./mes-projets.html#audiovisuel class="polaroid">
+                    <a href="./mes-projets.html#audiovisuel" class="polaroid">
                         <div class="bouton">
                             <span>Audiovisuel</span>
-                            <img src="src/images/fleche-noire.svg">
+                            <img src="src/images/fleche-noire.svg" alt="flèche noire">
                         </div>
-                        <div class="polaroid-image">
-                            <img src="src/images/polaroid-audiovisuel.png" alt="3ème polaroid audiovisuel">
-                            <img class="polaroid-noir" src="src/images/polaroid-noir.png">
+                        <img class="polaroid-img" src="src/images/polaroid-audiovisuel.webp"
+                            alt="3ème polaroid audiovisuel">
+                        <div class="polaroid-img-visible">
+                            <img class="polaroid-noir polaroid-img" src="src/images/polaroid-noir.webp"
+                                alt="polaroid noir">
                         </div>
                     </a>
                     <a href="./mes-projets.html#illustrations" class="polaroid">
                         <div class="bouton">
                             <span>Illustrations</span>
-                            <img src="src/images/fleche-noire.svg">
+                            <img src="src/images/fleche-noire.svg" alt="flèche noire">
                         </div>
-                        <div class="polaroid-image">
-                            <img src="src/images/polaroid-illustrations.png" alt="4ème polaroid audiovisuel">
-                            <img class="polaroid-noir" src="src/images/polaroid-noir.png">
+                        <img class="polaroid-img" src="src/images/polaroid-illustrations.webp"
+                            alt="4ème polaroid audiovisuel">
+                        <div class="polaroid-img-visible">
+                            <img class="polaroid-noir polaroid-img" src="src/images/polaroid-noir.webp"
+                                alt="polaroid noir">
                         </div>
                     </a>
                 </div>
@@ -128,78 +186,83 @@
         </section>
         <section id="contact" class="contact">
             <div class="titre-contact">
-                <h2>une idee ? un projet ?<br>
-                    <h2>contactez moi !</h2>
+                <h2>une idee ? un projet ?</h2>
+                <h2>contactez moi !</h2>
             </div>
             <div class="contact-content">
                 <div class="telephone">
-                    <img class="telephone-cable" src="src/images/telephone_cable.png">
+                    <img class="telephone-cable" src="src/images/telephone_cable.webp" alt="cable de téléphone">
                     <!-- Lien pour déclencher le popup -->
-                    <a href="#" id="openForm"><img class="telephone-appareil" src="src/images/telephone_1.png"></a>
+                    <a href="#" id="openForm"><img class="telephone-appareil" src="src/images/telephone_1.webp"
+                            alt="vieux téléphone"></a>
                 </div>
                 <div class="contact-message">
                     <h3>clic!</h3>
-                    <img src="src/images/fleche.png">
+                    <img src="src/images/fleche.webp" alt="flèche">
                 </div>
             </div>
-            
             <!-- Le popup de formulaire -->
             <div id="contactFormPopup" class="popup">
                 <div class="popup-content">
                     <span id="closeForm" class="close-btn">&times;</span>
                     <h2>Formulaire de contact</h2>
                     <div class="contact-form-content">
-                        <form id="contactForm">
+                        <form id="contactForm" name="contact" method="post" data-netlify="true"
+                            netlify-honeypot="bot-field">
                             <label for="name">Nom:</label>
                             <input type="text" id="name" name="name" required><br><br>
-                            
+
                             <label for="email">Email:</label>
                             <input type="email" id="email" name="email" required><br><br>
-                            
+
                             <label for="message">Message:</label><br>
                             <textarea id="message" name="message" rows="4" required></textarea><br><br>
-                            
+
                             <div class="envoyer">
                                 <span class="span-envoyer">ENVOYER</span>
-                                <img src="src/images/fleche-droite.png">
-                                <button type="submit">
-                                    <img class="envoyer-email-image mail-ouvert" src="src/images/mail-ouvert.png">
-                                </button>                                
+                                <img src="src/images/fleche-droite.webp" alt="flèche">
+                                <button type="submit" class="mail-container">
+                                    <img class="envoyer-email-image" src="src/images/mail-ouvert.webp" alt="lettre">
+                                </button>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
-            
-            
         </section>
     </main>
     <footer>
-        <div class="footer-left">
-            <a href="./index.html"><img class="logo2" src="src/images/logo-2.png"></a>
-            <div class="footer-menu">
+        <div class="footer-top">
+            <div class="footer-left">
+                <a href="./index.html"><img class="logo2" src="src/images/logo-2.webp"
+                        alt="logo avec pseudonyme Pops"></a>
+                <div class="footer-menu">
+                    <ul>
+                        <li><a href="./mes-projets.html" class="footer-lien">Mes projets</a></li>
+                        <li><a href="./index.html#a-propos" class="footer-lien">A propos</a></li>
+                        <li><a href="./index.html#contact" class="footer-lien">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-right">
                 <ul>
-                    <li><a href="./mes-projets.html" class="footer-lien">Mes projets</a></li>
-                    <li><a href="./index.html#a-propos" class="footer-lien">A propos</a></li>
-                    <li><a href="./index.html#contact" class="footer-lien">Contact</a></li>
+                    <li><a href="mailto:pauline.yvelin@mmibordeaux.com"><img src="src/images/email.webp"
+                                alt="email"></a>
+                    </li>
+                    <li><a target="_blank" href="https://www.linkedin.com/in/pauline-yvelin-a23188332"
+                            title="Linkedin Pauline Yvelin"><img src="src/images/linkedin.webp" alt="Logo LinkedIn"></a>
+                    </li>
                 </ul>
             </div>
         </div>
-        <div class="footer-middle">
+        <div class="footer-bottom">
             <p>© 2024 Pauline Yvelin | Tous droits réservés</p>
-            <a href="#" class="footer-lien">Mentions légales</a>
-        </div>
-        <div class="footer-right">
-            <ul>
-                <li><a href=./index.html><img src="src/images/email.png"></a></li>
-                <li><a href="https://www.linkedin.com/in/pauline-yvelin-a23188332"><img
-                            src="src/images/linkedin.png"></a></li>
-            </ul>
+            <a href="./mentions-legales.html" class="footer-lien">Mentions légales</a>
         </div>
     </footer>
     <script>
-                // Ouvrir le popup lorsque l'image du téléphone est cliquée
-        document.getElementById("openForm").addEventListener("click", function(event) {
+        // Ouvrir le popup lorsque l'image du téléphone est cliquée
+        document.getElementById("openForm").addEventListener("click", function (event) {
             event.preventDefault(); // Empêche le lien de rediriger
             document.getElementById("contactFormPopup").style.display = "block";
             // Désactiver le défilement de la page
@@ -207,54 +270,22 @@
         });
 
         // Fermer le popup lorsque l'on clique sur le bouton de fermeture
-        document.getElementById("closeForm").addEventListener("click", function() {
+        document.getElementById("closeForm").addEventListener("click", function () {
             document.getElementById("contactFormPopup").style.display = "none";
             // Réactiver le défilement de la page
             document.body.style.overflow = 'auto';
         });
 
         // Fermer le popup si l'utilisateur clique en dehors de la fenêtre du formulaire
-        window.addEventListener("click", function(event) {
+        window.addEventListener("click", function (event) {
             if (event.target === document.getElementById("contactFormPopup")) {
                 document.getElementById("contactFormPopup").style.display = "none";
                 // Réactiver le défilement de la page
                 document.body.style.overflow = 'auto';
             }
         });
-
-        // Envoi du formulaire via AJAX
-        document.getElementById("contactForm").addEventListener("submit", function(event) {
-            event.preventDefault(); // Empêche l'envoi traditionnel du formulaire
-            
-            // Récupération des valeurs des champs
-            const name = document.getElementById("name").value;
-            const email = document.getElementById("email").value;
-            const message = document.getElementById("message").value;
-
-            // Envoi des données via fetch (AJAX)
-            fetch('send_email.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                },
-                body: `name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&message=${encodeURIComponent(message)}`
-            })
-            .then(response => response.text())
-            .then(data => {
-                alert('Message envoyé avec succès !');
-                document.getElementById("contactForm").reset(); // Réinitialiser le formulaire
-            })
-            .catch(error => {
-                console.error('Erreur:', error);
-                alert('Erreur lors de l\'envoi du message.');
-            });
-
-            // Ferme le popup après l'envoi
-            document.getElementById("contactFormPopup").style.display = "none";
-            document.body.style.overflow = 'auto'; // Réactive le scroll
-        });
-
     </script>
+    <script src="./src/js/header.js"></script>
 </body>
 
 </html>
