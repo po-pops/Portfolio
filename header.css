@@ -46,21 +46,15 @@ body {
 }
 
 p {
-    font-family: 'Perpetua';
-    font-size: 24px;
+    font-family: 'Bricolage Grotesque';
+    font-size: 20px;
+    font-weight: 300;
     color: black;
 }
 
 a {
     color: #960000;
     text-decoration: none;
-}
-
-nav a {
-    font-family: 'Perpetua';
-    font-size: 24px;
-    text-decoration: none;
-    color: black;
 }
 
 header span {
@@ -122,6 +116,17 @@ nav ul {
     align-items: center;
 }
 
+.bouton {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1vw;
+    padding: 1vw 2vw;
+    border-radius: 2vw;
+    border-color: #0E0D0A;
+    border-width: thick;
+}
+
 .menu-mes-projets {
     position: relative;
     /* Permet aux enfants d'être positionnés relativement à cet élément */
@@ -138,33 +143,6 @@ nav ul {
     /* Ajustez la taille selon vos besoins */
     z-index: 2;
     /* Assure que le texte est au-dessus de l'image */
-}
-
-.image-entoure {
-    position: absolute;
-    /* Superpose l'image */
-    top: 50%;
-    /* Centre verticalement */
-    left: 50%;
-    /* Centre horizontalement */
-    transform: translate(-50%, -50%);
-    /* Ajuste parfaitement l'image autour du texte */
-    width: 130%;
-    /* Ajustez la taille pour qu'elle englobe bien le texte */
-    height: auto;
-    z-index: 1;
-    /* Place l'image sous le texte */
-    pointer-events: none;
-    /* Empêche l'image d'interférer avec le clic sur le lien */
-    opacity: 0%;
-    transition: 0.3s ease-in-out;
-}
-
-/* Applique l'effet lorsque le lien est survolé */
-.menu-mes-projets:hover .image-entoure,
-.bouton-menu:hover .image-souligne {
-    opacity: 100%;
-    /* Rend l'image visible */
 }
 
 .image-souligne {
@@ -190,15 +168,15 @@ main {
 }
 
 .top-content {
-    margin-top: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: right;
     width: 100%;
-    height: 100vh;
-    background-image: url('./src/images/background-paper/papier1.webp');
+    height: 110vh;
+    background-image: url('./src/images/hero_paper.webp');
+    background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -264,7 +242,6 @@ main {
     }
 
     .top-content {
-        margin-top: 65px;
         height: 90vh;
         min-height: 500px;
         gap: 48px;
@@ -351,7 +328,6 @@ main {
     }
 
     .top-content {
-        margin-top: 80px;
         height: 90vh;
         min-height: 500px;
     }
@@ -427,7 +403,6 @@ main {
     }
 
     .top-content {
-        margin-top: 80px;
         height: 90vh;
         min-height: 500px;
     }
