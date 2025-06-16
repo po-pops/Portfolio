@@ -2,6 +2,19 @@ body {
     scroll-behavior: smooth;
 }
 
+.sticky-paper {
+    position: fixed;
+    opacity: 69%;
+    width: 100%;
+    height: 832px;
+    background-image: url('src/images/background-paper/sticky-paper.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1; /* met l’image derrière le contenu */
+    pointer-events: none; /* pour éviter les blocages sur les clics */
+}
+
 ::-moz-selection {
     color: rgb(255, 255, 255);
     background: #960000;
@@ -67,6 +80,7 @@ header span {
 main a {
     font-family: 'Bricolage Grotesque';
     font-size: 24px;
+    font-weight: 300;
     text-decoration: none;
     color: #960000;
 }
@@ -486,6 +500,7 @@ main {
     
     p {
         font-family: 'Bricolage Grotesque';
+        font-weight: 300;
         font-size: 32px;
         color: black;
     }
@@ -496,6 +511,7 @@ main {
     
     nav a {
         font-family: 'Bricolage Grotesque';
+        font-weight: 300;
         font-size: 32px;
         text-decoration: none;
         color: black;
@@ -510,6 +526,7 @@ main {
     
     main a {
         font-family: 'Bricolage Grotesque';
+        font-weight: 300;
         font-size: 32px;
         text-decoration: none;
         color: #960000;

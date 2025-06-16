@@ -67,6 +67,7 @@ footer p {
 .footer-lien {
     white-space: nowrap;
     font-family: 'Bricolage Grotesque';
+    font-weight: 300;
     font-size: 20px;
     color: #000000;
     transition: 0.2s ease-in-out;

@@ -313,6 +313,7 @@ textarea {
     outline: none;
     resize: none;
     font-family: 'Bricolage Grotesque';
+    font-weight: 300;
 }
 
 .envoyer {
@@ -338,6 +339,7 @@ textarea {
 
 label {
     font-family: 'Bricolage Grotesque';
+    font-weight: 300;
 }
 
 .span-envoyer {
