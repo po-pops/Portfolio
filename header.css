@@ -207,6 +207,7 @@ main {
 }
 
 .highlight {
+    width: fit-content;
     background-color: rgba(210, 205, 163, 0.69);
 }
 
