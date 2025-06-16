@@ -49,7 +49,7 @@ p {
     font-family: 'Bricolage Grotesque';
     font-size: 20px;
     font-weight: 300;
-    color: black;
+    color: #0E0D0A;
 }
 
 a {
@@ -65,7 +65,7 @@ header span {
 }
 
 main a {
-    font-family: 'Perpetua';
+    font-family: 'Bricolage Grotesque';
     font-size: 24px;
     text-decoration: none;
     color: #960000;
@@ -120,11 +120,28 @@ nav ul {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 1vw;
-    padding: 1vw 2vw;
-    border-radius: 2vw;
+    width: fit-content;
+    color: #0E0D0A;
+    gap: 0.5vw;
+    padding: 0.8vw 2vw;
+    border-style: solid;
+    border-radius: 1.50rem;
     border-color: #0E0D0A;
-    border-width: thick;
+    border-width: 0.135rem;
+    transition: 0.2s ease-in-out;
+}
+
+.bouton:hover {
+    background-color: #0E0D0A;
+}
+
+.bouton:hover p {
+    color: #F6F6F6;
+}
+
+.bouton:hover .nav-arrow {
+    color: #F6F6F6;
+    transform: rotate(45deg);
 }
 
 .menu-mes-projets {
@@ -468,7 +485,7 @@ main {
     }
     
     p {
-        font-family: 'Perpetua';
+        font-family: 'Bricolage Grotesque';
         font-size: 32px;
         color: black;
     }
@@ -478,7 +495,7 @@ main {
     }
     
     nav a {
-        font-family: 'Perpetua';
+        font-family: 'Bricolage Grotesque';
         font-size: 32px;
         text-decoration: none;
         color: black;
@@ -492,7 +509,7 @@ main {
     }
     
     main a {
-        font-family: 'Perpetua';
+        font-family: 'Bricolage Grotesque';
         font-size: 32px;
         text-decoration: none;
         color: #960000;

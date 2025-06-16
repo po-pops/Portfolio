@@ -65,28 +65,22 @@
     margin-left: 10vw;
 }
 
-.a-propos-contenu .bouton,
-.domaines-expertises-titre .bouton {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    gap: 0.5vw;
-    text-decoration: none;
-    text-decoration-color: #960000;
+.bouton:hover .link-arrow {
+    color: #F6F6F6;
+    transform: rotate(-45deg);
 }
 
-.a-propos-contenu .bouton:hover,
-.domaines-expertises-titre .bouton:hover {
-    text-decoration: underline;
-    text-decoration-color: #960000;
-    text-decoration-thickness: 1.5px;
-}
-
-.bouton span {
+.label-title {
     font-family: 'Marker Note Regular';
-    color: black;
+    color: #0E0D0A;
     font-size: 18px;
-    text-transform: uppercase;
+}
+
+.label-skills {
+    font-family: 'Bricolage Grotesque';
+    color: #0E0D0A;
+    font-size: 18px;
+    font-weight: 300;
 }
 
 .domaines-expertises {
@@ -127,10 +121,9 @@
     height: 340px;
 }
 
-.polaroid .bouton {
+.polaroid .label {
     position: absolute;
     z-index: 2;
-    bottom: 10px;
     left: 18px;
     white-space: nowrap;
 }
@@ -319,6 +312,7 @@ textarea {
     background-color: transparent;
     outline: none;
     resize: none;
+    font-family: 'Bricolage Grotesque';
 }
 
 .envoyer {
@@ -340,6 +334,10 @@ textarea {
 .popup h2 {
     padding-top: 10px;
     margin-bottom: 20px;
+}
+
+label {
+    font-family: 'Bricolage Grotesque';
 }
 
 .span-envoyer {
@@ -474,11 +472,11 @@ main .mentions-légales {
         height: 300px;
     }
 
-    .polaroid .bouton {
-        bottom: 20px;
+    .polaroid .label {
+        bottom: 10px;
     }
 
-    .bouton span {
+    .label span {
         font-size: 16px;
     }
 
@@ -616,11 +614,11 @@ main .mentions-légales {
         height: 300px;
     }
 
-    .polaroid .bouton {
-        bottom: -30px;
+    .polaroid .label {
+        bottom: -40px;
     }
 
-    .bouton span {
+    .label span {
         font-size: 16px;
     }
 
@@ -761,11 +759,11 @@ main .mentions-légales {
         height: 370px;
     }
 
-    .polaroid .bouton {
-        bottom: 10px;
+    .polaroid .label {
+        bottom: 5px;
     }
 
-    .bouton span {
+    .label span {
         font-size: 16px;
     }
 
@@ -907,11 +905,11 @@ main .mentions-légales {
         height: 370px;
     }
 
-    .polaroid .bouton {
-        bottom: 10px;
+    .polaroid .label {
+        bottom: 5px;
     }
 
-    .bouton span {
+    .label span {
         font-size: 16px;
     }
 
@@ -1052,11 +1050,11 @@ main .mentions-légales {
         height: 370px;
     }
 
-    .polaroid .bouton {
-        bottom: 10px;
+    .polaroid .label {
+        bottom: 5px;
     }
 
-    .bouton span {
+    .label span {
         font-size: 16px;
     }
 
@@ -1118,8 +1116,8 @@ main .mentions-légales {
 }
 
 @media screen and (min-width: 1620px) and (max-width: 1740px) {
-    .polaroid .bouton {
-        top: 310px;
+    .polaroid .label {
+        top: 300px;
     }
 }
 
@@ -1132,7 +1130,7 @@ main .mentions-légales {
         width: 300px;
     }
 
-    .polaroid .bouton {
-        bottom: -50px;
+    .polaroid .label {
+        bottom: -55px;
     }
 }
