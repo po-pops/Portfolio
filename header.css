@@ -145,6 +145,12 @@ nav ul {
     transition: 0.2s ease-in-out;
 }
 
+.arrow {
+    width: 10px;  /* ou toute autre taille */
+    height: auto; /* garde le ratio */
+}
+
+
 .bouton:hover {
     background-color: #0E0D0A;
 }
