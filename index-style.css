@@ -54,6 +54,23 @@
     align-items: center;
 }
 
+.mes-projets-titre img {
+    position: absolute;
+    bottom: 50%;
+    left: 100%;
+    width: 5vw;
+    transform: scaleX(-1);
+}
+
+.mes-projets-titre {
+    display: flex;
+    align-self: center;
+    width: fit-content;
+    justify-content: center;
+    position: relative;
+    margin-top: 100px;
+}
+
 .domaines-expertises-titre {
     display: flex;
     flex-direction: column;
