@@ -498,7 +498,7 @@
     align-items: center;
 }
 
- iframe {
+iframe {
     width: 80%;
     height: calc(80vw * 9 / 16);
     max-width: 800px; 
@@ -708,6 +708,23 @@ height: 100%;
 
 .indications-fleche {
     cursor: pointer;
+}
+
+.nav-projects {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 4vw;
+}
+
+.switch-project {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+.left-arrow {
+    transform: scaleX(-1);
 }
 
 @keyframes rotation {
