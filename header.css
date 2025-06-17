@@ -54,7 +54,7 @@ h4 {
 
 body {
     height: 1000px;
-    cursor: url("src/images/souris.webp"), auto;
+    cursor: url('./src/images/custom-cursor.webp') 4 4, auto;
     background-color: #F6F6F6;
 }
 
