@@ -215,53 +215,6 @@
         </div>
     </footer>
     <script>
-        function openPopup(element) {
-            const videoUrl = element.getAttribute("data-video");
-            const popupId = element.getAttribute("data-popup");
-
-            const popup = document.getElementById(popupId);
-            const videoFrame = popup.querySelector("iframe");
-
-            videoFrame.src = videoUrl;
-            popup.style.display = 'flex';
-
-            // Désactiver le scroll
-            document.body.classList.add("no-scroll");
-        }
-
-        function closePopup(popupId) {
-            const popup = document.getElementById(popupId);
-            const videoFrame = popup.querySelector("iframe");
-
-            videoFrame.src = ""; // Stop la vidéo
-            popup.style.display = 'none';
-
-            // Réactiver le scroll
-            document.body.classList.remove("no-scroll");
-        }
-
-
-        function closePopupOutside(event, popupId) {
-            if (event.target.id === popupId) {
-                closePopup(popupId);
-            }
-        }
-
-        let page = 1;
-        const nbPages = document.querySelector(".carnet-left").children.length;
-        const carnetLeft = document.querySelector(".carnet-left");
-        const carnetRight = document.querySelector(".carnet-right");
-        function turnPage() {
-
-            carnetLeft.querySelector(`:nth-child(${page})`).classList.remove("visible");
-            carnetRight.querySelector(`:nth-child(${page})`).classList.remove("visible");
-
-            page = (page + 1) % nbPages || nbPages;
-
-            carnetLeft.querySelector(`:nth-child(${page})`).classList.add("visible");
-            carnetRight.querySelector(`:nth-child(${page})`).classList.add("visible");
-        }
-
         const tvScreen = document.getElementById("television-screen");
         tvScreen.addEventListener("wheel", (event) => {
             event.preventDefault();
@@ -279,39 +232,7 @@
             let moveTouch = startTouch - event.touches[0].clientY;
             tvScreen.scrollTop += moveTouch;
             startTouch = event.touches[0].clientY;
-        });
-
-        const filtre = document.getElementById("filtre");
-        const previewImage = document.getElementById("preview-image");
-        if (previewImage) {
-            previewImage.addEventListener("click", () => {
-                closePreview();
-            });
-
-            filtre.addEventListener("click", () => {
-                closePreview();
-            });
-        }
-
-        window.closePreview = () => {
-            previewImage.style.display = "none";
-            filtre.classList.toggle("dark");
-        };
-
-        function openPreview(src) {
-            const image = new Image();
-            image.src = src;
-            filtre.classList.toggle("dark");
-
-            image.onload = function () {
-                if (filtre.classList.contains("dark")) {
-                    previewImage.style.setProperty("--image-width", image.width);
-                    previewImage.style.setProperty("--image-height", image.height);
-                    previewImage.setAttribute("src", src);
-                    previewImage.style.display = "block";
-                }
-            };
-        }
+        }, { passive: false });
     </script>
 </body>
 </html>
