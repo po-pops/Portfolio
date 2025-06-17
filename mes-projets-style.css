@@ -80,23 +80,9 @@
     margin-left: -2vw;
 }
 
-
-
-.lien {
-    display: flex;
-    align-items: start;
-    text-decoration: none;
-    text-decoration-color: #960000;
-}
-
-.lien img {
-    margin: -8px -8px 0 0;
-}
-
-.lien:hover {
-    text-decoration: underline;
-    text-decoration-color: #960000;
-    text-decoration-thickness: 1.5px;
+.bouton:hover .link-arrow {
+    color: #F6F6F6;
+    transform: rotate(-45deg);
 }
 
 .television-frame {
