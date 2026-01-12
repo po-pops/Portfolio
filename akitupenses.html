@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <!-- Balises pour les navigateurs -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Balises pour une indexation optimisée -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="bingbot" content="index, follow">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="/header.css">
+    <link rel="stylesheet" href="mes-projets-style.css">
+    <link rel="stylesheet" href="/footer.css">
+    <link rel="stylesheet" href="font.css">
+
+    <!-- Meta -->
+    <title>Pauline Yvelin | Portfolio - Graphisme, UI/UX, Audiovisuel, Illustration</title>
+    <meta name="description" content="Jeune artiste et designer graphique aussi passionnée par l’UI/UX, j’explore le graphisme et l’art avec curiosité. Découvrez mon portfolio créatif !">
+    <meta name="keywords" content="Pauline Yvelin, artiste, portfolio, dessin, illustration, cinéma, audiovisuel, MMI, créativité, design graphique, logo, affiche, UI/UX, maquette, court-métrage, graphisme, art numérique">
+    <meta name="author" content="Pauline Yvelin">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/src/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/src/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/src/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/src/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Pauline Yvelin" />
+    <link rel="manifest" href="/src/favicon/site.webmanifest" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Balises de liaison -->
+    <link rel="canonical" href="https://pauline.yvelin.net">
+
+    <!-- Balises pour les réseaux sociaux -->
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Pauline Yvelin | Portfolio - Graphisme, UI/UX, Audiovisuel, Illustration">
+    <meta property="og:site_name" content="Pauline Yvelin - Portfolio">
+    <meta property="og:url" content="https://pauline.yvelin.net">
+    <meta property="og:description" content="Jeune artiste et designer graphique aussi passionnée par l’UI/UX, j’explore le graphisme et l’art avec curiosité. Découvrez mon portfolio créatif !">
+    <meta property="og:image" content="https://pauline.yvelin.net/src/images/og-img.webp">
+    <meta property="og:url" content="https://pauline.yvelin.net">
+
+    <!-- Balises pour Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@pauline-yvelin">
+    <meta name="twitter:title" content="Pauline Yvelin | Portfolio - Graphisme, UI/UX, Audiovisuel, Illustration">
+    <meta name="twitter:description" content="Jeune artiste et designer graphique aussi passionnée par l’UI/UX, j’explore le graphisme et l’art avec curiosité. Découvrez mon portfolio créatif !">
+    <meta name="twitter:url" content="https://pauline.yvelin.net">
+    <meta property="twitter:image" content="https://pauline.yvelin.net/src/images/og-img.webp">
+</head>
+
+<body>
+    <div class="sticky-paper"></div>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <ul>
+                    <li><a href="./index.html" title="Retour vers l'accueil"><img class="logo1"
+                                src="./src/images/logo-1.webp" alt="Logo Pauline Yvelin"></a></li>
+                    <li class="bouton-accueil"><a href="./index.html" class="bouton-menu">
+                            <p>Accueil</p>
+                            <img class="image-souligne" src="src/images/souligne2.webp" alt="ligne crayonnée">
+                        </a></li>
+                    <li><a href="./index.html#a-propos" class="bouton-menu">
+                            <p>A propos</p>
+                            <img class="image-souligne" src="src/images/souligne.webp" alt="ligne crayonnée">
+                        </a></li>
+                    <li><a href="./index.html#mes-projets" class="bouton-menu">
+                            <p>Mes projets</p>
+                            <img class="image-souligne" src="src/images/souligne3.webp" alt="ligne crayonnée">
+                        </a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <a href="./index.html#contact" class="bouton">
+                    <p>Contact</p>
+                    <svg width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-arrow">
+                        <path d="M5.75204 7.004C5.82671 6.66267 5.93871 6.30534 6.08804 5.932C6.24804 5.55867 6.45071 5.20667 6.69604 4.876C6.94137 4.54534 7.23471 4.284 7.57604 4.092V4.028L0.0400391 4.172V2.828L7.57604 2.972V2.908C7.21337 2.66267 6.90937 2.38 6.66404 2.06C6.41871 1.74 6.22137 1.404 6.07204 1.052C5.92271 0.689336 5.80004 0.337336 5.70404 -0.0039978H7.20804C7.28271 0.412002 7.39471 0.812002 7.54404 1.196C7.69337 1.56934 7.89071 1.916 8.13604 2.236C8.38137 2.556 8.66937 2.83334 9.00004 3.068V3.932C8.50937 4.284 8.11471 4.716 7.81604 5.228C7.52804 5.72934 7.32537 6.32134 7.20804 7.004H5.75204Z" fill="currentColor"/>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="mes-projets-contenu">
+            <section class="uiux">
+                <div class="catégorie-titres">
+                    <h4>aki' tu penses</h4>
+                    <img src="src/images/mes-projets-fleche.webp" alt="flèche">
+                </div>
+                <div class="uiux-top">
+                    <div class="uiux-left">
+                        <div class="info-title">
+                            <p class="highlight">DA & UI/UX Design</p>
+                            <p class="infos">Brand & UI/UX Design<br>2026</p>
+                        </div>
+                        <p>Pour l’événement annuel Bacchanight du MUSBA, mon groupe et moi avons mis au jour un jeu interactif fun et ludique inspiré par Akinator. <br><br> Aki’ tu penses c’est un jeu où les visiteurs de cette soirée peuvent choisir un personnage d’un tableau du musée et Aki, notre mascotte, essayera de deviner à qui la personne a pensé.</p>
+                        <a href="https://loucantou.yvelin.net/" target="_blank" class="bouton">
+                            <p>Voir le site</p>
+                            <svg width="9" height="7" viewBox="0 0 9 7" fill="none" xmlns="http://www.w3.org/2000/svg" class="arrow link-arrow">
+                                <path d="M5.75204 7.004C5.82671 6.66267 5.93871 6.30534 6.08804 5.932C6.24804 5.55867 6.45071 5.20667 6.69604 4.876C6.94137 4.54534 7.23471 4.284 7.57604 4.092V4.028L0.0400391 4.172V2.828L7.57604 2.972V2.908C7.21337 2.66267 6.90937 2.38 6.66404 2.06C6.41871 1.74 6.22137 1.404 6.07204 1.052C5.92271 0.689336 5.80004 0.337336 5.70404 -0.0039978H7.20804C7.28271 0.412002 7.39471 0.812002 7.54404 1.196C7.69337 1.56934 7.89071 1.916 8.13604 2.236C8.38137 2.556 8.66937 2.83334 9.00004 3.068V3.932C8.50937 4.284 8.11471 4.716 7.81604 5.228C7.52804 5.72934 7.32537 6.32134 7.20804 7.004H5.75204Z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="uiux-right">
+                            <img class="etoiles" src="src/images/etoiles2.webp" alt="étoiles">
+                            <img src="src/images/akitupenses-phone.png" alt="mockup téléphone retro">
+                            <img class="sticker-aki" src="src/images/akitupenses-sticker.svg" alt="sticker aki">
+                    </div>
+                </div>
+                <div class="DA">
+                <div class="palette-couleurs">
+                    <p class="highlight">Palette de couleurs</p>
+                    <div class="palette-content">
+                        <div class="carres-couleurs-row">
+                            <div class="carre">
+                                <div class="noir" style="background-color: #151515;">
+                                </div>
+                                <p class="texte-blanc">#151515</p>
+                            </div>
+                            <div class="carre">
+                                <div class="blanc" style="background-color: #FFFFFF;">
+                                </div>
+                                <p>#FFFFFF</p>
+                            </div>
+                            <div class="carre">
+                                <div class="bleu-clair" style="background-color: #A3BEF5;">
+                                </div>
+                                <p>#A3BEF5</p>
+                            </div>
+                        </div>
+                        <div class="carres-couleurs-row">
+                            <div class="carre">
+                                <div class="bleu-fonce" style="background-color: #F5A3E0;">
+                                </div>
+                                <p>#F5A3E0</p>
+                            </div>
+                            <div class="carre">
+                                <div style="background-color: #FF7442;">
+                                </div>
+                                <p class="texte-blanc">#FF7442</p>
+                            </div>
+                            <div class="carre">
+                                <div style="background-color: #8BC062;">
+                                </div>
+                                <p class="texte-blanc">#8BC062</p>
+                            </div>
+                        </div>
+                </div>
+                <div class="typographie">
+                    <p class="highlight">Typographie</p>
+                        <div class="polices">
+                            <div class="polices-titres">
+                                <p>Titres</p>
+                                <span class="lemon-milk bold">LEMON MILK</span>
+                                <span class="lemon-milk medium">LEMON MILK</span>
+                                <span class="lemon-milk regular">LEMON MILK</span>
+                                <span class="lemon-milk light">LEMON MILK</span>
+                            </div>
+                            <div class="polices-corps">
+                                <p>Corps de texte</p>
+                                <span class="bricolage-grotesque bold">Bricolage Grotesque</span>
+                                <span class="bricolage-grotesque medium">Bricolage Grotesque</span>
+                                <span class="bricolage-grotesque regular">Bricolage Grotesque</span>
+                                <span class="bricolage-grotesque light">Bricolage Grotesque</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </section>
+            <div class="nav-projects">
+                <a href="./musbar.html">
+                    <div class="switch-project">
+                        <img src="src/images/mes-projets-fleche.webp" class="left-arrow" alt="flèche">
+                        <h4>precedent</h4>
+                    </div>
+                </a>
+                <a href="mes-projets.html">
+                    <div class="switch-project">
+                        <h4>suivant</h4>
+                        <img src="src/images/mes-projets-fleche.webp" alt="flèche">
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-top">
+            <div class="footer-left">
+                <a href="./index.html"><img class="logo2" src="src/images/logo-2.webp"
+                        alt="logo avec pseudonyme Pops"></a>
+                <div class="footer-menu">
+                    <ul>
+                        <li><a href="./index.html#mes-projets" class="footer-lien">Mes projets</a></li>
+                        <li><a href="./index.html#a-propos" class="footer-lien">A propos</a></li>
+                        <li><a href="./index.html#contact" class="footer-lien">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-right">
+                <ul>
+                    <li><a href="mailto:pauline.yvelin@mmibordeaux.com"><img src="src/images/email.webp"
+                                alt="email"></a>
+                    </li>
+                    <li><a target="_blank" href="https://www.linkedin.com/in/pauline-yvelin-124075364/"
+                            title="Linkedin Pauline Yvelin"><img src="src/images/linkedin.webp" alt="Logo LinkedIn"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Pauline Yvelin | Tous droits réservés</p>
+            <a href="./mentions-legales.html" class="footer-lien">Mentions légales</a>
+        </div>
+    </footer>
+    <script>
+        const tvScreen = document.getElementById("television-screen");
+        tvScreen.addEventListener("wheel", (event) => {
+            event.preventDefault();
+            tvScreen.scrollTop += event.deltaY;
+        });
+
+        let startTouch = 0;
+
+        tvScreen.addEventListener("touchstart", (event) => {
+            startTouch = event.touches[0].clientY;
+        });
+
+        tvScreen.addEventListener("touchmove", (event) => {
+            event.preventDefault();
+            let moveTouch = startTouch - event.touches[0].clientY;
+            tvScreen.scrollTop += moveTouch;
+            startTouch = event.touches[0].clientY;
+        }, { passive: false });
+    </script>
+</body>
+</html>
