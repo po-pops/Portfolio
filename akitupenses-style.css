@@ -1,0 +1,75 @@
+.aki-top {
+    margin: 0 4vw;
+    display: flex;
+    flex-direction: row;
+    gap: 10rem;
+    align-items: center;
+}
+
+.aki-left {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 100%;
+}
+
+.aki-right {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+}
+
+.sticker-aki {
+    position: absolute;
+    width: 25rem;
+    left: 0%;
+    top: 25%;
+}
+
+.etoiles-aki {
+    position: absolute;
+    width: 15rem;
+    right: 0%;
+    z-index: 9999;
+}
+
+.telephone-aki {
+    z-index: 999;
+    width: 25rem;
+}
+
+.infos {
+    opacity: 75%;
+}
+
+.DA {
+    display: flex;
+    flex-direction: row;
+    margin: 0 4vw;
+    gap: 10rem;
+    justify-content: center;
+}
+
+.DA-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+.aki-palette-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw;
+}
+
+.carres-couleurs-row {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5vw;
+}
+
+.aki-typographie {
+
+}
