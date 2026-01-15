@@ -40,10 +40,6 @@
     width: 25rem;
 }
 
-.infos {
-    opacity: 75%;
-}
-
 .DA {
     display: flex;
     flex-direction: row;
@@ -70,6 +66,4 @@
     gap: 0.5vw;
 }
 
-.aki-typographie {
-
-}
+.aki-typographie {}
